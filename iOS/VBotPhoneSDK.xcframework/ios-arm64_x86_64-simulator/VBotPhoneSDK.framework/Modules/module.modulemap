@@ -1,0 +1,11 @@
+framework module VBotPhoneSDK {
+  umbrella header "VBotPhoneSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module VBotPhoneSDK.Swift {
+  header "VBotPhoneSDK-Swift.h"
+  requires objc
+}
