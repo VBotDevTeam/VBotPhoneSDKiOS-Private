@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
-  s.name         = 'VBotPhoneSDK'
+  s.name         = 'VBotPhoneSDKiOS-Private'
   s.version      = '1.0.0'
   s.authors      = "VBotDevTeam"
-  s.summary      = "VBotPhoneSDK"
+  s.summary      = "VBotPhoneSDKiOS-Private"
   s.description  = "VBot Phone SDK for iOS."
   s.homepage     = "https://vbot.vn"
   s.license      = 'LICENSE.txt'
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.documentation_url = "https://vbot.vn"
   s.platform = :ios, '12.0'
   s.static_framework = true
-  s.swift_versions = [4.0, 4.2, 5.0, 5.3, 5.4, 6.0]
+  s.swift_versions = [4.2, 5.0, 5.3, 5.4]
 	
   s.frameworks = [
     "Foundation",
