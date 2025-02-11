@@ -7,6 +7,7 @@ import AVFoundation
 import AVKit
 import CallKit
 import CocoaLumberjack
+import CommonCrypto
 import CoreTelephony
 import Foundation
 import Network
@@ -281,7 +282,6 @@ extension VBotPhoneSDK.VBotReachability {
   public static let sharedInstance: VBotPhoneSDK.VBotPhone
   public var audioOutput: VBotPhoneSDK.VBotAudioControllerOutputs?
   public var callUser: VBotPhoneSDK.CallUser?
-  public var token: Swift.String?
   public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
   public func removeDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
   public func notifyDelegates(_ action: (any VBotPhoneSDK.VBotPhoneDelegate) -> Swift.Void)
