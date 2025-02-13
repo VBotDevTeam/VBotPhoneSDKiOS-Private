@@ -341,6 +341,7 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 
 
 
+
 @class VBotCall;
 
 /// Protocol định nghĩa các phương thức delegate cho VBotPhone

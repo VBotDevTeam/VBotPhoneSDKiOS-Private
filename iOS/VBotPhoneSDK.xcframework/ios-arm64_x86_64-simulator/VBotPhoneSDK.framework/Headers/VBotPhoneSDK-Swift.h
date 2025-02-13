@@ -341,6 +341,7 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 
 
 
+
 @class VBotCall;
 
 /// Protocol định nghĩa các phương thức delegate cho VBotPhone
@@ -728,6 +729,7 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (void)callObserver:(CXCallObserver * _Nonnull)callObserver callChanged:(CXCall * _Nonnull)call;
 @end
+
 
 
 

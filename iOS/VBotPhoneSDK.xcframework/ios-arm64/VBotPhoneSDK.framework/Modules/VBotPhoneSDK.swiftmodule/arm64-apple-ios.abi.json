@@ -1257,8 +1257,8 @@
       },
       {
         "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "VBotPhoneSDK",
         "declAttributes": [
@@ -1267,8 +1267,15 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "VBotPhoneSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoSwift",
+        "printedName": "CryptoSwift",
         "declKind": "Import",
         "moduleName": "VBotPhoneSDK"
       },
@@ -10863,6 +10870,55 @@
           },
           {
             "kind": "Var",
+            "name": "VBotCallMessageButtonTapped",
+            "printedName": "VBotCallMessageButtonTapped",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE0C23CallMessageButtonTappedABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE0C23CallMessageButtonTappedABvpZ",
+            "moduleName": "VBotPhoneSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE0C23CallMessageButtonTappedABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE0C23CallMessageButtonTappedABvgZ",
+                "moduleName": "VBotPhoneSDK",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "VBotCallHoldStateDidChange",
             "printedName": "VBotCallHoldStateDidChange",
             "children": [
@@ -10901,152 +10957,6 @@
                 "declKind": "Accessor",
                 "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE0C22CallHoldStateDidChangeABvgZ",
                 "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE0C22CallHoldStateDidChangeABvgZ",
-                "moduleName": "VBotPhoneSDK",
-                "static": true,
-                "implicit": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "teardownSip",
-            "printedName": "teardownSip",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE11teardownSipABvpZ",
-            "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE11teardownSipABvpZ",
-            "moduleName": "VBotPhoneSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Name",
-                    "printedName": "Foundation.NSNotification.Name",
-                    "usr": "c:@T@NSNotificationName"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE11teardownSipABvgZ",
-                "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE11teardownSipABvgZ",
-                "moduleName": "VBotPhoneSDK",
-                "static": true,
-                "implicit": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "receivedApnsToken",
-            "printedName": "receivedApnsToken",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE17receivedApnsTokenABvpZ",
-            "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE17receivedApnsTokenABvpZ",
-            "moduleName": "VBotPhoneSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Name",
-                    "printedName": "Foundation.NSNotification.Name",
-                    "usr": "c:@T@NSNotificationName"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE17receivedApnsTokenABvgZ",
-                "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE17receivedApnsTokenABvgZ",
-                "moduleName": "VBotPhoneSDK",
-                "static": true,
-                "implicit": true,
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "remoteLoggingStateChanged",
-            "printedName": "remoteLoggingStateChanged",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE25remoteLoggingStateChangedABvpZ",
-            "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE25remoteLoggingStateChangedABvpZ",
-            "moduleName": "VBotPhoneSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Name",
-                    "printedName": "Foundation.NSNotification.Name",
-                    "usr": "c:@T@NSNotificationName"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So18NSNotificationNamea12VBotPhoneSDKE25remoteLoggingStateChangedABvgZ",
-                "mangledName": "$sSo18NSNotificationNamea12VBotPhoneSDKE25remoteLoggingStateChangedABvgZ",
                 "moduleName": "VBotPhoneSDK",
                 "static": true,
                 "implicit": true,
@@ -11458,77 +11368,77 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3003,
+      "offset": 3078,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3036,
+      "offset": 3111,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3071,
+      "offset": 3146,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3104,
+      "offset": 3179,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3134,
+      "offset": 3209,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3167,
+      "offset": 3242,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3198,
+      "offset": 3273,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3228,
+      "offset": 3303,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3258,
+      "offset": 3333,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3291,
+      "offset": 3366,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 3322,
+      "offset": 3397,
       "length": 2,
       "value": "\"\""
     },
@@ -11555,87 +11465,87 @@
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6023,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 6203,
-      "length": 25,
-      "value": "\"yyyy\/MM\/dd HH:mm:ss.SSS\""
-    },
-    {
-      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 7533,
+      "offset": 2787,
       "length": 5,
       "value": "\"❌\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7558,
+      "offset": 2808,
       "length": 6,
       "value": "\"🌼\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7581,
+      "offset": 2827,
       "length": 6,
       "value": "\"🍥\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7605,
+      "offset": 2847,
       "length": 6,
       "value": "\"🌵\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7631,
+      "offset": 2869,
       "length": 6,
       "value": "\"🍚\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7714,
+      "offset": 2936,
       "length": 7,
       "value": "\"ERROR\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7741,
+      "offset": 2959,
       "length": 9,
       "value": "\"WARNING\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7767,
+      "offset": 2981,
       "length": 6,
       "value": "\"INFO\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7791,
+      "offset": 3001,
       "length": 7,
       "value": "\"DEBUG\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7818,
+      "offset": 3024,
       "length": 9,
       "value": "\"VERBOSE\""
+    },
+    {
+      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6415,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 6595,
+      "length": 25,
+      "value": "\"yyyy\/MM\/dd HH:mm:ss.SSS\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/AppInfo.swift",
@@ -11752,63 +11662,70 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 941,
+      "offset": 982,
+      "length": 29,
+      "value": "\"VBotCallMessageButtonTapped\""
+    },
+    {
+      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
+      "kind": "StringLiteral",
+      "offset": 1080,
       "length": 40,
       "value": "\"VBotCallHoldStateDidChangeNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1031,
+      "offset": 1217,
       "length": 13,
       "value": "\"destroy-sip\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1219,
+      "offset": 1405,
       "length": 21,
       "value": "\"received-apns-token\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1423,
+      "offset": 1609,
       "length": 30,
       "value": "\"remote-logging-state-changed\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1500,
+      "offset": 1686,
       "length": 37,
       "value": "\"AppDelegateIncomingCallNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1598,
+      "offset": 1784,
       "length": 55,
       "value": "\"AppDelegateIncomingBackgroundCallAcceptedNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1702,
+      "offset": 1888,
       "length": 43,
       "value": "\"AppDelegateStartConnectABCallNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1793,
+      "offset": 1979,
       "length": 13,
       "value": "\"PhoneNumber\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1845,
+      "offset": 2031,
       "length": 33,
       "value": "\"ReachabilityChangedNotification\""
     },
@@ -11927,7 +11844,7 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotCallKitDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 18965,
+      "offset": 18971,
       "length": 5,
       "value": "10000"
     },
@@ -12325,57 +12242,64 @@
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
+      "kind": "Array",
+      "offset": 2114,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2778,
+      "offset": 2863,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2826,
+      "offset": 2911,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 2862,
+      "offset": 2947,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 6730,
+      "offset": 7366,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 8617,
+      "offset": 9269,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 36378,
+      "offset": 33578,
       "length": 16,
       "value": "\"🍀 VBotPhone\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 36396,
+      "offset": 33596,
       "length": 38,
       "value": "\"Error: \""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 36433,
+      "offset": 33633,
       "length": 2,
       "value": "\"\""
     },
@@ -12725,7 +12649,7 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/VBotVoIPPushHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 8472,
+      "offset": 8478,
       "length": 1,
       "value": "0"
     },
@@ -12734,7 +12658,7 @@
       "kind": "StringLiteral",
       "offset": 151,
       "length": 7,
-      "value": "\"1.0.1\""
+      "value": "\"1.0.2\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS\/VBotPhoneSDK\/Keys.swift",
