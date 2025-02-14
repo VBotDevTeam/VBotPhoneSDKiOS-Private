@@ -13,7 +13,6 @@
 #import "VBotIceConfiguration.h"
 #import "VBotStunConfiguration.h"
 #import "VBotTransportConfiguration.h"
-#import "CallKitProviderDelegate.h"
 #import "VBotEndpoint.h"
 
 /**

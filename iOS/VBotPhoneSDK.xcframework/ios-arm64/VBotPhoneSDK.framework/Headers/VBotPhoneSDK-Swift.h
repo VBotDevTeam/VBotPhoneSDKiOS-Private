@@ -326,6 +326,7 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 
 
 
+
 @class CXCallObserver;
 @class CXCall;
 
