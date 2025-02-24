@@ -315,10 +315,34 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 @property (nonatomic, readonly, copy) NSString * _Nonnull avatar;
 @property (nonatomic, readonly, copy) NSString * _Nonnull checkSum;
 @property (nonatomic, strong) UIImage * _Nullable avatarImage;
-- (nonnull instancetype)initWithUuid:(NSUUID * _Nonnull)uuid callerId:(NSString * _Nonnull)callerId name:(NSString * _Nonnull)name avatar:(NSString * _Nonnull)avatar checkSum:(NSString * _Nonnull)checkSum avatarImage:(UIImage * _Nullable)avatarImage OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) BOOL callStopped;
+@property (nonatomic, copy) NSString * _Nonnull caller;
+@property (nonatomic, copy) NSString * _Nonnull callerName;
+@property (nonatomic, copy) NSString * _Nonnull callee;
+@property (nonatomic, copy) NSString * _Nonnull calleeName;
+@property (nonatomic, copy) NSString * _Nonnull typeCall;
+- (nonnull instancetype)initWithUuid:(NSUUID * _Nonnull)uuid callerId:(NSString * _Nonnull)callerId name:(NSString * _Nonnull)name avatar:(NSString * _Nonnull)avatar checkSum:(NSString * _Nonnull)checkSum avatarImage:(UIImage * _Nullable)avatarImage caller:(NSString * _Nonnull)caller callerName:(NSString * _Nonnull)callerName callee:(NSString * _Nonnull)callee calleeName:(NSString * _Nonnull)calleeName typeCall:(NSString * _Nonnull)typeCall OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
+@interface VBotPhone : NSObject <CXCallObserverDelegate>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
 
 
 
@@ -330,15 +354,9 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 @class CXCallObserver;
 @class CXCall;
 
-SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
-@interface VBotPhone : NSObject <CXCallObserverDelegate>
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@interface VBotPhone (SWIFT_EXTENSION(VBotPhoneSDK))
 - (void)callObserver:(CXCallObserver * _Nonnull)callObserver callChanged:(CXCall * _Nonnull)call;
 @end
-
-
-
 
 
 
@@ -710,10 +728,34 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 @property (nonatomic, readonly, copy) NSString * _Nonnull avatar;
 @property (nonatomic, readonly, copy) NSString * _Nonnull checkSum;
 @property (nonatomic, strong) UIImage * _Nullable avatarImage;
-- (nonnull instancetype)initWithUuid:(NSUUID * _Nonnull)uuid callerId:(NSString * _Nonnull)callerId name:(NSString * _Nonnull)name avatar:(NSString * _Nonnull)avatar checkSum:(NSString * _Nonnull)checkSum avatarImage:(UIImage * _Nullable)avatarImage OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) BOOL callStopped;
+@property (nonatomic, copy) NSString * _Nonnull caller;
+@property (nonatomic, copy) NSString * _Nonnull callerName;
+@property (nonatomic, copy) NSString * _Nonnull callee;
+@property (nonatomic, copy) NSString * _Nonnull calleeName;
+@property (nonatomic, copy) NSString * _Nonnull typeCall;
+- (nonnull instancetype)initWithUuid:(NSUUID * _Nonnull)uuid callerId:(NSString * _Nonnull)callerId name:(NSString * _Nonnull)name avatar:(NSString * _Nonnull)avatar checkSum:(NSString * _Nonnull)checkSum avatarImage:(UIImage * _Nullable)avatarImage caller:(NSString * _Nonnull)caller callerName:(NSString * _Nonnull)callerName callee:(NSString * _Nonnull)callee calleeName:(NSString * _Nonnull)calleeName typeCall:(NSString * _Nonnull)typeCall OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
+@interface VBotPhone : NSObject <CXCallObserverDelegate>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
 
 
 
@@ -725,15 +767,9 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 @class CXCallObserver;
 @class CXCall;
 
-SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
-@interface VBotPhone : NSObject <CXCallObserverDelegate>
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@interface VBotPhone (SWIFT_EXTENSION(VBotPhoneSDK))
 - (void)callObserver:(CXCallObserver * _Nonnull)callObserver callChanged:(CXCall * _Nonnull)call;
 @end
-
-
-
 
 
 

@@ -123,7 +123,13 @@ public struct VoIPPushPayload {
   @objc final public let avatar: Swift.String
   @objc final public let checkSum: Swift.String
   @objc public var avatarImage: UIKit.UIImage?
-  @objc public init(uuid: Foundation.UUID, callerId: Swift.String, name: Swift.String, avatar: Swift.String, checkSum: Swift.String, avatarImage: UIKit.UIImage?)
+  @objc public var callStopped: Swift.Bool
+  @objc public var caller: Swift.String
+  @objc public var callerName: Swift.String
+  @objc public var callee: Swift.String
+  @objc public var calleeName: Swift.String
+  @objc public var typeCall: Swift.String
+  @objc public init(uuid: Foundation.UUID, callerId: Swift.String, name: Swift.String, avatar: Swift.String, checkSum: Swift.String, avatarImage: UIKit.UIImage?, caller: Swift.String, callerName: Swift.String, callee: Swift.String, calleeName: Swift.String, typeCall: Swift.String)
   @objc deinit
 }
 public struct VBotHotline : Swift.Codable {
@@ -281,24 +287,18 @@ extension VBotPhoneSDK.VBotReachability {
   public static let sharedInstance: VBotPhoneSDK.VBotPhone
   public var audioOutput: VBotPhoneSDK.VBotAudioControllerOutputs?
   public var callUser: VBotPhoneSDK.CallUser?
-  public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
-  public func removeDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
-  public func notifyDelegates(_ action: (any VBotPhoneSDK.VBotPhoneDelegate) -> Swift.Void)
-  public func setup(token: Swift.String, with config: VBotPhoneSDK.VBotConfig = VBotConfig())
-  public func setConfig(config: VBotPhoneSDK.VBotConfig)
-  public func getConfig() -> VBotPhoneSDK.VBotConfig
-  public func setLocalizationStrings(_ data: VBotPhoneSDK.VBotLocalizedStrings)
-  public func getLocalizedStrings() -> VBotPhoneSDK.VBotLocalizedStrings
-  public func pushToken() -> Swift.String?
-  public func returnToCallVC()
-  @objc public func callObserver(_ callObserver: CallKit.CXCallObserver, callChanged call: CallKit.CXCall)
   @objc deinit
 }
 extension VBotPhoneSDK.VBotPhone {
-  public func startOutgoingCall(callerId: Swift.String, callerAvatar: Swift.String? = nil, callerName: Swift.String, calleeId: Swift.String, calleeAvatar: Swift.String? = nil, calleeName: Swift.String, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  public func setup(token: Swift.String, with config: VBotPhoneSDK.VBotConfig = VBotConfig())
+  public func setConfig(config: VBotPhoneSDK.VBotConfig)
+  public func getConfig() -> VBotPhoneSDK.VBotConfig
+  public func getLocalizedStrings() -> VBotPhoneSDK.VBotLocalizedStrings
+  public func startOutgoingCall(callerId: Swift.String, callerName: Swift.String, callerAvatar: Swift.String? = nil, calleeId: Swift.String, calleeName: Swift.String, calleeAvatar: Swift.String? = nil, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   public func startIncomingCall(callerId: Swift.String, callerName: Swift.String, callerAvatar: Swift.String? = nil, calleeId: Swift.String, calleeName: Swift.String, calleeAvatar: Swift.String? = nil, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping () -> Swift.Void)
-  public func getActiveCall() -> VBotPhoneSDK.VBotCall?
-  public func getFirstCall() -> VBotPhoneSDK.VBotCall?
+  public func returnToCallVCIfNeeded()
+  public func hideCallVCIfNeeded()
+  public func hasActiveCall() -> Swift.Bool
   public func endCall(completion: @escaping ((any Swift.Error)?) -> Swift.Void)
   public func muteCall()
   public func holdCall(completion: @escaping ((any Swift.Error)?) -> Swift.Void)
@@ -308,10 +308,13 @@ extension VBotPhoneSDK.VBotPhone {
   public func isCallHold() -> Swift.Bool
   public func isCallMute() -> Swift.Bool
   public func sendDTMF(digit: Swift.String, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  public func startCallSIP(to number: Swift.String, displayName: Swift.String, for account: VBotPhoneSDK.VBotAccount, completion: @escaping (VBotPhoneSDK.VBotCall?, (any Swift.Error)?) -> Swift.Void)
-  public func requestCallKitAction(_ action: CallKit.CXAction, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  public func checkMicrophonePermission(completion: @escaping (Swift.Bool) -> Swift.Void)
-  public func showMicrophoneSettingsAlert(from viewController: UIKit.UIViewController)
+}
+extension VBotPhoneSDK.VBotPhone {
+  @objc dynamic public func callObserver(_ callObserver: CallKit.CXCallObserver, callChanged call: CallKit.CXCall)
+}
+extension VBotPhoneSDK.VBotPhone {
+  public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
+  public func removeDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
 }
 @_hasMissingDesignatedInitializers public class VBotReachabilityHelper {
   @objc deinit
