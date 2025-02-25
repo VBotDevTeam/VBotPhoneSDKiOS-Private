@@ -207,6 +207,8 @@ extension AppDelegate: PKPushRegistryDelegate {
           checkSum: <Mã xác thực cuộc gọi>,
           metaData: <MetaData của cuộc gọi>
           completion: completion) 
+      } else {
+          completion()
       }
       
     }
