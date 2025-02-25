@@ -6116,6 +6116,9 @@
             "usr": "s:12VBotPhoneSDK0aB0C18hideCallVCIfNeededyyF",
             "mangledName": "$s12VBotPhoneSDK0aB0C18hideCallVCIfNeededyyF",
             "moduleName": "VBotPhoneSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -11811,7 +11814,7 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 24187,
+      "offset": 24284,
       "length": 1,
       "value": "0"
     },
@@ -12679,21 +12682,21 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 21068,
+      "offset": 21118,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 21942,
+      "offset": 21992,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 37026,
+      "offset": 37076,
       "length": 2,
       "value": "30"
     },
@@ -13087,7 +13090,7 @@
       "kind": "StringLiteral",
       "offset": 151,
       "length": 7,
-      "value": "\"1.0.4\""
+      "value": "\"1.0.5\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Keys.swift",
