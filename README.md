@@ -222,8 +222,7 @@ extension AppDelegate: PKPushRegistryDelegate {
 
 Các màn hình cuộc gọi VBot SDK mặc định chỉ hỗ trợ Tiếng Việt
 
-Có hai cách :
-Để thay đổi ngôn ngữ truyền dữ liệu qua metadata khi gọi hàm **startIncomingCall**
+Để thay đổi ngôn ngữ truyền dữ liệu qua metadata khi gọi hàm **startIncomingCall** và **startOutgoingCall**
 
 ### Thao tác trong cuộc gọi
 
