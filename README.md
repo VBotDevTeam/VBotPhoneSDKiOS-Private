@@ -231,12 +231,16 @@ Từ ứng dụng của bạn, có thể gọi vào các hàm khác nhau của V
 
 Ví dụ:
 ```swift
-VBotPhone.sharedInstance.getActiveCall()
+// Kiểm tra xem có call hay không
+VBotPhone.sharedInstance.hasActiveCall()
 ```
 
 ```swift
 // Quay lại màn hình cuộc gọi
-func returnToCallVC()
+func returnToCallVCIfNeeded()
+
+// Ẩn màn hình cuộc gọi
+func hideCallVCIfNeeded()
 
 // Kết thúc cuộc gọi
 func endCall(completion: @escaping (Error?) -> Void)
