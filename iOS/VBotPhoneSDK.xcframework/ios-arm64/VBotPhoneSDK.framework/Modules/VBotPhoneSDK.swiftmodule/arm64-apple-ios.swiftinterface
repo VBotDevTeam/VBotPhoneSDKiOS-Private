@@ -13,7 +13,6 @@ import CryptoSwift
 import Foundation
 import Network
 import PushKit
-import SQLite3
 import Starscream
 import Swift
 import SystemConfiguration
