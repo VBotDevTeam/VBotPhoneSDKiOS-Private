@@ -275,7 +275,7 @@ extension VBotPhoneSDK.VBotReachability {
   @objc optional func callStateChanged(call: VBotPhoneSDK.VBotCall)
   @objc optional func callStarted()
   @objc optional func callAccepted()
-  @objc optional func callEnded()
+  @objc optional func callEnded(error: (any Swift.Error)?)
   @objc optional func callMuteStateDidChange(muted: Swift.Bool)
   @objc optional func messageButtonTapped()
   @objc optional func callInfoUpdated(user: VBotPhoneSDK.CallUser)
@@ -286,6 +286,7 @@ extension VBotPhoneSDK.VBotReachability {
   public static let sharedInstance: VBotPhoneSDK.VBotPhone
   public var audioOutput: VBotPhoneSDK.VBotAudioControllerOutputs?
   public var callUser: VBotPhoneSDK.CallUser?
+  public var microphonePermissionGranted: Swift.Bool
   @objc deinit
 }
 extension VBotPhoneSDK.VBotPhone {

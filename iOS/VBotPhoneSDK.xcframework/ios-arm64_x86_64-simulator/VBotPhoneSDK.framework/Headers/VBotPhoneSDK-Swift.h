@@ -374,7 +374,7 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 /// Được gọi khi người dùng chấp nhận một cuộc gọi đến
 - (void)callAccepted;
 /// Được gọi khi cuộc gọi kết thúc
-- (void)callEnded;
+- (void)callEndedWithError:(NSError * _Nullable)error;
 /// Được gọi khi trạng thái microphone thay đổi
 - (void)callMuteStateDidChangeWithMuted:(BOOL)muted;
 /// Được gọi khi người dùng nhấn vào nút nhắn tin
@@ -787,7 +787,7 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 /// Được gọi khi người dùng chấp nhận một cuộc gọi đến
 - (void)callAccepted;
 /// Được gọi khi cuộc gọi kết thúc
-- (void)callEnded;
+- (void)callEndedWithError:(NSError * _Nullable)error;
 /// Được gọi khi trạng thái microphone thay đổi
 - (void)callMuteStateDidChangeWithMuted:(BOOL)muted;
 /// Được gọi khi người dùng nhấn vào nút nhắn tin
