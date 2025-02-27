@@ -296,8 +296,11 @@ protocol VBotPhoneDelegate {
     // Cuộc gọi đến được chấp nhận (Khi user chọn chấp nhận cuộc gọi)
     func callAccepted()
 
-    // Cuộc gọi kết thúc
-    func callEnded()
+    // Cuộc gọi kết thúc, cùng nguyên nhân
+    func callEnded(reason: VBotEndCallReason)
+    
+    // Lấy quyền microphone
+    func microphonePermission(status: AVAudioSession.RecordPermission)
 
     // Trạng thái Microphone thay đổi
     func callMuteStateDidChange(muted: Bool)
@@ -308,28 +311,64 @@ protocol VBotPhoneDelegate {
 }
 ```
 
-2. **Sử dụng NotificationCenter**
+---
 
-```swift
+### Xem thêm
 
-// Thay đổi trạng thái cuộc gọi
-Notification.Name.VBotCallStateChanged
+#### VBotEndCallReason và VBotError
 
-// Cuộc gọi đi đã bắt đầu
-Notification.Name.VBotCallStarted
 
-// Cuộc gọi đến được chấp nhận (Khi user chọn chấp nhận cuộc gọi)
-Notification.Name.VBotCallAccepted
-
-// Cuộc gọi kết thúc
-Notification.Name.VBotCallEnded
-
-// Trạng thái Microphone thay đổi
-Notification.Name.VBotCallMuteStateDidChange
-
-// Nhấn vào nút nhắn tin
-Notification.Name.VBotCallMessageButtonTapped
+```
+    // Timeout
+    case timeOut = -1001
+    
+    // Khởi tạo không thành công
+    case initiationFailed = 1001
+    
+    case initiationFailed_1 = 1002
+    
+    // Chưa cấp truyền mic
+    case microphonePermissionDenied = 1003
+    
+    case invalidPhoneNumber = 1004
+    
+    // Không có dữ liệu từ máy chủ
+    case noDataFromServer = 1005
+    
+    case initiationFailed_2 = 1006
+    
+    case initiationFailed_3 = 1007
+    
+    // Dữ liệu không hợp lệ
+    case dataInvalid = 1008
+    
+    case initiationFailed_4 = 1009
+    
+    // Xác thực thất bại
+    case authenticatedFailed = 1010
+    
+    // Đang có cuộc gọi khác
+    case anotherCallInProgress = 1011
+    
+    // Cuộc gọi kết thúc
+    case normal = 1012
+    
+    // Từ chối cuộc gọi
+    case decline = 1013
+    
+    // Không liên lạc được
+    case temporarilyUnavailable = 1014
+    
+    // Máy bận
+    case busy = 1015
+    
+    // reportNewIncomingCall lỗi
+    case reportNewIncomingCallFailed = 1016
+    
+    // Lỗi chưa xác định
+    case unknownError = 1999
 ```
 
----
+
+
 
