@@ -280,6 +280,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFAudio;
 @import CallKit;
 @import ObjectiveC;
 #endif
@@ -334,6 +335,27 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 
 
 
+typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
+  VBotEndCallReasonTimeOut = -1001,
+  VBotEndCallReasonInitiationFailed = 1001,
+  VBotEndCallReasonInitiationFailed_1 = 1002,
+  VBotEndCallReasonMicrophonePermissionDenied = 1003,
+  VBotEndCallReasonInvalidPhoneNumber = 1004,
+  VBotEndCallReasonNoDataFromServer = 1005,
+  VBotEndCallReasonInitiationFailed_2 = 1006,
+  VBotEndCallReasonInitiationFailed_3 = 1007,
+  VBotEndCallReasonDataInvalid = 1008,
+  VBotEndCallReasonInitiationFailed_4 = 1009,
+  VBotEndCallReasonAuthenticatedFailed = 1010,
+  VBotEndCallReasonAnotherCallInProgress = 1011,
+  VBotEndCallReasonNormal = 1012,
+  VBotEndCallReasonDecline = 1013,
+  VBotEndCallReasonTemporarilyUnavailable = 1014,
+  VBotEndCallReasonBusy = 1015,
+  VBotEndCallReasonReportNewIncomingCallFailed = 1016,
+  VBotEndCallReasonUnknownError = 1999,
+};
+
 
 SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 @interface VBotPhone : NSObject <CXCallObserverDelegate>
@@ -374,7 +396,9 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 /// Được gọi khi người dùng chấp nhận một cuộc gọi đến
 - (void)callAccepted;
 /// Được gọi khi cuộc gọi kết thúc
-- (void)callEndedWithError:(NSError * _Nullable)error;
+- (void)callEndedWithReason:(enum VBotEndCallReason)reason;
+/// Được gọi khi trạng thái microphone
+- (void)microphonePermissionWithStatus:(enum AVAudioSessionRecordPermission)status;
 /// Được gọi khi trạng thái microphone thay đổi
 - (void)callMuteStateDidChangeWithMuted:(BOOL)muted;
 /// Được gọi khi người dùng nhấn vào nút nhắn tin
@@ -693,6 +717,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFAudio;
 @import CallKit;
 @import ObjectiveC;
 #endif
@@ -747,6 +772,27 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
 
 
 
+typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
+  VBotEndCallReasonTimeOut = -1001,
+  VBotEndCallReasonInitiationFailed = 1001,
+  VBotEndCallReasonInitiationFailed_1 = 1002,
+  VBotEndCallReasonMicrophonePermissionDenied = 1003,
+  VBotEndCallReasonInvalidPhoneNumber = 1004,
+  VBotEndCallReasonNoDataFromServer = 1005,
+  VBotEndCallReasonInitiationFailed_2 = 1006,
+  VBotEndCallReasonInitiationFailed_3 = 1007,
+  VBotEndCallReasonDataInvalid = 1008,
+  VBotEndCallReasonInitiationFailed_4 = 1009,
+  VBotEndCallReasonAuthenticatedFailed = 1010,
+  VBotEndCallReasonAnotherCallInProgress = 1011,
+  VBotEndCallReasonNormal = 1012,
+  VBotEndCallReasonDecline = 1013,
+  VBotEndCallReasonTemporarilyUnavailable = 1014,
+  VBotEndCallReasonBusy = 1015,
+  VBotEndCallReasonReportNewIncomingCallFailed = 1016,
+  VBotEndCallReasonUnknownError = 1999,
+};
+
 
 SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 @interface VBotPhone : NSObject <CXCallObserverDelegate>
@@ -787,7 +833,9 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 /// Được gọi khi người dùng chấp nhận một cuộc gọi đến
 - (void)callAccepted;
 /// Được gọi khi cuộc gọi kết thúc
-- (void)callEndedWithError:(NSError * _Nullable)error;
+- (void)callEndedWithReason:(enum VBotEndCallReason)reason;
+/// Được gọi khi trạng thái microphone
+- (void)microphonePermissionWithStatus:(enum AVAudioSessionRecordPermission)status;
 /// Được gọi khi trạng thái microphone thay đổi
 - (void)callMuteStateDidChangeWithMuted:(BOOL)muted;
 /// Được gọi khi người dùng nhấn vào nút nhắn tin
