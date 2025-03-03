@@ -288,7 +288,7 @@ Các delegate method bao gồm
 protocol VBotPhoneDelegate {
 
     // Trạng thái cuộc gọi thay đổi
-    func callStateChanged(call: VBotCall)
+    func callStateChanged(state: VBotCallState)
 
     // Cuộc gọi đi đã bắt đầu
     func callStarted()
