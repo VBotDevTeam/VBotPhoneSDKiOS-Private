@@ -22,7 +22,7 @@ platform :ios, '13.5'
 target 'Runner' do
   use_frameworks! :linkage => :static
 
-  pod 'VBotPhoneSDKiOS-Private', '~1.0.4'
+  pod 'VBotPhoneSDKiOS-Private', '1.0.9'
 
   target 'RunnerTests' do
     inherit! :search_paths
