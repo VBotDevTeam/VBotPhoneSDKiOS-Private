@@ -285,6 +285,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
+#import <VBotPhoneSDK/VBotPhoneSDK.h>
+
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -383,14 +385,13 @@ SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 
 
 
-@class VBotCall;
 
 /// Protocol định nghĩa các phương thức delegate cho VBotPhone
 SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 @protocol VBotPhoneDelegate
 @optional
 /// Được gọi khi trạng thái của cuộc gọi thay đổi
-- (void)callStateChangedWithCall:(VBotCall * _Nonnull)call;
+- (void)callStateChangedWithState:(VBotCallState)state;
 /// Được gọi khi một cuộc gọi đi mới bắt đầu
 - (void)callStarted;
 /// Được gọi khi người dùng chấp nhận một cuộc gọi đến

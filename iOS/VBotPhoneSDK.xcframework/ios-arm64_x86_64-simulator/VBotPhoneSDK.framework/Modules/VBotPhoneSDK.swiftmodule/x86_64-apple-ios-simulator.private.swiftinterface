@@ -162,7 +162,14 @@ public enum SocketMethod : Swift.String, Swift.CaseIterable {
   }
 }
 extension VBotPhoneSDK.VBotCallState {
-  public func stringValue() -> Swift.String
+  public var description: Swift.String {
+    get
+  }
+}
+extension AVFAudio.AVAudioSession.RecordPermission {
+  public var description: Swift.String {
+    get
+  }
 }
 extension Foundation.NSNotification.Name {
   public static let VBotCallInfoUpdated: Foundation.Notification.Name
@@ -272,7 +279,7 @@ extension VBotPhoneSDK.VBotReachability {
   public func stopNotifier()
 }
 @objc public protocol VBotPhoneDelegate {
-  @objc optional func callStateChanged(call: VBotPhoneSDK.VBotCall)
+  @objc optional func callStateChanged(state: VBotPhoneSDK.VBotCallState)
   @objc optional func callStarted()
   @objc optional func callAccepted()
   @objc optional func callEnded(reason: VBotPhoneSDK.VBotEndCallReason)
@@ -344,7 +351,7 @@ public struct VBotLocalizedStrings {
   public var call_permission_microphone_demied_content: Swift.String
   public var call_permission_microphone_demied_title: Swift.String
   public var call_permission_microphone_title: Swift.String
-  public init(call_btn_messsage: Swift.String = "Nhắn tin", call_btn_mute: Swift.String = "Im lặng", call_btn_speaker: Swift.String = "Loa ngoài", call_calling: Swift.String = "Đang gọi...", call_connecting: Swift.String = "Đang kết nối", call_end: Swift.String = "Kết thúc", call_failed_api: Swift.String = "Không thể thực hiện cuộc gọi. Vui lòng thử lại.", call_failed_no_connection: Swift.String = "Không có mạng. Vui lòng thử lại.", call_lost_connection: Swift.String = "Mất kết nối", call_permission_btn_allow: Swift.String = "Cho phép", call_permission_btn_deny: Swift.String = "Không cho phép", call_permission_btn_setting: Swift.String = "Đi đến Cài đặt", call_permission_btn_skip: Swift.String = "Bỏ qua", call_permission_microphone_content: Swift.String = "Việc này cho phép ứng dụng thực hiện cuộc gọi miễn phí trong ứng dụng.", call_permission_microphone_demied_content: Swift.String = "Vui lòng cho phép ứng dụng truy cập \"Microphone\" trong Cài đặt điện thoại của bạn.", call_permission_microphone_demied_title: Swift.String = "Không thể thực hiện cuộc gọi do chưa có quyền truy cập “Micrô\"", call_permission_microphone_title: Swift.String = "Xanh SM muốn truy cập micrô trên thiết bị của bạn.", call_refused: Swift.String = "Người nhận từ chối cuộc gọi", call_ringing: Swift.String = "Đang đổ chuông...", call_title: Swift.String = "Gọi miễn phí", call_weak_signal: Swift.String = "Sóng yếu")
+  public init(call_btn_messsage: Swift.String = "Nhắn tin", call_btn_mute: Swift.String = "Im lặng", call_btn_speaker: Swift.String = "Loa ngoài", call_calling: Swift.String = "Đang gọi...", call_connecting: Swift.String = "Đang kết nối", call_end: Swift.String = "Kết thúc", call_failed_api: Swift.String = "Không thể thực hiện cuộc gọi. Vui lòng thử lại.", call_failed_no_connection: Swift.String = "Không có mạng. Vui lòng thử lại.", call_lost_connection: Swift.String = "Mất kết nối", call_permission_btn_allow: Swift.String = "Cho phép", call_permission_btn_deny: Swift.String = "Không cho phép", call_permission_btn_setting: Swift.String = "Đi đến Cài đặt", call_permission_btn_skip: Swift.String = "Bỏ qua", call_permission_microphone_content: Swift.String = "Việc này cho phép ứng dụng thực hiện cuộc gọi miễn phí trong ứng dụng.", call_permission_microphone_demied_content: Swift.String = "Vui lòng cho phép ứng dụng truy cập \"Microphone\" trong Cài đặt điện thoại của bạn.", call_permission_microphone_demied_title: Swift.String = "Không thể thực hiện cuộc gọi do chưa có quyền truy cập “Micrô\"", call_permission_microphone_title: Swift.String = "Xanh SM muốn truy cập micrô trên thiết bị của bạn.", call_refused: Swift.String = "Người nhận từ chối cuộc gọi", call_busy: Swift.String = "Máy bận", call_temporarily_unavailable: Swift.String = "Không liên lạc được", call_ringing: Swift.String = "Đang đổ chuông...", call_title: Swift.String = "Gọi miễn phí", call_weak_signal: Swift.String = "Sóng yếu")
 }
 @objc public enum VBotEndCallReason : Swift.Int {
   case timeOut = -1001

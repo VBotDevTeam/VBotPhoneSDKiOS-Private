@@ -2275,6 +2275,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "AVFAudio",
+        "printedName": "AVFAudio",
+        "declKind": "Import",
+        "moduleName": "VBotPhoneSDK"
+      },
+      {
         "kind": "TypeDecl",
         "name": "SocketMethod",
         "printedName": "SocketMethod",
@@ -5159,7 +5166,7 @@
           {
             "kind": "Function",
             "name": "callStateChanged",
-            "printedName": "callStateChanged(call:)",
+            "printedName": "callStateChanged(state:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5168,19 +5175,19 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "VBotCall",
-                "printedName": "VBotPhoneSDK.VBotCall",
-                "usr": "c:objc(cs)VBotCall"
+                "name": "VBotCallState",
+                "printedName": "VBotPhoneSDK.VBotCallState",
+                "usr": "c:@E@VBotCallState"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@VBotPhoneSDK@objc(pl)VBotPhoneDelegate(im)callStateChangedWithCall:",
-            "mangledName": "$s12VBotPhoneSDK0aB8DelegateP16callStateChanged0E0ySo0A4CallC_tF",
+            "usr": "c:@M@VBotPhoneSDK@objc(pl)VBotPhoneDelegate(im)callStateChangedWithState:",
+            "mangledName": "$s12VBotPhoneSDK0aB8DelegateP16callStateChanged5stateySo0a4CallF0V_tF",
             "moduleName": "VBotPhoneSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : VBotPhoneSDK.VBotPhoneDelegate>",
             "sugared_genericSig": "<Self where Self : VBotPhoneSDK.VBotPhoneDelegate>",
             "protocolReq": true,
-            "objc_name": "callStateChangedWithCall:",
+            "objc_name": "callStateChangedWithState:",
             "declAttributes": [
               "Optional",
               "ObjC",
@@ -8754,7 +8761,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(call_btn_messsage:call_btn_mute:call_btn_speaker:call_calling:call_connecting:call_end:call_failed_api:call_failed_no_connection:call_lost_connection:call_permission_btn_allow:call_permission_btn_deny:call_permission_btn_setting:call_permission_btn_skip:call_permission_microphone_content:call_permission_microphone_demied_content:call_permission_microphone_demied_title:call_permission_microphone_title:call_refused:call_ringing:call_title:call_weak_signal:)",
+            "printedName": "init(call_btn_messsage:call_btn_mute:call_btn_speaker:call_calling:call_connecting:call_end:call_failed_api:call_failed_no_connection:call_lost_connection:call_permission_btn_allow:call_permission_btn_deny:call_permission_btn_setting:call_permission_btn_skip:call_permission_microphone_content:call_permission_microphone_demied_content:call_permission_microphone_demied_title:call_permission_microphone_title:call_refused:call_busy:call_temporarily_unavailable:call_ringing:call_title:call_weak_signal:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8908,11 +8915,25 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV17call_btn_messsage0f1_G5_mute0f1_G8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_N14_no_connection0f6_lost_Q00f12_permission_G6_allow0f1_s1_G5_deny0f1_s1_G8_setting0f1_s1_G5_skip0f1_S19_microphone_content0f1_s1_x8_demied_Y00f1_s1_x1_Z6_title0f1_s1_X6_title0F8_refused0F8_ringing0F6_title0F12_weak_signalACSS_S20Stcfc",
-            "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV17call_btn_messsage0f1_G5_mute0f1_G8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_N14_no_connection0f6_lost_Q00f12_permission_G6_allow0f1_s1_G5_deny0f1_s1_G8_setting0f1_s1_G5_skip0f1_S19_microphone_content0f1_s1_x8_demied_Y00f1_s1_x1_Z6_title0f1_s1_X6_title0F8_refused0F8_ringing0F6_title0F12_weak_signalACSS_S20Stcfc",
+            "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV17call_btn_messsage0f1_G5_mute0f1_G8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_N14_no_connection0f6_lost_Q00f12_permission_G6_allow0f1_s1_G5_deny0f1_s1_G8_setting0f1_s1_G5_skip0f1_S19_microphone_content0f1_s1_x8_demied_Y00f1_s1_x1_Z6_title0f1_s1_X6_title0F8_refused0F5_busy0F24_temporarily_unavailable0F8_ringing0F6_title0F12_weak_signalACSS_S22Stcfc",
+            "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV17call_btn_messsage0f1_G5_mute0f1_G8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_N14_no_connection0f6_lost_Q00f12_permission_G6_allow0f1_s1_G5_deny0f1_s1_G8_setting0f1_s1_G5_skip0f1_S19_microphone_content0f1_s1_x8_demied_Y00f1_s1_x1_Z6_title0f1_s1_X6_title0F8_refused0F5_busy0F24_temporarily_unavailable0F8_ringing0F6_title0F12_weak_signalACSS_S22Stcfc",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
               "AccessControl"
@@ -12149,9 +12170,9 @@
         "printedName": "VBotCallState",
         "children": [
           {
-            "kind": "Function",
-            "name": "stringValue",
-            "printedName": "stringValue()",
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12160,12 +12181,32 @@
                 "usr": "s:SS"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:So13VBotCallStateV0A8PhoneSDKE11stringValueSSyF",
-            "mangledName": "$sSo13VBotCallStateV0A8PhoneSDKE11stringValueSSyF",
+            "declKind": "Var",
+            "usr": "s:So13VBotCallStateV0A8PhoneSDKE11descriptionSSvp",
+            "mangledName": "$sSo13VBotCallStateV0A8PhoneSDKE11descriptionSSvp",
             "moduleName": "VBotPhoneSDK",
             "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So13VBotCallStateV0A8PhoneSDKE11descriptionSSvg",
+                "mangledName": "$sSo13VBotCallStateV0A8PhoneSDKE11descriptionSSvg",
+                "moduleName": "VBotPhoneSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -12211,6 +12252,125 @@
                     "name": "Int",
                     "printedName": "Swift.Int",
                     "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RecordPermission",
+        "printedName": "RecordPermission",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So30AVAudioSessionRecordPermissionV12VBotPhoneSDKE11descriptionSSvp",
+            "mangledName": "$sSo30AVAudioSessionRecordPermissionV12VBotPhoneSDKE11descriptionSSvp",
+            "moduleName": "VBotPhoneSDK",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So30AVAudioSessionRecordPermissionV12VBotPhoneSDKE11descriptionSSvg",
+                "mangledName": "$sSo30AVAudioSessionRecordPermissionV12VBotPhoneSDKE11descriptionSSvg",
+                "moduleName": "VBotPhoneSDK",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@E@AVAudioSessionRecordPermission",
+        "moduleName": "AVFAudio",
+        "objc_name": "AVAudioSessionRecordPermission",
+        "declAttributes": [
+          "SynthesizedProtocol",
+          "ObjC",
+          "SynthesizedProtocol",
+          "Sendable",
+          "Dynamic"
+        ],
+        "isFromExtension": true,
+        "enumRawTypeName": "UInt",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
                   }
                 ]
               }
@@ -13040,7 +13200,7 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26800,
+      "offset": 26774,
       "length": 1,
       "value": "0"
     },
@@ -13159,21 +13319,21 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
       "kind": "StringLiteral",
-      "offset": 184,
+      "offset": 200,
       "length": 17,
       "value": "\"vbot.call.ready\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
       "kind": "StringLiteral",
-      "offset": 227,
+      "offset": 243,
       "length": 19,
       "value": "\"vbot.call.unready\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
       "kind": "StringLiteral",
-      "offset": 270,
+      "offset": 286,
       "length": 18,
       "value": "\"vbot.call.hangup\""
     },
@@ -13278,56 +13438,56 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1217,
+      "offset": 1216,
       "length": 13,
       "value": "\"destroy-sip\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1405,
+      "offset": 1404,
       "length": 21,
       "value": "\"received-apns-token\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1609,
+      "offset": 1608,
       "length": 30,
       "value": "\"remote-logging-state-changed\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1685,
       "length": 37,
       "value": "\"AppDelegateIncomingCallNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1784,
+      "offset": 1783,
       "length": 55,
       "value": "\"AppDelegateIncomingBackgroundCallAcceptedNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1888,
+      "offset": 1887,
       "length": 43,
       "value": "\"AppDelegateStartConnectABCallNotification\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 1979,
+      "offset": 1978,
       "length": 13,
       "value": "\"PhoneNumber\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Notifications.swift",
       "kind": "StringLiteral",
-      "offset": 2031,
+      "offset": 2030,
       "length": 33,
       "value": "\"ReachabilityChangedNotification\""
     },
@@ -13446,7 +13606,7 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotCallKitDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 20135,
+      "offset": 20081,
       "length": 5,
       "value": "10000"
     },
@@ -13831,112 +13991,112 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 2013,
+      "offset": 2019,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2078,
+      "offset": 2084,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2181,
+      "offset": 2187,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2209,
+      "offset": 2215,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2245,
+      "offset": 2251,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2279,
+      "offset": 2285,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2604,
+      "offset": 2610,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2646,
+      "offset": 2652,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 2682,
+      "offset": 2688,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "Array",
-      "offset": 2916,
+      "offset": 2922,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 3004,
+      "offset": 3010,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 3049,
+      "offset": 3055,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 3095,
+      "offset": 3101,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 22725,
+      "offset": 23106,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 23599,
+      "offset": 23980,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 38269,
+      "offset": 38701,
       "length": 2,
       "value": "30"
     },
@@ -14230,21 +14390,35 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3732,
+      "offset": 3725,
+      "length": 12,
+      "value": "\"Máy bận\""
+    },
+    {
+      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3782,
+      "length": 29,
+      "value": "\"Không liên lạc được\""
+    },
+    {
+      "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
+      "kind": "StringLiteral",
+      "offset": 3844,
       "length": 24,
       "value": "\"Đang đổ chuông...\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3787,
+      "offset": 3899,
       "length": 19,
       "value": "\"Gọi miễn phí\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3843,
+      "offset": 3955,
       "length": 13,
       "value": "\"Sóng yếu\""
     },
@@ -14377,91 +14551,91 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2654,
+      "offset": 2665,
       "length": 5,
       "value": "-1001"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2731,
+      "offset": 2742,
       "length": 4,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2813,
+      "offset": 2824,
       "length": 4,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2893,
+      "offset": 2904,
       "length": 4,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2979,
+      "offset": 2990,
       "length": 4,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3063,
+      "offset": 3074,
       "length": 4,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3157,
+      "offset": 3168,
       "length": 4,
       "value": "1006"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3240,
+      "offset": 3251,
       "length": 4,
       "value": "1007"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3310,
+      "offset": 3321,
       "length": 4,
       "value": "1008"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3394,
+      "offset": 3405,
       "length": 4,
       "value": "1009"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3467,
+      "offset": 3478,
       "length": 4,
       "value": "1010"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3546,
+      "offset": 3557,
       "length": 4,
       "value": "1011"
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotError.swift",
       "kind": "IntegerLiteral",
-      "offset": 3612,
+      "offset": 3623,
       "length": 4,
       "value": "1999"
     },
@@ -14489,7 +14663,7 @@
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotVoIPPushHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 7420,
+      "offset": 7519,
       "length": 1,
       "value": "0"
     },
@@ -14498,7 +14672,7 @@
       "kind": "StringLiteral",
       "offset": 151,
       "length": 7,
-      "value": "\"1.0.8\""
+      "value": "\"1.0.9\""
     },
     {
       "filePath": "\/Users\/namhoang\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Keys.swift",
