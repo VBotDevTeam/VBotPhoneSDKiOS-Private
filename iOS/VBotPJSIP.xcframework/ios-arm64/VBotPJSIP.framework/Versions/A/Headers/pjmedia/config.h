@@ -1,4 +1,3 @@
-/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -45,6 +44,43 @@
 #endif
 
 /**
+ * Initial memory block for media endpoint.
+ */
+#ifndef PJMEDIA_POOL_LEN_ENDPT
+#   define PJMEDIA_POOL_LEN_ENDPT               8000
+#endif
+
+/**
+ * Memory increment for media endpoint.
+ */
+#ifndef PJMEDIA_POOL_INC_ENDPT
+#   define PJMEDIA_POOL_INC_ENDPT               4000
+#endif
+
+/**
+ * Initial memory block for event manager.
+ */
+#ifndef PJMEDIA_POOL_LEN_EVTMGR
+#   define PJMEDIA_POOL_LEN_EVTMGR              500
+#endif
+
+/**
+ * Memory increment for event manager.
+ */
+#ifndef PJMEDIA_POOL_INC_EVTMGR
+#   define PJMEDIA_POOL_INC_EVTMGR              500
+#endif
+
+/**
+ * Maximum number of events that can be handled by event manager.
+ *
+ * Default: 16
+ */
+#ifndef PJMEDIA_EVENT_MAX_EVENTS
+#   define PJMEDIA_EVENT_MAX_EVENTS             16
+#endif
+
+/**
  * Specify whether we prefer to use audio switch board rather than 
  * conference bridge.
  *
@@ -81,7 +117,7 @@
  * Default: 1 (enabled)
  */
 #ifndef PJMEDIA_CONF_USE_AGC
-#   define PJMEDIA_CONF_USE_AGC    	    1
+#   define PJMEDIA_CONF_USE_AGC             1
 #endif
 
 
@@ -117,7 +153,7 @@
  * info.
  */
 #ifndef PJMEDIA_HAS_LEGACY_SOUND_API
-#   define PJMEDIA_HAS_LEGACY_SOUND_API	    1
+#   define PJMEDIA_HAS_LEGACY_SOUND_API     1
 #endif
 
 /**
@@ -134,9 +170,9 @@
  */
 #ifndef PJMEDIA_SND_DEFAULT_PLAY_LATENCY
 #   if defined(PJ_WIN32_WINCE) && PJ_WIN32_WINCE!=0
-#	define PJMEDIA_SND_DEFAULT_PLAY_LATENCY	    160
+#       define PJMEDIA_SND_DEFAULT_PLAY_LATENCY     160
 #   else
-#	define PJMEDIA_SND_DEFAULT_PLAY_LATENCY	    140
+#       define PJMEDIA_SND_DEFAULT_PLAY_LATENCY     140
 #   endif
 #endif
 
@@ -153,7 +189,7 @@
  * This type of implementation may be used as it requires the least
  * processing power.
  */
-#define PJMEDIA_WSOLA_IMP_NULL		    0
+#define PJMEDIA_WSOLA_IMP_NULL              0
 
 /**
  * This denotes implementation of WSOLA using fixed or floating point WSOLA
@@ -161,14 +197,14 @@
  * at the expense of one frame delay and intensive processing power 
  * requirement.
  */
-#define PJMEDIA_WSOLA_IMP_WSOLA		    1
+#define PJMEDIA_WSOLA_IMP_WSOLA             1
 
 /**
  * This denotes implementation of WSOLA algorithm with faster waveform 
  * similarity calculation. This implementation provides fair quality of 
  * the result with the main advantage of low processing power requirement.
  */
-#define PJMEDIA_WSOLA_IMP_WSOLA_LITE	    2
+#define PJMEDIA_WSOLA_IMP_WSOLA_LITE        2
 
 /**
  * Specify type of Waveform based Similarity Overlap and Add (WSOLA) backend
@@ -179,7 +215,7 @@
  * Default is PJMEDIA_WSOLA_IMP_WSOLA
  */
 #ifndef PJMEDIA_WSOLA_IMP
-#   define PJMEDIA_WSOLA_IMP		    PJMEDIA_WSOLA_IMP_WSOLA
+#   define PJMEDIA_WSOLA_IMP                PJMEDIA_WSOLA_IMP_WSOLA
 #endif
 
 
@@ -208,7 +244,7 @@
  * Default: 5
  */
 #ifndef PJMEDIA_WSOLA_TEMPLATE_LENGTH_MSEC
-#   define PJMEDIA_WSOLA_TEMPLATE_LENGTH_MSEC	5
+#   define PJMEDIA_WSOLA_TEMPLATE_LENGTH_MSEC   5
 #endif
 
 
@@ -222,7 +258,7 @@
  * Default: 5
  */
 #ifndef PJMEDIA_WSOLA_DELAY_MSEC
-#   define PJMEDIA_WSOLA_DELAY_MSEC	    5
+#   define PJMEDIA_WSOLA_DELAY_MSEC         5
 #endif
 
 
@@ -237,7 +273,7 @@
  * Default: 0
  */
 #ifndef PJMEDIA_WSOLA_PLC_NO_FADING
-#   define PJMEDIA_WSOLA_PLC_NO_FADING	    0
+#   define PJMEDIA_WSOLA_PLC_NO_FADING      0
 #endif
 
 
@@ -271,7 +307,7 @@
  * Default: (PJMEDIA_SND_DEFAULT_PLAY_LATENCY+20)/20
  */
 #ifndef PJMEDIA_SOUND_BUFFER_COUNT
-#   define PJMEDIA_SOUND_BUFFER_COUNT	    ((PJMEDIA_SND_DEFAULT_PLAY_LATENCY+20)/20)
+#   define PJMEDIA_SOUND_BUFFER_COUNT       ((PJMEDIA_SND_DEFAULT_PLAY_LATENCY+20)/20)
 #endif
 
 
@@ -282,7 +318,7 @@
  * If this option is disabled, a smaller but slower algorithm will be used.
  */
 #ifndef PJMEDIA_HAS_ALAW_ULAW_TABLE
-#   define PJMEDIA_HAS_ALAW_ULAW_TABLE	    1
+#   define PJMEDIA_HAS_ALAW_ULAW_TABLE      1
 #endif
 
 
@@ -290,7 +326,7 @@
  * Unless specified otherwise, G711 codec is included by default.
  */
 #ifndef PJMEDIA_HAS_G711_CODEC
-#   define PJMEDIA_HAS_G711_CODEC	    1
+#   define PJMEDIA_HAS_G711_CODEC           1
 #endif
 
 
@@ -301,10 +337,10 @@
  */
 #if defined(PJMEDIA_HAS_SMALL_FILTER)
 #   ifdef _MSC_VER
-#	pragma message("Warning: PJMEDIA_HAS_SMALL_FILTER macro is deprecated"\
-		       " and has no effect")
+#       pragma message("Warning: PJMEDIA_HAS_SMALL_FILTER macro is deprecated"\
+                       " and has no effect")
 #   else
-#	warning "PJMEDIA_HAS_SMALL_FILTER macro is deprecated and has no effect"
+#       warning "PJMEDIA_HAS_SMALL_FILTER macro is deprecated and has no effect"
 #   endif
 #endif
 
@@ -316,10 +352,10 @@
  */
 #if defined(PJMEDIA_HAS_LARGE_FILTER)
 #   ifdef _MSC_VER
-#	pragma message("Warning: PJMEDIA_HAS_LARGE_FILTER macro is deprecated"\
-		       " and has no effect")
+#       pragma message("Warning: PJMEDIA_HAS_LARGE_FILTER macro is deprecated"\
+                       " and has no effect")
 #   else
-#	warning "PJMEDIA_HAS_LARGE_FILTER macro is deprecated"
+#       warning "PJMEDIA_HAS_LARGE_FILTER macro is deprecated"
 #   endif
 #endif
 
@@ -342,15 +378,17 @@
  * Sample rate conversion backends.
  * Select one of these backends in PJMEDIA_RESAMPLE_IMP.
  */
-#define PJMEDIA_RESAMPLE_NONE		    1	/**< No resampling.	    */
-#define PJMEDIA_RESAMPLE_LIBRESAMPLE	    2	/**< Sample rate conversion 
-						     using libresample.  */
-#define PJMEDIA_RESAMPLE_SPEEX		    3	/**< Sample rate conversion 
-						     using Speex. */
-#define PJMEDIA_RESAMPLE_LIBSAMPLERATE	    4	/**< Sample rate conversion 
-						     using libsamplerate 
-						     (a.k.a Secret Rabbit Code)
-						 */
+/** No resampling */
+#define PJMEDIA_RESAMPLE_NONE               1
+
+/** Sample rate conversion using libresample */
+#define PJMEDIA_RESAMPLE_LIBRESAMPLE        2
+
+/** Sample rate conversion using Speex */
+#define PJMEDIA_RESAMPLE_SPEEX              3
+
+/** Sample rate conversion using libsamplerate (a.k.a Secret Rabbit Code) */
+#define PJMEDIA_RESAMPLE_LIBSAMPLERATE      4
 
 /**
  * Select which resample implementation to use. Currently pjmedia supports:
@@ -365,7 +403,7 @@
  * Default is PJMEDIA_RESAMPLE_LIBRESAMPLE
  */
 #ifndef PJMEDIA_RESAMPLE_IMP
-#   define PJMEDIA_RESAMPLE_IMP		    PJMEDIA_RESAMPLE_LIBRESAMPLE
+#   define PJMEDIA_RESAMPLE_IMP             PJMEDIA_RESAMPLE_LIBRESAMPLE
 #endif
 
 
@@ -380,7 +418,7 @@
  * Default file player/writer buffer size.
  */
 #ifndef PJMEDIA_FILE_PORT_BUFSIZE
-#   define PJMEDIA_FILE_PORT_BUFSIZE		4000
+#   define PJMEDIA_FILE_PORT_BUFSIZE            4000
 #endif
 
 
@@ -390,44 +428,44 @@
  * for outgoing packets.
  */
 #ifndef PJMEDIA_MAX_FRAME_DURATION_MS   
-#   define PJMEDIA_MAX_FRAME_DURATION_MS   	200
+#   define PJMEDIA_MAX_FRAME_DURATION_MS        200
 #endif
 
 
 /**
  * Max packet size for transmitting direction.
  */
-#ifndef PJMEDIA_MAX_MTU			
-#  define PJMEDIA_MAX_MTU			1500
+#ifndef PJMEDIA_MAX_MTU                 
+#  define PJMEDIA_MAX_MTU                       1500
 #endif
 
 
 /**
  * Max packet size for receiving direction.
  */
-#ifndef PJMEDIA_MAX_MRU			
-#  define PJMEDIA_MAX_MRU			2000
+#ifndef PJMEDIA_MAX_MRU                 
+#  define PJMEDIA_MAX_MRU                       2000
 #endif
 
 
 /**
  * DTMF/telephone-event duration, in timestamp. To specify the duration in
  * milliseconds, use the setting PJMEDIA_DTMF_DURATION_MSEC instead.
+ *
+ * Note that for a clockrate of 8 KHz, a dtmf duration of 1600 timestamp
+ * units (the default value of PJMEDIA_DTMF_DURATION) is equivalent to 200 ms. 
  */
-#ifndef PJMEDIA_DTMF_DURATION		
-#  define PJMEDIA_DTMF_DURATION			1600	/* in timestamp */
+#ifndef PJMEDIA_DTMF_DURATION           
+#  define PJMEDIA_DTMF_DURATION                 1600    /* in timestamp */
 #endif
 
 
 /**
  * DTMF/telephone-event duration, in milliseconds. If the value is greater
  * than zero, than this setting will be used instead of PJMEDIA_DTMF_DURATION.
- *
- * Note that for a clockrate of 8 KHz, a dtmf duration of 1600 timestamp
- * units (the default value of PJMEDIA_DTMF_DURATION) is equivalent to 200 ms. 
  */
-#ifndef PJMEDIA_DTMF_DURATION_MSEC		
-#  define PJMEDIA_DTMF_DURATION_MSEC		0
+#ifndef PJMEDIA_DTMF_DURATION_MSEC              
+#  define PJMEDIA_DTMF_DURATION_MSEC            200
 #endif
 
 
@@ -436,8 +474,8 @@
  * remote address required to make the stream switch transmission
  * to the source address.
  */
-#ifndef PJMEDIA_RTP_NAT_PROBATION_CNT	
-#  define PJMEDIA_RTP_NAT_PROBATION_CNT		10
+#ifndef PJMEDIA_RTP_NAT_PROBATION_CNT   
+#  define PJMEDIA_RTP_NAT_PROBATION_CNT         10
 #endif
 
 
@@ -447,7 +485,7 @@
  * to the source address.
  */
 #ifndef PJMEDIA_RTCP_NAT_PROBATION_CNT
-#  define PJMEDIA_RTCP_NAT_PROBATION_CNT	3
+#  define PJMEDIA_RTCP_NAT_PROBATION_CNT        3
 #endif
 
 
@@ -460,7 +498,7 @@
  * Default: 1 (yes)
  */
 #ifndef PJMEDIA_ADVERTISE_RTCP
-#   define PJMEDIA_ADVERTISE_RTCP		1
+#   define PJMEDIA_ADVERTISE_RTCP               1
 #endif
 
 
@@ -468,7 +506,7 @@
  * Interval to send regular RTCP packets, in msec.
  */
 #ifndef PJMEDIA_RTCP_INTERVAL
-#   define PJMEDIA_RTCP_INTERVAL		5000	/* msec*/
+#   define PJMEDIA_RTCP_INTERVAL                5000    /* msec*/
 #endif
 
 
@@ -477,7 +515,7 @@
  * such as Picture Loss Indication, in msec.
  */
 #ifndef PJMEDIA_RTCP_FB_INTERVAL
-#   define PJMEDIA_RTCP_FB_INTERVAL		50	/* msec*/
+#   define PJMEDIA_RTCP_FB_INTERVAL             50      /* msec*/
 #endif
 
 
@@ -491,7 +529,7 @@
  * Default: 25.
  */
 #ifndef PJMEDIA_RTCP_IGNORE_FIRST_PACKETS
-#   define  PJMEDIA_RTCP_IGNORE_FIRST_PACKETS	25
+#   define  PJMEDIA_RTCP_IGNORE_FIRST_PACKETS   25
 #endif
 
 
@@ -504,7 +542,7 @@
  * Default: 0 (no).
  */
 #ifndef PJMEDIA_RTCP_STAT_HAS_RAW_JITTER
-#   define PJMEDIA_RTCP_STAT_HAS_RAW_JITTER	0
+#   define PJMEDIA_RTCP_STAT_HAS_RAW_JITTER     0
 #endif
 
 /**
@@ -517,7 +555,7 @@
  * Default: 3.
  */
 #ifndef PJMEDIA_RTCP_NORMALIZE_FACTOR
-#   define PJMEDIA_RTCP_NORMALIZE_FACTOR	3
+#   define PJMEDIA_RTCP_NORMALIZE_FACTOR        3
 #endif
 
 
@@ -532,7 +570,7 @@
  * Default: 0 (no).
  */
 #ifndef PJMEDIA_RTCP_STAT_HAS_IPDV
-#   define PJMEDIA_RTCP_STAT_HAS_IPDV		0
+#   define PJMEDIA_RTCP_STAT_HAS_IPDV           0
 #endif
 
 
@@ -546,7 +584,7 @@
  * Default: 0 (no).
  */
 #ifndef PJMEDIA_HAS_RTCP_XR
-#   define PJMEDIA_HAS_RTCP_XR			0
+#   define PJMEDIA_HAS_RTCP_XR                  0
 #endif
 
 
@@ -558,7 +596,7 @@
  * Default: 0 (disabled)
  */
 #ifndef PJMEDIA_STREAM_ENABLE_XR
-#   define PJMEDIA_STREAM_ENABLE_XR		0
+#   define PJMEDIA_STREAM_ENABLE_XR             0
 #endif
 
 
@@ -570,7 +608,7 @@
  * Default: 64 bytes.
  */
 #ifndef PJMEDIA_RTCP_RX_SDES_BUF_LEN
-#   define PJMEDIA_RTCP_RX_SDES_BUF_LEN		64
+#   define PJMEDIA_RTCP_RX_SDES_BUF_LEN         64
 #endif
 
 
@@ -580,7 +618,7 @@
  * Default: 16
  */
 #ifndef PJMEDIA_RTCP_FB_MAX_CAP
-#   define PJMEDIA_RTCP_FB_MAX_CAP		16
+#   define PJMEDIA_RTCP_FB_MAX_CAP              16
 #endif
 
 
@@ -599,11 +637,11 @@
  *                    filling up the jitter buffer on the remote end).
  */
 #ifndef PJMEDIA_STREAM_VAD_SUSPEND_MSEC
-#   define PJMEDIA_STREAM_VAD_SUSPEND_MSEC	600
+#   define PJMEDIA_STREAM_VAD_SUSPEND_MSEC      600
 #endif
 
 /**
- * Perform RTP payload type checking in the stream. Normally the peer
+ * Perform RTP payload type checking in the audio stream. Normally the peer
  * MUST send RTP with payload type as we specified in our SDP. Certain
  * agents may not be able to follow this hence the only way to have
  * communication is to disable this check.
@@ -611,7 +649,7 @@
  * Default: 1
  */
 #ifndef PJMEDIA_STREAM_CHECK_RTP_PT
-#   define PJMEDIA_STREAM_CHECK_RTP_PT		1
+#   define PJMEDIA_STREAM_CHECK_RTP_PT          1
 #endif
 
 /**
@@ -619,7 +657,7 @@
  * in RTP payload, so the total payload length will not exceed the MTU.
  */
 #ifndef PJMEDIA_STREAM_RESV_PAYLOAD_LEN
-#   define PJMEDIA_STREAM_RESV_PAYLOAD_LEN	20
+#   define PJMEDIA_STREAM_RESV_PAYLOAD_LEN      20
 #endif
 
 
@@ -629,17 +667,16 @@
  * and to prevent server from disconnecting the call because no 
  * RTP packet is received.
  *
- * This only applies to codecs that use PJMEDIA's VAD (pretty much
- * everything including iLBC, except Speex, which has its own DTX 
- * mechanism).
+ * This only applies to codecs that use PJMEDIA's VAD such as G711, GSM,
+ * iLBC, G722, G722.1, L16. Some other codecs, such as Speex, Opus, G729,
+ * have their own VAD/DTX mechanism will not be affected by this setting.
  *
  * Use (-1) to disable this feature.
  *
  * Default: 5000 ms
- *
  */
 #ifndef PJMEDIA_CODEC_MAX_SILENCE_PERIOD
-#   define PJMEDIA_CODEC_MAX_SILENCE_PERIOD	5000
+#   define PJMEDIA_CODEC_MAX_SILENCE_PERIOD     5000
 #endif
 
 
@@ -649,7 +686,7 @@
  * has the range from zero to 0xFFFF.
  */
 #ifndef PJMEDIA_SILENCE_DET_THRESHOLD
-#   define PJMEDIA_SILENCE_DET_THRESHOLD	4
+#   define PJMEDIA_SILENCE_DET_THRESHOLD        4
 #endif
 
 
@@ -663,7 +700,7 @@
  * Default: 0x10000 (disabled)
  */
 #ifndef PJMEDIA_SILENCE_DET_MAX_THRESHOLD
-#   define PJMEDIA_SILENCE_DET_MAX_THRESHOLD	0x10000
+#   define PJMEDIA_SILENCE_DET_MAX_THRESHOLD    0x10000
 #endif
 
 
@@ -672,7 +709,7 @@
  * By default is enabled.
  */
 #ifndef PJMEDIA_HAS_SPEEX_AEC
-#   define PJMEDIA_HAS_SPEEX_AEC		1
+#   define PJMEDIA_HAS_SPEEX_AEC                1
 #endif
 
 
@@ -683,7 +720,7 @@
  * Default: 1 (yes)
  */
 #ifndef PJMEDIA_SPEEX_AEC_USE_AGC
-#   define PJMEDIA_SPEEX_AEC_USE_AGC		1
+#   define PJMEDIA_SPEEX_AEC_USE_AGC            1
 #endif
 
 
@@ -693,7 +730,7 @@
  * Default: 1 (yes)
  */
 #ifndef PJMEDIA_SPEEX_AEC_USE_DENOISE
-#   define PJMEDIA_SPEEX_AEC_USE_DENOISE	1
+#   define PJMEDIA_SPEEX_AEC_USE_DENOISE        1
 #endif
 
 
@@ -702,7 +739,7 @@
  * By default is disabled.
  */
 #ifndef PJMEDIA_HAS_WEBRTC_AEC
-#   define PJMEDIA_HAS_WEBRTC_AEC		0
+#   define PJMEDIA_HAS_WEBRTC_AEC               0
 #endif
 
 /**
@@ -711,7 +748,7 @@
  * Default: 0 (no)
  */
 #ifndef PJMEDIA_WEBRTC_AEC_USE_MOBILE
-#   define PJMEDIA_WEBRTC_AEC_USE_MOBILE 	0
+#   define PJMEDIA_WEBRTC_AEC_USE_MOBILE        0
 #endif
 
 
@@ -721,7 +758,7 @@
  * Default: 16
  */
 #ifndef PJMEDIA_CODEC_MAX_FMTP_CNT
-#   define PJMEDIA_CODEC_MAX_FMTP_CNT		16
+#   define PJMEDIA_CODEC_MAX_FMTP_CNT           16
 #endif
 
 
@@ -745,7 +782,7 @@
  * Default is 1 (to maintain backward compatibility)
  */
 #ifndef PJMEDIA_SDP_NEG_PREFER_REMOTE_CODEC_ORDER
-#   define PJMEDIA_SDP_NEG_PREFER_REMOTE_CODEC_ORDER	1
+#   define PJMEDIA_SDP_NEG_PREFER_REMOTE_CODEC_ORDER    1
 #endif
 
 /**
@@ -758,7 +795,7 @@
  * Default is 0 (to maintain backward compatibility)
  */
 #ifndef PJMEDIA_SDP_NEG_ANSWER_MULTIPLE_CODECS
-#   define PJMEDIA_SDP_NEG_ANSWER_MULTIPLE_CODECS	0
+#   define PJMEDIA_SDP_NEG_ANSWER_MULTIPLE_CODECS       0
 #endif
 
 
@@ -767,7 +804,7 @@
  * negotiation callbacks.
  */
 #ifndef PJMEDIA_SDP_NEG_MAX_CUSTOM_FMT_NEG_CB
-#   define PJMEDIA_SDP_NEG_MAX_CUSTOM_FMT_NEG_CB	8
+#   define PJMEDIA_SDP_NEG_MAX_CUSTOM_FMT_NEG_CB        8
 #endif
 
 
@@ -779,7 +816,23 @@
  * Default is 1 (yes)
  */
 #ifndef PJMEDIA_SDP_NEG_ANSWER_SYMMETRIC_PT
-#   define PJMEDIA_SDP_NEG_ANSWER_SYMMETRIC_PT		1
+#   define PJMEDIA_SDP_NEG_ANSWER_SYMMETRIC_PT          1
+#endif
+
+/**
+ * The SDP negotiator will maintain that the mapping from a particular
+ * dynamic payload type number to a particular codec does not change,
+ * as mandated by RFC 3264 section 8.3.2.
+ * By default, the mapping is maintained for local endpoint only, i.e.
+ * it only takes into account local offer and local answer.
+ * Enable this if application wishes to maintain PT->codec mapping for
+ * remote endpoint as well, i.e. to update the mapping based on remote
+ * offer and answer too.
+ *
+ * Default is 0 (no)
+ */
+#ifndef PJMEDIA_SDP_NEG_MAINTAIN_REMOTE_PT_MAP
+#   define PJMEDIA_SDP_NEG_MAINTAIN_REMOTE_PT_MAP       0
 #endif
 
 
@@ -791,9 +844,18 @@
  * compatibility and performance this is set to 0.
  *
  * Default is 0 (No)
+ * 
+ * This macro has been deprecated in version 2.14.
+ * See https://github.com/pjsip/pjproject/pull/3322 for more info.
  */
-#ifndef PJMEDIA_SDP_NEG_COMPARE_BEFORE_INC_VERSION
-#   define PJMEDIA_SDP_NEG_COMPARE_BEFORE_INC_VERSION	0
+#ifdef PJMEDIA_SDP_NEG_COMPARE_BEFORE_INC_VERSION
+#   ifdef _MSC_VER
+#       pragma message("Warning: PJMEDIA_SDP_NEG_COMPARE_BEFORE_INC_VERSION macro is"\
+                       " deprecated and has no effect")
+#   else
+#       warning "PJMEDIA_SDP_NEG_COMPARE_BEFORE_INC_VERSION macro is deprecated"\
+                " and has no effect"
+#   endif
 #endif
 
 
@@ -802,7 +864,7 @@
  * Default is equal to PJMEDIA_ADVERTISE_RTCP setting.
  */
 #ifndef PJMEDIA_HAS_RTCP_IN_SDP
-#   define PJMEDIA_HAS_RTCP_IN_SDP		(PJMEDIA_ADVERTISE_RTCP)
+#   define PJMEDIA_HAS_RTCP_IN_SDP              (PJMEDIA_ADVERTISE_RTCP)
 #endif
 
 
@@ -824,7 +886,7 @@
  * Default: 1 (yes)
  */
 #ifndef PJMEDIA_ADD_BANDWIDTH_TIAS_IN_SDP
-#   define PJMEDIA_ADD_BANDWIDTH_TIAS_IN_SDP	1
+#   define PJMEDIA_ADD_BANDWIDTH_TIAS_IN_SDP    1
 #endif
 
 
@@ -848,7 +910,7 @@
  * Default: 1 (yes)
  */
 #ifndef PJMEDIA_ADD_RTPMAP_FOR_STATIC_PT
-#   define PJMEDIA_ADD_RTPMAP_FOR_STATIC_PT	1
+#   define PJMEDIA_ADD_RTPMAP_FOR_STATIC_PT     1
 #endif
 
 
@@ -859,7 +921,21 @@
  * supported.
  */
 #ifndef PJMEDIA_RTP_PT_TELEPHONE_EVENTS
-#   define PJMEDIA_RTP_PT_TELEPHONE_EVENTS	    120
+#   define PJMEDIA_RTP_PT_TELEPHONE_EVENTS          120
+#endif
+
+
+/**
+ * This macro declares whether PJMEDIA should generate multiple
+ * telephone-event formats in SDP offer, i.e: one for each audio codec
+ * clock rate (see also ticket #2088). If this macro is set to zero, only
+ * one telephone event format will be generated and it uses clock rate 8kHz
+ * (old behavior before ticket #2088).
+ *
+ * Default: 1 (yes)
+ */
+#ifndef PJMEDIA_TELEPHONE_EVENT_ALL_CLOCKRATES
+#   define PJMEDIA_TELEPHONE_EVENT_ALL_CLOCKRATES   1
 #endif
 
 
@@ -867,7 +943,7 @@
  * Maximum tones/digits that can be enqueued in the tone generator.
  */
 #ifndef PJMEDIA_TONEGEN_MAX_DIGITS
-#   define PJMEDIA_TONEGEN_MAX_DIGITS		    32
+#   define PJMEDIA_TONEGEN_MAX_DIGITS               32
 #endif
 
 
@@ -880,14 +956,14 @@
  * but it's the slowest and requires floating point support and
  * linking with the math library.
  */
-#define PJMEDIA_TONEGEN_SINE			    1
+#define PJMEDIA_TONEGEN_SINE                        1
 
 /**
  * Floating point approximation of sine(). This has relatively good
  * precision and much faster than plain sine(), but it requires floating-
  * point support and linking with the math library.
  */
-#define PJMEDIA_TONEGEN_FLOATING_POINT		    2
+#define PJMEDIA_TONEGEN_FLOATING_POINT              2
 
 /**
  * Fixed point using sine signal generated by Cordic algorithm. This
@@ -896,20 +972,20 @@
  * setting, and may be suitable for platforms that lack floating-point
  * support.
  */
-#define PJMEDIA_TONEGEN_FIXED_POINT_CORDIC	    3
+#define PJMEDIA_TONEGEN_FIXED_POINT_CORDIC          3
 
 /**
  * Fast fixed point using some approximation to generate sine waves.
  * The tone generated by this algorithm is not very precise, however
  * the algorithm is very fast.
  */
-#define PJMEDIA_TONEGEN_FAST_FIXED_POINT	    4
+#define PJMEDIA_TONEGEN_FAST_FIXED_POINT            4
 
 
 /**
  * Specify the tone generator algorithm to be used. Please see 
- * http://trac.pjsip.org/repos/wiki/Tone_Generator for the performance
- * analysis results of the various tone generator algorithms.
+ * https://docs.pjsip.org/en/latest/specific-guides/media/tonegen.html for
+ * the performance analysis results of the various tone generator algorithms.
  *
  * Default value:
  *  - PJMEDIA_TONEGEN_FLOATING_POINT when PJ_HAS_FLOATING_POINT is set
@@ -917,9 +993,9 @@
  */
 #ifndef PJMEDIA_TONEGEN_ALG
 #   if defined(PJ_HAS_FLOATING_POINT) && PJ_HAS_FLOATING_POINT
-#	define PJMEDIA_TONEGEN_ALG	PJMEDIA_TONEGEN_FLOATING_POINT
+#       define PJMEDIA_TONEGEN_ALG      PJMEDIA_TONEGEN_FLOATING_POINT
 #   else
-#	define PJMEDIA_TONEGEN_ALG	PJMEDIA_TONEGEN_FIXED_POINT_CORDIC
+#       define PJMEDIA_TONEGEN_ALG      PJMEDIA_TONEGEN_FIXED_POINT_CORDIC
 #   endif
 #endif
 
@@ -959,7 +1035,7 @@
  * Default: 1 (msec)
  */
 #ifndef PJMEDIA_TONEGEN_FADE_IN_TIME
-#   define PJMEDIA_TONEGEN_FADE_IN_TIME		    1
+#   define PJMEDIA_TONEGEN_FADE_IN_TIME             1
 #endif
 
 
@@ -970,7 +1046,7 @@
  * Default: 2 (msec)
  */
 #ifndef PJMEDIA_TONEGEN_FADE_OUT_TIME
-#   define PJMEDIA_TONEGEN_FADE_OUT_TIME	    2
+#   define PJMEDIA_TONEGEN_FADE_OUT_TIME            2
 #endif
 
 
@@ -980,7 +1056,7 @@
  * Default value: 12288
  */
 #ifndef PJMEDIA_TONEGEN_VOLUME
-#   define PJMEDIA_TONEGEN_VOLUME		    12288
+#   define PJMEDIA_TONEGEN_VOLUME                   12288
 #endif
 
 
@@ -991,7 +1067,7 @@
  * By default it is enabled.
  */
 #ifndef PJMEDIA_HAS_SRTP
-#   define PJMEDIA_HAS_SRTP			    1
+#   define PJMEDIA_HAS_SRTP                         1
 #endif
 
 
@@ -1001,7 +1077,7 @@
  * By default it is enabled.
  */
 #ifndef PJMEDIA_SRTP_HAS_SDES
-#   define PJMEDIA_SRTP_HAS_SDES		    1
+#   define PJMEDIA_SRTP_HAS_SDES                    1
 #endif
 
 
@@ -1011,7 +1087,7 @@
  * Default value: 0 (disabled)
  */
 #ifndef PJMEDIA_SRTP_HAS_DTLS
-#   define PJMEDIA_SRTP_HAS_DTLS		    0
+#   define PJMEDIA_SRTP_HAS_DTLS                    0
 #endif
 
 
@@ -1021,7 +1097,7 @@
  * Default value: "DEFAULT"
  */
 #ifndef PJMEDIA_SRTP_DTLS_OSSL_CIPHERS
-#   define PJMEDIA_SRTP_DTLS_OSSL_CIPHERS	    "DEFAULT"
+#   define PJMEDIA_SRTP_DTLS_OSSL_CIPHERS           "DEFAULT"
 #endif
 
 
@@ -1031,7 +1107,7 @@
  * Default: 16
  */
 #ifndef PJMEDIA_SRTP_MAX_CRYPTOS
-#   define PJMEDIA_SRTP_MAX_CRYPTOS		    16
+#   define PJMEDIA_SRTP_MAX_CRYPTOS                 16
 #endif
 
 
@@ -1040,7 +1116,7 @@
  * Default: enabled.
  */
 #ifndef PJMEDIA_SRTP_HAS_AES_CM_256
-#   define PJMEDIA_SRTP_HAS_AES_CM_256	    	    1
+#   define PJMEDIA_SRTP_HAS_AES_CM_256              1
 #endif
 
 
@@ -1050,12 +1126,12 @@
  * so we recommend to disable this.
  *
  * To enable this, you would require OpenSSL which supports it.
- * See https://trac.pjsip.org/repos/ticket/1943 for more info.
+ * See https://github.com/pjsip/pjproject/issues/1943 for more info.
  *
  * Default: disabled.
  */
 #ifndef PJMEDIA_SRTP_HAS_AES_CM_192
-#   define PJMEDIA_SRTP_HAS_AES_CM_192	    	    0
+#   define PJMEDIA_SRTP_HAS_AES_CM_192              0
 #endif
 
 
@@ -1064,7 +1140,7 @@
  * Default: enabled.
  */
 #ifndef PJMEDIA_SRTP_HAS_AES_CM_128
-#   define PJMEDIA_SRTP_HAS_AES_CM_128    	    1
+#   define PJMEDIA_SRTP_HAS_AES_CM_128              1
 #endif
 
 
@@ -1072,12 +1148,12 @@
  * Enable AES_GCM_256 cryptos in SRTP.
  *
  * To enable this, you would require OpenSSL which supports it.
- * See https://trac.pjsip.org/repos/ticket/1943 for more info. 
+ * See https://github.com/pjsip/pjproject/issues/1943 for more info. 
  *
  * Default: disabled.
  */
 #ifndef PJMEDIA_SRTP_HAS_AES_GCM_256
-#   define PJMEDIA_SRTP_HAS_AES_GCM_256	    	    0
+#   define PJMEDIA_SRTP_HAS_AES_GCM_256             0
 #endif
 
 
@@ -1085,12 +1161,34 @@
  * Enable AES_GCM_128 cryptos in SRTP.
  *
  * To enable this, you would require OpenSSL which supports it.
- * See https://trac.pjsip.org/repos/ticket/1943 for more info.
+ * See https://github.com/pjsip/pjproject/issues/1943 for more info.
  *
  * Default: disabled.
  */
 #ifndef PJMEDIA_SRTP_HAS_AES_GCM_128
-#   define PJMEDIA_SRTP_HAS_AES_GCM_128    	    0
+#   define PJMEDIA_SRTP_HAS_AES_GCM_128             0
+#endif
+
+
+/**
+ * Specify whether SRTP needs to handle condition that old packets with
+ * incorect RTP seq are still coming when SRTP is restarted.
+ *
+ * Default: enabled.
+ */
+#ifndef PJMEDIA_SRTP_CHECK_RTP_SEQ_ON_RESTART
+#   define PJMEDIA_SRTP_CHECK_RTP_SEQ_ON_RESTART    1
+#endif
+
+
+/**
+ * Specify whether SRTP needs to handle condition that remote may reset
+ * or maintain ROC when SRTP is restarted.
+ *
+ * Default: enabled.
+ */
+#ifndef PJMEDIA_SRTP_CHECK_ROC_ON_RESTART
+#   define PJMEDIA_SRTP_CHECK_ROC_ON_RESTART        1
 #endif
 
 
@@ -1103,7 +1201,7 @@
  * By default it is enabled.
  */
 #ifndef PJMEDIA_LIBSRTP_AUTO_INIT_DEINIT
-#   define PJMEDIA_LIBSRTP_AUTO_INIT_DEINIT	    1
+#   define PJMEDIA_LIBSRTP_AUTO_INIT_DEINIT         1
 #endif
 
 
@@ -1114,7 +1212,7 @@
  * See:
  *  - G.722      : RFC 3551 4.5.2
  *  - MPEG audio : RFC 3551 4.5.13 & RFC 3119
- *  - OPUS	 : RFC 7587
+ *  - OPUS       : RFC 7587
  *
  * Also when this feature is enabled, some handling will be performed
  * to deal with clock rate incompatibilities of some phones.
@@ -1122,7 +1220,7 @@
  * By default it is enabled.
  */
 #ifndef PJMEDIA_HANDLE_G722_MPEG_BUG
-#   define PJMEDIA_HANDLE_G722_MPEG_BUG		    1
+#   define PJMEDIA_HANDLE_G722_MPEG_BUG             1
 #endif
 
 
@@ -1132,7 +1230,7 @@
  * By default it is enabled.
  */
 #ifndef PJMEDIA_TRANSPORT_SWITCH_REMOTE_ADDR
-#   define PJMEDIA_TRANSPORT_SWITCH_REMOTE_ADDR	    1
+#   define PJMEDIA_TRANSPORT_SWITCH_REMOTE_ADDR     1
 #endif
 
 
@@ -1152,7 +1250,7 @@
  * Maximum size in bytes of storage buffer of a transport specific info.
  */
 #ifndef PJMEDIA_TRANSPORT_SPECIFIC_INFO_MAXSIZE
-#   define PJMEDIA_TRANSPORT_SPECIFIC_INFO_MAXSIZE  (36*sizeof(long))
+#   define PJMEDIA_TRANSPORT_SPECIFIC_INFO_MAXSIZE  (50*sizeof(long))
 #endif
 
 
@@ -1161,7 +1259,7 @@
  * This indicates that an empty RTP packet should be used as
  * the keep-alive packet.
  */
-#define PJMEDIA_STREAM_KA_EMPTY_RTP		    1
+#define PJMEDIA_STREAM_KA_EMPTY_RTP                 1
 
 /**
  * Value to be specified in PJMEDIA_STREAM_ENABLE_KA setting.
@@ -1170,7 +1268,7 @@
  * packet is specified by PJMEDIA_STREAM_KA_USER_PKT. Default
  * content is a CR-LF packet.
  */
-#define PJMEDIA_STREAM_KA_USER			    2
+#define PJMEDIA_STREAM_KA_USER                      2
 
 /**
  * The content of the user defined keep-alive packet. The format
@@ -1178,8 +1276,9 @@
  * the content may contain NULL character.
  */
 #ifndef PJMEDIA_STREAM_KA_USER_PKT
-#   define PJMEDIA_STREAM_KA_USER_PKT	{ "\r\n", 2 }
+#   define PJMEDIA_STREAM_KA_USER_PKT   { "\r\n", 2 }
 #endif
+
 
 /**
  * Specify another type of keep-alive and NAT hole punching 
@@ -1204,7 +1303,7 @@
  * Default: 0 (disabled)
  */
 #ifndef PJMEDIA_STREAM_ENABLE_KA
-#   define PJMEDIA_STREAM_ENABLE_KA		    0
+#   define PJMEDIA_STREAM_ENABLE_KA                 0
 #endif
 
 
@@ -1215,7 +1314,31 @@
  * Default: 5 seconds
  */
 #ifndef PJMEDIA_STREAM_KA_INTERVAL
-#   define PJMEDIA_STREAM_KA_INTERVAL		    5
+#   define PJMEDIA_STREAM_KA_INTERVAL               5
+#endif
+
+
+/**
+ * Specify the number of keep-alive needed to be sent after the stream is
+ * created.
+ *
+ * Setting this to 0 will disable it.
+ *
+ * Default : 2
+ */
+#ifndef PJMEDIA_STREAM_START_KA_CNT
+#   define PJMEDIA_STREAM_START_KA_CNT  2
+#endif
+
+
+/**
+ * Specify the interval to send keep-alive after the stream is created,
+ * in msec.
+ *
+ * Default : 1000
+ */
+#ifndef PJMEDIA_STREAM_START_KA_INTERVAL_MSEC
+#   define PJMEDIA_STREAM_START_KA_INTERVAL_MSEC  1000
 #endif
 
 
@@ -1239,7 +1362,7 @@
  * Default : 20
  */
 #ifndef PJMEDIA_IGNORE_RECV_ERR_CNT
-#   define PJMEDIA_IGNORE_RECV_ERR_CNT		20
+#   define PJMEDIA_IGNORE_RECV_ERR_CNT          20
 #endif
 
 
@@ -1257,7 +1380,7 @@
  * Default: 0 (disabled)
  */
 #ifndef PJMEDIA_HAS_VIDEO
-#   define PJMEDIA_HAS_VIDEO				0
+#   define PJMEDIA_HAS_VIDEO                            0
 #endif
 
 
@@ -1268,7 +1391,7 @@
  * Default: 0
  */
 #ifndef PJMEDIA_HAS_FFMPEG
-#   define PJMEDIA_HAS_FFMPEG				0
+#   define PJMEDIA_HAS_FFMPEG                           0
 #endif
 
 /**
@@ -1277,7 +1400,7 @@
  * Default: PJMEDIA_HAS_FFMPEG (or detected by configure)
  */
 #ifndef PJMEDIA_HAS_LIBAVFORMAT
-#   define PJMEDIA_HAS_LIBAVFORMAT			PJMEDIA_HAS_FFMPEG
+#   define PJMEDIA_HAS_LIBAVFORMAT                      PJMEDIA_HAS_FFMPEG
 #endif
 
 /**
@@ -1286,7 +1409,7 @@
  * Default: PJMEDIA_HAS_FFMPEG (or detected by configure)
  */
 #ifndef PJMEDIA_HAS_LIBAVCODEC
-#   define PJMEDIA_HAS_LIBAVCODEC			PJMEDIA_HAS_FFMPEG
+#   define PJMEDIA_HAS_LIBAVCODEC                       PJMEDIA_HAS_FFMPEG
 #endif
 
 /**
@@ -1295,7 +1418,7 @@
  * Default: PJMEDIA_HAS_FFMPEG (or detected by configure)
  */
 #ifndef PJMEDIA_HAS_LIBAVUTIL
-#   define PJMEDIA_HAS_LIBAVUTIL			PJMEDIA_HAS_FFMPEG
+#   define PJMEDIA_HAS_LIBAVUTIL                        PJMEDIA_HAS_FFMPEG
 #endif
 
 /**
@@ -1304,7 +1427,7 @@
  * Default: PJMEDIA_HAS_FFMPEG (or detected by configure)
  */
 #ifndef PJMEDIA_HAS_LIBSWSCALE
-#   define PJMEDIA_HAS_LIBSWSCALE			PJMEDIA_HAS_FFMPEG
+#   define PJMEDIA_HAS_LIBSWSCALE                       PJMEDIA_HAS_FFMPEG
 #endif
 
 /**
@@ -1313,7 +1436,7 @@
  * Default: PJMEDIA_HAS_FFMPEG (or detected by configure)
  */
 #ifndef PJMEDIA_HAS_LIBAVDEVICE
-#   define PJMEDIA_HAS_LIBAVDEVICE			PJMEDIA_HAS_FFMPEG
+#   define PJMEDIA_HAS_LIBAVDEVICE                      PJMEDIA_HAS_FFMPEG
 #endif
 
 /**
@@ -1322,7 +1445,7 @@
  * Default: 4
  */
 #ifndef PJMEDIA_MAX_VIDEO_PLANES
-#   define PJMEDIA_MAX_VIDEO_PLANES			4
+#   define PJMEDIA_MAX_VIDEO_PLANES                     4
 #endif
 
 /**
@@ -1331,7 +1454,7 @@
  * Default: 32
  */
 #ifndef PJMEDIA_MAX_VIDEO_FORMATS
-#   define PJMEDIA_MAX_VIDEO_FORMATS			32
+#   define PJMEDIA_MAX_VIDEO_FORMATS                    32
 #endif
 
 /**
@@ -1351,7 +1474,7 @@
  * Default: 128kB
  */
 #ifndef PJMEDIA_MAX_VIDEO_ENC_FRAME_SIZE
-#  define PJMEDIA_MAX_VIDEO_ENC_FRAME_SIZE	    (1<<17)
+#  define PJMEDIA_MAX_VIDEO_ENC_FRAME_SIZE          (1<<17)
 #endif
 
 
@@ -1377,7 +1500,7 @@
  * Default: 200 ms
  */
 #ifndef PJMEDIA_JBUF_DISC_MIN_GAP
-#   define PJMEDIA_JBUF_DISC_MIN_GAP		    200
+#   define PJMEDIA_JBUF_DISC_MIN_GAP                200
 #endif
 
 
@@ -1388,7 +1511,7 @@
  * Default: 1 frame
  */
 #ifndef PJMEDIA_JBUF_PRO_DISC_MIN_BURST
-#   define PJMEDIA_JBUF_PRO_DISC_MIN_BURST	    1
+#   define PJMEDIA_JBUF_PRO_DISC_MIN_BURST          1
 #endif
 
 
@@ -1399,7 +1522,7 @@
  * Default: 200 frames
  */
 #ifndef PJMEDIA_JBUF_PRO_DISC_MAX_BURST
-#   define PJMEDIA_JBUF_PRO_DISC_MAX_BURST	    100
+#   define PJMEDIA_JBUF_PRO_DISC_MAX_BURST          100
 #endif
 
 
@@ -1411,7 +1534,7 @@
  * Default: 2000 ms
  */
 #ifndef PJMEDIA_JBUF_PRO_DISC_T1
-#   define PJMEDIA_JBUF_PRO_DISC_T1		    2000
+#   define PJMEDIA_JBUF_PRO_DISC_T1                 2000
 #endif
 
 
@@ -1423,7 +1546,25 @@
  * Default: 10000 ms
  */
 #ifndef PJMEDIA_JBUF_PRO_DISC_T2
-#   define PJMEDIA_JBUF_PRO_DISC_T2		    10000
+#   define PJMEDIA_JBUF_PRO_DISC_T2                 10000
+#endif
+
+
+/**
+ * Reset jitter buffer and return silent audio on stream playback start
+ * (first get_frame()). This is useful to avoid possible noise that may be
+ * introduced by discard algorithm and neutralize latency when audio device
+ * is started later than the stream.
+ *
+ * Set this to N>0 to allow N silent audio frames returned on stream playback
+ * start, this will allow about N frames to be buffered in the jitter buffer
+ * before the playback is started (prefetching effect).
+ * Set this to zero to disable this feature.
+ *
+ * Default: 1
+ */
+#ifndef PJMEDIA_STREAM_SOFT_START
+#   define PJMEDIA_STREAM_SOFT_START                1
 #endif
 
 
@@ -1434,7 +1575,7 @@
  * Default: 0
  */
 #ifndef PJMEDIA_VID_STREAM_SKIP_PACKETS_TO_REDUCE_LATENCY
-#   define PJMEDIA_VID_STREAM_SKIP_PACKETS_TO_REDUCE_LATENCY	0
+#   define PJMEDIA_VID_STREAM_SKIP_PACKETS_TO_REDUCE_LATENCY    0
 #endif
 
 
@@ -1443,7 +1584,7 @@
  * PJMEDIA_MAX_MTU.
  *
  * Default: (PJMEDIA_MAX_MTU - 20 - (128+16)) if SRTP is enabled, 
- *	    otherwise (PJMEDIA_MAX_MTU - 20). 
+ *          otherwise (PJMEDIA_MAX_MTU - 20). 
  *          Note that (128+16) constant value is taken from libSRTP macro 
  *          SRTP_MAX_TRAILER_LEN.
  */
@@ -1469,9 +1610,9 @@
  */
 #ifndef PJMEDIA_TRANSPORT_SO_RCVBUF_SIZE
 #   if PJMEDIA_HAS_VIDEO
-#	define PJMEDIA_TRANSPORT_SO_RCVBUF_SIZE	(64*1024)
+#       define PJMEDIA_TRANSPORT_SO_RCVBUF_SIZE (64*1024)
 #   else
-#	define PJMEDIA_TRANSPORT_SO_RCVBUF_SIZE	0
+#       define PJMEDIA_TRANSPORT_SO_RCVBUF_SIZE 0
 #   endif
 #endif
 
@@ -1489,9 +1630,9 @@
  */
 #ifndef PJMEDIA_TRANSPORT_SO_SNDBUF_SIZE
 #   if PJMEDIA_HAS_VIDEO
-#	define PJMEDIA_TRANSPORT_SO_SNDBUF_SIZE	(64*1024)
+#       define PJMEDIA_TRANSPORT_SO_SNDBUF_SIZE (64*1024)
 #   else
-#	define PJMEDIA_TRANSPORT_SO_SNDBUF_SIZE	0
+#       define PJMEDIA_TRANSPORT_SO_SNDBUF_SIZE 0
 #   endif
 #endif
 
@@ -1502,7 +1643,7 @@
  * Default: 0 (disable)
  */
 #ifndef PJMEDIA_HAS_LIBYUV
-#   define PJMEDIA_HAS_LIBYUV				0
+#   define PJMEDIA_HAS_LIBYUV                           0
 #endif
 
 
@@ -1510,7 +1651,7 @@
  * Specify if dtmf flash in RFC 2833 is available.
  */
 #ifndef PJMEDIA_HAS_DTMF_FLASH
-#   define PJMEDIA_HAS_DTMF_FLASH			1
+#   define PJMEDIA_HAS_DTMF_FLASH                       1
 #endif
 
 
@@ -1521,7 +1662,7 @@
  * Default : 5
  */
 #ifndef PJMEDIA_VID_STREAM_START_KEYFRAME_CNT
-#   define PJMEDIA_VID_STREAM_START_KEYFRAME_CNT	5
+#   define PJMEDIA_VID_STREAM_START_KEYFRAME_CNT        5
 #endif
 
 
@@ -1555,16 +1696,27 @@
  * Default : 100
  */
 #ifndef PJMEDIA_VID_STREAM_DECODE_MIN_DELAY_MSEC
-#   define PJMEDIA_VID_STREAM_DECODE_MIN_DELAY_MSEC	    100
+#   define PJMEDIA_VID_STREAM_DECODE_MIN_DELAY_MSEC         100
 #endif
 
 
+/**
+ * Perform RTP payload type checking in the video stream. Normally the peer
+ * MUST send RTP with payload type as we specified in our SDP. Certain
+ * agents may not be able to follow this hence the only way to have
+ * communication is to disable this check.
+ *
+ * Default: PJMEDIA_STREAM_CHECK_RTP_PT (follow audio stream's setting)
+ */
+#ifndef PJMEDIA_VID_STREAM_CHECK_RTP_PT
+#   define PJMEDIA_VID_STREAM_CHECK_RTP_PT      PJMEDIA_STREAM_CHECK_RTP_PT
+#endif
 
 /**
  * @}
  */
 
 
-#endif	/* __PJMEDIA_CONFIG_H__ */
+#endif  /* __PJMEDIA_CONFIG_H__ */
 
 

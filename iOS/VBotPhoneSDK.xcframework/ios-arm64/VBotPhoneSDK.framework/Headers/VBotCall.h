@@ -407,6 +407,8 @@ typedef NS_ENUM(NSInteger, VBotCallTerminateReason) {
  */
 - (instancetype _Nullable)initOutboundCallWithNumberToCall:(NSString * _Nonnull)number account:(VBotAccount * _Nonnull)account;
 
+- (instancetype _Nullable)initOutboundCallWithUUID:(NSUUID * _Nonnull)uuid number:(NSString * _Nonnull)number account:(VBotAccount * _Nonnull)account;
+
 /**
  *  This will change the callState of the call.
  *

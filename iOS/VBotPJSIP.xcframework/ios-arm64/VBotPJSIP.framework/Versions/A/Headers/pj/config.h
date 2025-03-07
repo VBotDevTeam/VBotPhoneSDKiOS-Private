@@ -1,4 +1,3 @@
-/* $Id$ */
 /*
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -31,6 +30,8 @@
  */
 #if defined(_MSC_VER)
 #include <VBotPJSIP/pj/compat/cc_msvc.h>
+#elif defined(__clang__)
+#include <VBotPJSIP/pj/compat/cc_clang.h>
 #elif defined(__GNUC__)
 #include <VBotPJSIP/pj/compat/cc_gcc.h>
 #elif defined(__CW32__)
@@ -250,7 +251,8 @@
 #define PJ_IS_LITTLE_ENDIAN 0
 #define PJ_IS_BIG_ENDIAN 1
 
-#elif defined(ARM) || defined(_ARM_) || defined(__arm__) || defined(_M_ARM)
+#elif defined(ARM) || defined(_ARM_) || defined(__arm__) || \
+    defined(_M_ARM) || defined(_M_ARM64) || defined(__aarch64__)
 #define PJ_HAS_PENTIUM 0
 /*
  * ARM, bi-endian, so raise error if endianness is not configured
@@ -266,6 +268,10 @@
 #undef PJ_M_ARMV4
 #define PJ_M_ARMV4 1
 #define PJ_M_NAME "armv4"
+#elif defined(PJ_M_ARM64) || defined(ARM64) || defined(__aarch64__)
+#undef PJ_M_ARM64
+#define PJ_M_ARM64 1
+#define PJ_M_NAME "arm64"
 #endif
 
 #elif defined(PJ_M_POWERPC) || defined(__powerpc) || defined(__powerpc__) || \
@@ -325,10 +331,10 @@
 #undef FD_SETSIZE
 #undef PJ_HAS_SEMAPHORE
 #undef PJ_HAS_EVENT_OBJ
-#undef PJ_ENABLE_EXTRA_CHECK
 #undef PJ_EXCEPTION_USE_WIN32_SEH
 #undef PJ_HAS_ERROR_STRING
 
+#define PJ_HAS_IPV6 1
 #endif
 
 /**
@@ -533,10 +539,23 @@
 #endif
 
 /**
+ * If enabled, when allocating memory, pool will only search for a maximum
+ * number of blocks specified before deciding that the pool is full and
+ * a new memory block needs to be created.
+ *
+ * Set it to 0 to disable the limitation (i.e. it will search all blocks).
+ *
+ * Default: 5
+ */
+#ifndef PJ_POOL_MAX_SEARCH_BLOCK_COUNT
+#define PJ_POOL_MAX_SEARCH_BLOCK_COUNT 5
+#endif
+
+/**
  * Enable timer debugging facility. When this is enabled, application
  * can call pj_timer_heap_dump() to show the contents of the timer
  * along with the source location where the timer entries were scheduled.
- * See https://trac.pjsip.org/repos/ticket/1527 for more info.
+ * See https://github.com/pjsip/pjproject/issues/1527 for more info.
  *
  * Default: 1
  */
@@ -637,10 +656,14 @@
  * Libraries sometimes needs to make copy of an address to stack buffer;
  * the value here affects the stack usage.
  *
- * Default: 128
+ * Note that the length here should include the NULL termination. In other
+ * words, the maximum hostname length is PJ_MAX_HOSTNAME with the NULL
+ * termination and PJ_MAX_HOSTNAME-1 without the NULL termination.
+ *
+ * Default: 254
  */
 #ifndef PJ_MAX_HOSTNAME
-#define PJ_MAX_HOSTNAME (128)
+#define PJ_MAX_HOSTNAME (254)
 #endif
 
 /**
@@ -705,7 +728,7 @@
  */
 #if (PJ_IOQUEUE_DEFAULT_ALLOW_CONCURRENCY == 0) && (PJ_IOQUEUE_HAS_SAFE_UNREG == 0)
 #error PJ_IOQUEUE_HAS_SAFE_UNREG must be enabled if ioqueue concurrency \
-	  is disabled
+          is disabled
 #endif
 
 /**
@@ -719,6 +742,16 @@
  */
 #ifndef PJ_IOQUEUE_KEY_FREE_DELAY
 #define PJ_IOQUEUE_KEY_FREE_DELAY 500
+#endif
+
+/**
+ * Default flags for epoll_flags member of  pj_ioqueue_cfg structure.
+ * The values are combination of pj_ioqueue_epoll_flag constants.
+ *
+ * Default: PJ_IOQUEUE_EPOLL_AUTO
+ */
+#ifndef PJ_IOQUEUE_DEFAULT_EPOLL_FLAGS
+#define PJ_IOQUEUE_DEFAULT_EPOLL_FLAGS PJ_IOQUEUE_EPOLL_AUTO
 #endif
 
 /**
@@ -756,9 +789,9 @@
  */
 /*
 #   ifdef FD_SETSIZE
-#	if PJ_IOQUEUE_MAX_HANDLES > FD_SETSIZE
-#	    error "PJ_IOQUEUE_MAX_HANDLES is greater than FD_SETSIZE"
-#	endif
+#       if PJ_IOQUEUE_MAX_HANDLES > FD_SETSIZE
+#           error "PJ_IOQUEUE_MAX_HANDLES is greater than FD_SETSIZE"
+#       endif
 #   endif
 */
 #endif
@@ -783,6 +816,19 @@
 #endif
 
 /**
+ * Use dispatch semaphores on Darwin.
+ *
+ * Default: 1 on Darwin, 0 otherwise
+ */
+#ifndef PJ_SEMAPHORE_USE_DISPATCH_SEM
+#if defined(PJ_DARWINOS) && PJ_DARWINOS != 0
+#define PJ_SEMAPHORE_USE_DISPATCH_SEM 1
+#else
+#define PJ_SEMAPHORE_USE_DISPATCH_SEM 0
+#endif
+#endif
+
+/**
  * Event object (for synchronization, e.g. in Win32)
  *
  * Default: 1
@@ -796,21 +842,6 @@
  */
 #ifndef PJ_MAXPATH
 #define PJ_MAXPATH 260
-#endif
-
-/**
- * Enable library's extra check.
- * If this macro is enabled, #PJ_ASSERT_RETURN macro will expand to
- * run-time checking. If this macro is disabled, #PJ_ASSERT_RETURN
- * will simply evaluate to #pj_assert().
- *
- * You can disable this macro to reduce size, at the risk of crashes
- * if invalid value (e.g. NULL) is passed to the library.
- *
- * Default: 1
- */
-#ifndef PJ_ENABLE_EXTRA_CHECK
-#define PJ_ENABLE_EXTRA_CHECK 1
 #endif
 
 /**
@@ -889,6 +920,68 @@
 #define PJ_HAS_STRICMP_ALNUM 0
 #endif
 
+/**
+ * Prohibit the use of unsafe string functions such as strcpy(), strncpy(),
+ * strcat(), and vsprintf().
+ */
+#ifndef PJ_BAN_UNSAFE_STR_FUNCS
+#define PJ_BAN_UNSAFE_STR_FUNCS 0
+#endif
+
+/**
+ * Prohibit the use of strcpy() and pj_ansi_strcpy(), use pj_ansi_strxcpy()
+ * instead.
+ */
+#ifndef PJ_BAN_STRCPY
+#define PJ_BAN_STRCPY PJ_BAN_UNSAFE_STR_FUNCS
+#endif
+
+/**
+ * Prohibit the use of strncpy() and pj_ansi_strncpy(), use pj_ansi_strxcpy()
+ * instead.
+ */
+#ifndef PJ_BAN_STRNCPY
+#define PJ_BAN_STRNCPY PJ_BAN_UNSAFE_STR_FUNCS
+#endif
+
+/**
+ * Prohibit the use of strcat() and pj_ansi_strcat(), use pj_ansi_strxcat()
+ * instead.
+ */
+#ifndef PJ_BAN_STRCAT
+#define PJ_BAN_STRCAT PJ_BAN_UNSAFE_STR_FUNCS
+#endif
+
+/**
+ * Prohibit the use of sprintf() and pj_ansi_sprintf(),
+ * use pj_ansi_snprintf() instead.
+ */
+#ifndef PJ_BAN_SPRINTF
+#define PJ_BAN_SPRINTF PJ_BAN_UNSAFE_STR_FUNCS
+#endif
+
+/**
+ * Prohibit the use of vsprintf() and pj_ansi_vsprintf(),
+ * use pj_ansi_vsnprintf() instead.
+ */
+#ifndef PJ_BAN_VSPRINTF
+#define PJ_BAN_VSPRINTF PJ_BAN_UNSAFE_STR_FUNCS
+#endif
+
+/*
+ * Warn about obsolete macros.
+ *
+ * PJ_ENABLE_EXTRA_CHECK has been deprecated in 2.13.
+ */
+#if defined(PJ_ENABLE_EXTRA_CHECK) && PJ_ENABLE_EXTRA_CHECK == 0
+#ifdef _MSC_VER
+#pragma message("Warning: PJ_ENABLE_EXTRA_CHECK macro is deprecated" \
+                " and has no effect")
+#else
+#warning "PJ_ENABLE_EXTRA_CHECK macro is deprecated and has no effect"
+#endif
+#endif
+
 /*
  * Types of QoS backend implementation.
  */
@@ -940,9 +1033,23 @@
  * Secure socket implementation.
  * Select one of these implementations in PJ_SSL_SOCK_IMP.
  */
-#define PJ_SSL_SOCK_IMP_NONE 0    /**< Disable SSL socket.    */
-#define PJ_SSL_SOCK_IMP_OPENSSL 1 /**< Using OpenSSL.	    */
-#define PJ_SSL_SOCK_IMP_GNUTLS 2  /**< Using GnuTLS.	    */
+/** Disable SSL socket */
+#define PJ_SSL_SOCK_IMP_NONE 0
+
+/** Using OpenSSL */
+#define PJ_SSL_SOCK_IMP_OPENSSL 1
+
+/**< Using GnuTLS */
+#define PJ_SSL_SOCK_IMP_GNUTLS 2
+
+/** Using Apple's Secure Transport (deprecated in MacOS 10.15 & iOS 13.0) */
+#define PJ_SSL_SOCK_IMP_DARWIN 3
+
+/** Using Apple's Network framework */
+#define PJ_SSL_SOCK_IMP_APPLE 4
+
+/** Using Windows's Schannel */
+#define PJ_SSL_SOCK_IMP_SCHANNEL 5
 
 /**
  * Select which SSL socket implementation to use. Currently pjlib supports
@@ -991,8 +1098,20 @@
 #endif
 
 /**
+ * Use OpenSSL thread locking callback. This is only applicable for OpenSSL
+ * version prior to 1.1.0
+ *
+ * Default: 1 (enabled)
+ */
+#ifndef PJ_SSL_SOCK_OSSL_USE_THREAD_CB
+#define PJ_SSL_SOCK_OSSL_USE_THREAD_CB 1
+#else
+#define PJ_SSL_SOCK_OSSL_USE_THREAD_CB 0
+#endif
+
+/**
  * Disable WSAECONNRESET error for UDP sockets on Win32 platforms. See
- * https://trac.pjsip.org/repos/ticket/1197.
+ * https://github.com/pjsip/pjproject/issues/1197.
  *
  * Default: 1
  */
@@ -1007,6 +1126,19 @@
  */
 #ifndef PJ_MAX_SOCKOPT_PARAMS
 #define PJ_MAX_SOCKOPT_PARAMS 4
+#endif
+
+/* Specify if JNI_OnLoad() will be defined in the library. If enabled,
+ * PJSIP will set the Java Virtual Machine (JVM) inside JNI_OnLoad().
+ *
+ * Since there can only be one JNI_OnLoad() in a library loaded from Java,
+ * you can disable this if the implementation is already defined somewhere
+ * else. Then you can set the JVM using the API pj_jni_set_jvm() instead.
+ *
+ * Default: enabled for Android
+ */
+#ifndef PJ_JNI_HAS_JNI_ONLOAD
+#define PJ_JNI_HAS_JNI_ONLOAD PJ_ANDROID
 #endif
 
 /** @} */
@@ -1078,8 +1210,8 @@
  *    macros.
  *  - Declare these macros in your <tt>config_site.h</tt>:
  \verbatim
-    #define PJ_EXPORT_SPECIFIER  __declspec(dllexport)
-    #define PJ_IMPORT_SPECIFIER  __declspec(dllimport)
+        #define PJ_EXPORT_SPECIFIER  __declspec(dllexport)
+        #define PJ_IMPORT_SPECIFIER  __declspec(dllimport)
  \endverbatim
  *  - And in the application (that links with the DLL) project, add
  *    <tt>PJ_DLL</tt> in the macro declarations.
@@ -1319,10 +1451,10 @@ PJ_BEGIN_DECL
 #define PJ_VERSION_NUM_MAJOR 2
 
 /** PJLIB version minor number. */
-#define PJ_VERSION_NUM_MINOR 10
+#define PJ_VERSION_NUM_MINOR 15
 
 /** PJLIB version revision number. */
-#define PJ_VERSION_NUM_REV 0
+#define PJ_VERSION_NUM_REV 1
 
 /**
  * Extra suffix for the version (e.g. "-trunk"), or empty for

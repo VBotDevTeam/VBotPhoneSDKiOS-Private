@@ -105,32 +105,6 @@ extension Swift.Optional where Wrapped == UIKit.UIView.AnimationCurve {
 public struct VBotConfig {
   public init(supportPopupCall: Swift.Bool = true, iconTemplateImageData: Foundation.Data? = nil)
 }
-public struct VoIPPushPayload {
-  public let uuid: Foundation.UUID
-  public let callerId: Swift.String
-  public let callerName: Swift.String
-  public let callerAvatar: Swift.String
-  public let calleeId: Swift.String
-  public let calleeName: Swift.String
-  public let calleeAvatar: Swift.String
-  public let checkSum: Swift.String
-}
-@objc public class CallUser : ObjectiveC.NSObject {
-  @objc final public let uuid: Foundation.UUID
-  @objc final public let callId: Swift.String
-  @objc final public let name: Swift.String
-  @objc final public let avatar: Swift.String
-  @objc final public let checkSum: Swift.String
-  @objc public var avatarImage: UIKit.UIImage?
-  @objc public var callStopped: Swift.Bool
-  @objc public var caller: Swift.String
-  @objc public var callerName: Swift.String
-  @objc public var callee: Swift.String
-  @objc public var calleeName: Swift.String
-  @objc public var typeCall: Swift.String
-  @objc public init(uuid: Foundation.UUID, callerId: Swift.String, name: Swift.String, avatar: Swift.String, checkSum: Swift.String, avatarImage: UIKit.UIImage?, caller: Swift.String, callerName: Swift.String, callee: Swift.String, calleeName: Swift.String, typeCall: Swift.String)
-  @objc deinit
-}
 public struct VBotHotline : Swift.Codable {
   public let name: Swift.String, phoneNumber: Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
@@ -286,14 +260,12 @@ extension VBotPhoneSDK.VBotReachability {
   @objc optional func microphonePermission(status: AVFAudio.AVAudioSession.RecordPermission)
   @objc optional func callMuteStateDidChange(muted: Swift.Bool)
   @objc optional func messageButtonTapped()
-  @objc optional func callInfoUpdated(user: VBotPhoneSDK.CallUser)
   @objc optional func networkIsUnreachable()
   @objc optional func internetConnectionChanged()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VBotPhone : ObjectiveC.NSObject, CallKit.CXCallObserverDelegate {
   public static let sharedInstance: VBotPhoneSDK.VBotPhone
   public var audioOutput: VBotPhoneSDK.VBotAudioControllerOutputs?
-  public var callUser: VBotPhoneSDK.CallUser?
   public var microphonePermissionGranted: AVFAudio.AVAudioSession.RecordPermission
   @objc deinit
 }
@@ -360,7 +332,7 @@ public struct VBotLocalizedStrings {
   case microphonePermissionDenied = 1003
   case invalidPhoneNumber = 1004
   case noDataFromServer = 1005
-  case initiationFailed_2 = 1006
+  case endCallBeforeServerStartCall = 1006
   case initiationFailed_3 = 1007
   case dataInvalid = 1008
   case initiationFailed_4 = 1009
@@ -371,6 +343,7 @@ public struct VBotLocalizedStrings {
   case temporarilyUnavailable = 1014
   case busy = 1015
   case reportNewIncomingCallFailed = 1016
+  case alertDataNotFound = 1017
   case unknownError = 1999
   public var description: Swift.String {
     get

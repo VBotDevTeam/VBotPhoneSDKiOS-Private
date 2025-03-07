@@ -1,4 +1,3 @@
-/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -48,6 +47,7 @@
 /* Authentication. */
 #include <VBotPJSIP/pjsip/sip_auth.h>
 #include <VBotPJSIP/pjsip/sip_auth_aka.h>
+#include <VBotPJSIP/pjsip/sip_auth_parser.h>
 
 /* Transaction layer. */
 #include <VBotPJSIP/pjsip/sip_transaction.h>
@@ -57,5 +57,5 @@
 #include <VBotPJSIP/pjsip/sip_dialog.h>
 
 
-#endif	/* __PJSIP_H__ */
+#endif  /* __PJSIP_H__ */
 

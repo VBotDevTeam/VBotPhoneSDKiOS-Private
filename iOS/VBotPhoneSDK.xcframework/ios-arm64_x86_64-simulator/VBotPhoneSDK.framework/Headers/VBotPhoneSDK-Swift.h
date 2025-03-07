@@ -306,30 +306,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-@class NSUUID;
-@class NSString;
-@class UIImage;
-
-SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
-@interface CallUser : NSObject
-@property (nonatomic, readonly, copy) NSUUID * _Nonnull uuid;
-@property (nonatomic, readonly, copy) NSString * _Nonnull callId;
-@property (nonatomic, readonly, copy) NSString * _Nonnull name;
-@property (nonatomic, readonly, copy) NSString * _Nonnull avatar;
-@property (nonatomic, readonly, copy) NSString * _Nonnull checkSum;
-@property (nonatomic, strong) UIImage * _Nullable avatarImage;
-@property (nonatomic) BOOL callStopped;
-@property (nonatomic, copy) NSString * _Nonnull caller;
-@property (nonatomic, copy) NSString * _Nonnull callerName;
-@property (nonatomic, copy) NSString * _Nonnull callee;
-@property (nonatomic, copy) NSString * _Nonnull calleeName;
-@property (nonatomic, copy) NSString * _Nonnull typeCall;
-- (nonnull instancetype)initWithUuid:(NSUUID * _Nonnull)uuid callerId:(NSString * _Nonnull)callerId name:(NSString * _Nonnull)name avatar:(NSString * _Nonnull)avatar checkSum:(NSString * _Nonnull)checkSum avatarImage:(UIImage * _Nullable)avatarImage caller:(NSString * _Nonnull)caller callerName:(NSString * _Nonnull)callerName callee:(NSString * _Nonnull)callee calleeName:(NSString * _Nonnull)calleeName typeCall:(NSString * _Nonnull)typeCall OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 
@@ -344,7 +320,7 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonMicrophonePermissionDenied = 1003,
   VBotEndCallReasonInvalidPhoneNumber = 1004,
   VBotEndCallReasonNoDataFromServer = 1005,
-  VBotEndCallReasonInitiationFailed_2 = 1006,
+  VBotEndCallReasonEndCallBeforeServerStartCall = 1006,
   VBotEndCallReasonInitiationFailed_3 = 1007,
   VBotEndCallReasonDataInvalid = 1008,
   VBotEndCallReasonInitiationFailed_4 = 1009,
@@ -355,6 +331,7 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonTemporarilyUnavailable = 1014,
   VBotEndCallReasonBusy = 1015,
   VBotEndCallReasonReportNewIncomingCallFailed = 1016,
+  VBotEndCallReasonAlertDataNotFound = 1017,
   VBotEndCallReasonUnknownError = 1999,
 };
 
@@ -405,11 +382,11 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 /// Được gọi khi người dùng nhấn vào nút nhắn tin
 - (void)messageButtonTapped;
 /// Được gọi khi thông tin người dùng trong cuộc gọi được cập nhật
-- (void)callInfoUpdatedWithUser:(CallUser * _Nonnull)user;
 - (void)networkIsUnreachable;
 - (void)internetConnectionChanged;
 @end
 
+@class NSString;
 
 SWIFT_CLASS("_TtC12VBotPhoneSDK16VBotReachability")
 @interface VBotReachability : NSObject
@@ -744,30 +721,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-@class NSUUID;
-@class NSString;
-@class UIImage;
-
-SWIFT_CLASS("_TtC12VBotPhoneSDK8CallUser")
-@interface CallUser : NSObject
-@property (nonatomic, readonly, copy) NSUUID * _Nonnull uuid;
-@property (nonatomic, readonly, copy) NSString * _Nonnull callId;
-@property (nonatomic, readonly, copy) NSString * _Nonnull name;
-@property (nonatomic, readonly, copy) NSString * _Nonnull avatar;
-@property (nonatomic, readonly, copy) NSString * _Nonnull checkSum;
-@property (nonatomic, strong) UIImage * _Nullable avatarImage;
-@property (nonatomic) BOOL callStopped;
-@property (nonatomic, copy) NSString * _Nonnull caller;
-@property (nonatomic, copy) NSString * _Nonnull callerName;
-@property (nonatomic, copy) NSString * _Nonnull callee;
-@property (nonatomic, copy) NSString * _Nonnull calleeName;
-@property (nonatomic, copy) NSString * _Nonnull typeCall;
-- (nonnull instancetype)initWithUuid:(NSUUID * _Nonnull)uuid callerId:(NSString * _Nonnull)callerId name:(NSString * _Nonnull)name avatar:(NSString * _Nonnull)avatar checkSum:(NSString * _Nonnull)checkSum avatarImage:(UIImage * _Nullable)avatarImage caller:(NSString * _Nonnull)caller callerName:(NSString * _Nonnull)callerName callee:(NSString * _Nonnull)callee calleeName:(NSString * _Nonnull)calleeName typeCall:(NSString * _Nonnull)typeCall OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 
 
 
@@ -782,7 +735,7 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonMicrophonePermissionDenied = 1003,
   VBotEndCallReasonInvalidPhoneNumber = 1004,
   VBotEndCallReasonNoDataFromServer = 1005,
-  VBotEndCallReasonInitiationFailed_2 = 1006,
+  VBotEndCallReasonEndCallBeforeServerStartCall = 1006,
   VBotEndCallReasonInitiationFailed_3 = 1007,
   VBotEndCallReasonDataInvalid = 1008,
   VBotEndCallReasonInitiationFailed_4 = 1009,
@@ -793,6 +746,7 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonTemporarilyUnavailable = 1014,
   VBotEndCallReasonBusy = 1015,
   VBotEndCallReasonReportNewIncomingCallFailed = 1016,
+  VBotEndCallReasonAlertDataNotFound = 1017,
   VBotEndCallReasonUnknownError = 1999,
 };
 
@@ -843,11 +797,11 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 /// Được gọi khi người dùng nhấn vào nút nhắn tin
 - (void)messageButtonTapped;
 /// Được gọi khi thông tin người dùng trong cuộc gọi được cập nhật
-- (void)callInfoUpdatedWithUser:(CallUser * _Nonnull)user;
 - (void)networkIsUnreachable;
 - (void)internetConnectionChanged;
 @end
 
+@class NSString;
 
 SWIFT_CLASS("_TtC12VBotPhoneSDK16VBotReachability")
 @interface VBotReachability : NSObject

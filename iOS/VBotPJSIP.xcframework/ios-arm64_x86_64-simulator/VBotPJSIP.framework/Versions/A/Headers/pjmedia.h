@@ -1,4 +1,3 @@
-/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -78,5 +77,5 @@
 #include <VBotPJSIP/pjmedia/wave.h>
 #include <VBotPJSIP/pjmedia/wsola.h>
 
-#endif	/* __PJMEDIA_H__ */
+#endif  /* __PJMEDIA_H__ */
 
