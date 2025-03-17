@@ -1,4 +1,5 @@
-# VBot-iOS-SDK-Example
+# VBotPhoneSDKiOS-Private
+VBot Phone SDK – Cho khách hàng doanh nghiệp, hỗ trợ tùy chỉnh luồng cuộc gọi và giao diện.
 
 ## Code demo
 
