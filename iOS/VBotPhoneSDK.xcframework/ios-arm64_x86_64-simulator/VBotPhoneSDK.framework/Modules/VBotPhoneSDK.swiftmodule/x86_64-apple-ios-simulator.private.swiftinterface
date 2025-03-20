@@ -200,58 +200,6 @@ extension VBotPhoneSDK.NetworkReachabilityManager.NetworkReachabilityStatus : Sw
 extension UIKit.UIWindow.Level {
   public static let _background: UIKit.UIWindow.Level
 }
-public enum VBotReachabilityError : Swift.Error {
-  case FailedToCreateWithAddress(Darwin.sockaddr_in)
-  case FailedToCreateWithHostname(Swift.String)
-  case UnableToSetCallback
-  case UnableToSetDispatchQueue
-}
-@objc public class VBotReachability : ObjectiveC.NSObject {
-  public enum NetworkStatus : Swift.CustomStringConvertible {
-    case notReachable
-    case reachableViaWiFi
-    case reachableVia2G
-    case reachableVia3G
-    case reachableVia4G
-    public var description: Swift.String {
-      get
-    }
-    public static func == (a: VBotPhoneSDK.VBotReachability.NetworkStatus, b: VBotPhoneSDK.VBotReachability.NetworkStatus) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public typealias NetworkChanged = (VBotPhoneSDK.VBotReachability) -> ()
-  public var whenConnectionChanged: VBotPhoneSDK.VBotReachability.NetworkChanged?
-  public var onWWAN: Swift.Bool
-  @objc public var hasHighSpeed: Swift.Bool {
-    @objc get
-  }
-  @objc public var statusString: Swift.String {
-    @objc get
-  }
-  @objc public var carrierName: Swift.String? {
-    @objc get
-  }
-  public var status: VBotPhoneSDK.VBotReachability.NetworkStatus {
-    get
-  }
-  public var radioStatus: VBotPhoneSDK.VBotReachability.NetworkStatus? {
-    get
-  }
-  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability)
-  convenience public init?(hostname: Swift.String)
-  convenience public init?(_: Swift.Bool)
-  @objc deinit
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-}
-extension VBotPhoneSDK.VBotReachability {
-  public func startNotifier() throws
-  public func stopNotifier()
-}
 @objc public protocol VBotPhoneDelegate {
   @objc optional func callStateChanged(state: VBotPhoneSDK.VBotCallState)
   @objc optional func callStarted()
@@ -295,9 +243,6 @@ extension VBotPhoneSDK.VBotPhone {
 extension VBotPhoneSDK.VBotPhone {
   public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
   public func removeDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
-}
-@_hasMissingDesignatedInitializers public class VBotReachabilityHelper {
-  @objc deinit
 }
 public struct VBotLocalizedStrings {
   public var call_btn_messsage: Swift.String
@@ -359,8 +304,6 @@ extension VBotPhoneSDK.SocketMethod : Swift.Hashable {}
 extension VBotPhoneSDK.SocketMethod : Swift.RawRepresentable {}
 extension VBotPhoneSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType : Swift.Equatable {}
 extension VBotPhoneSDK.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType : Swift.Hashable {}
-extension VBotPhoneSDK.VBotReachability.NetworkStatus : Swift.Equatable {}
-extension VBotPhoneSDK.VBotReachability.NetworkStatus : Swift.Hashable {}
 extension VBotPhoneSDK.VBotEndCallReason : Swift.Equatable {}
 extension VBotPhoneSDK.VBotEndCallReason : Swift.Hashable {}
 extension VBotPhoneSDK.VBotEndCallReason : Swift.RawRepresentable {}

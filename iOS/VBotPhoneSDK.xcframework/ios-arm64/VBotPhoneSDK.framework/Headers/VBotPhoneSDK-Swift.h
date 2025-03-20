@@ -386,24 +386,6 @@ SWIFT_PROTOCOL("_TtP12VBotPhoneSDK17VBotPhoneDelegate_")
 - (void)internetConnectionChanged;
 @end
 
-@class NSString;
-
-SWIFT_CLASS("_TtC12VBotPhoneSDK16VBotReachability")
-@interface VBotReachability : NSObject
-@property (nonatomic, readonly) BOOL hasHighSpeed;
-@property (nonatomic, readonly, copy) NSString * _Nonnull statusString;
-@property (nonatomic, readonly, copy) NSString * _Nullable carrierName;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-
-
-
-
-
 
 #endif
 #if __has_attribute(external_source_symbol)
