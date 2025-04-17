@@ -312,7 +312,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-
 typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonTimeOut = -1001,
   VBotEndCallReasonInitiationFailed = 1001,

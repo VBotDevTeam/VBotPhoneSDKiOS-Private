@@ -8,7 +8,6 @@ import AVKit
 import CallKit
 import CocoaLumberjack
 import CommonCrypto
-import CoreTelephony
 import CryptoSwift
 import Foundation
 import Network
@@ -144,15 +143,6 @@ extension AVFAudio.AVAudioSession.RecordPermission {
   public var description: Swift.String {
     get
   }
-}
-extension Foundation.NSNotification.Name {
-  public static let VBotCallInfoUpdated: Foundation.Notification.Name
-  public static let VBotCallStarted: Foundation.Notification.Name
-  public static let VBotCallAccepted: Foundation.Notification.Name
-  public static let VBotCallEnded: Foundation.Notification.Name
-  public static let VBotCallMuteStateDidChange: Foundation.Notification.Name
-  public static let VBotCallMessageButtonTapped: Foundation.Notification.Name
-  public static let VBotCallHoldStateDidChange: Foundation.Notification.Name
 }
 @_hasMissingDesignatedInitializers open class NetworkReachabilityManager {
   public enum NetworkReachabilityStatus {

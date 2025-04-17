@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/VBotPhoneSDK-Swift.h</key>
 		<data>
-		gcluj+BbwZrRefaFWlErSFuOJ3E=
+		3KciB+EDswoFUhn5upaSkXySRN8=
 		</data>
 		<key>Headers/VBotPhoneSDK.h</key>
 		<data>
@@ -122,15 +122,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+mWNcOPn4VeELfkL+r72354I4So=
+		cQ2fUOKPEjRjZgWnO/Wots3WRl4=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		gaD2PiBeSo0IOP4HQyI104Zd/CI=
+		j8fy245wi9hYSV74t9T8lcR69gE=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Fdq0E0zPgDT988B9uRd6iw5aAyM=
+		kn6xJynyP87zm2b0rOrWqaMe3Ds=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -138,19 +138,19 @@
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Fdq0E0zPgDT988B9uRd6iw5aAyM=
+		kn6xJynyP87zm2b0rOrWqaMe3Ds=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lcPZAvM6xqVlzK9GcF45oh7aVQc=
+		F4upe2c/9IfwXV/0//ggVGsuv48=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		gaD2PiBeSo0IOP4HQyI104Zd/CI=
+		j8fy245wi9hYSV74t9T8lcR69gE=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		de0oNl+RL+D3ZKQlaev13MaeKh8=
+		R5Vwmfi8eDnmc8RazjAam2hLH0Y=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -158,11 +158,11 @@
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		de0oNl+RL+D3ZKQlaev13MaeKh8=
+		R5Vwmfi8eDnmc8RazjAam2hLH0Y=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		udyYfFjCJwbW/pbPmylrqAbJQ9E=
+		DbFLCKZOd/wHoxglnfxzUx+ONyk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -368,7 +368,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bUmzM843ik5c+rZJ3AVAINrR2ZLlvUsEzq3AqPDSh8U=
+			8qKhMf3JeeOdsdOoitMzggScx77muwIHESDPfOXBBZA=
 			</data>
 		</dict>
 		<key>Headers/VBotPhoneSDK.h</key>
@@ -438,14 +438,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nszcTOBKf+pe30MczzV5zeoEue9yqhl3QDkAa4QXlyk=
+			1DbvhjQp/C4DaUAjjCwl9quZM71v1cA8pzbXwQywui8=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nrTtDGoS04H5rAmbIoMSwXlRdV1a2mciRqlyg3mEUDM=
+			DJdbo9tMB4QneqZDQyhT88996E6boWpwRpQQt1rOoHU=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -459,28 +459,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nrTtDGoS04H5rAmbIoMSwXlRdV1a2mciRqlyg3mEUDM=
+			DJdbo9tMB4QneqZDQyhT88996E6boWpwRpQQt1rOoHU=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p+UQIvRUwQ/ohPssMfwURRTea9kA9jDOP3eZq51kQ5s=
+			AejAcwYUXRGEDctLSxBzU5ZqXs367wtH1018w9ZxCjk=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nszcTOBKf+pe30MczzV5zeoEue9yqhl3QDkAa4QXlyk=
+			1DbvhjQp/C4DaUAjjCwl9quZM71v1cA8pzbXwQywui8=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mOVzET4YQzAzCZw5/kL00CN5o1uTqZ1cKo9EX3E8Xs8=
+			t8fK3qgNQhLvGInI/IuDHAanpuH8cc2zzPzUlbq1Fxs=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -494,14 +494,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mOVzET4YQzAzCZw5/kL00CN5o1uTqZ1cKo9EX3E8Xs8=
+			t8fK3qgNQhLvGInI/IuDHAanpuH8cc2zzPzUlbq1Fxs=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AjeMu3RfgG6tOGPpfi+/dgJZsnbbXagM/iLBpOwD/fQ=
+			JlUxHL200BZVvBFvI5Pq/lTgzpYKXWq2uo6XOyD/flk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
