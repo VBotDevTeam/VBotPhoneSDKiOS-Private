@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VBotPhoneSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VBotPhoneSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AVFAudio
 import AVFoundation
 import AVKit
@@ -88,19 +88,11 @@ extension UIKit.UIView.AnimationCurve {
     get
   }
 }
-#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional where Wrapped == UIKit.UIView.AnimationCurve {
   public var asAnimationOptions: UIKit.UIView.AnimationOptions {
     get
   }
 }
-#else
-extension Swift.Optional where Wrapped == UIKit.UIView.AnimationCurve {
-  public var asAnimationOptions: UIKit.UIView.AnimationOptions {
-    get
-  }
-}
-#endif
 public struct VBotConfig {
   public init(supportPopupCall: Swift.Bool = true, iconTemplateImageData: Foundation.Data? = nil)
 }
