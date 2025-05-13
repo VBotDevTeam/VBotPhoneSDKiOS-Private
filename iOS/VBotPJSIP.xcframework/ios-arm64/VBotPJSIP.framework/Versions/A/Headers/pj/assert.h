@@ -1,4 +1,4 @@
-/*
+/* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
  *
@@ -14,7 +14,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
  */
 #ifndef __PJ_ASSERT_H__
 #define __PJ_ASSERT_H__
@@ -45,27 +45,25 @@
  *
  * @param expr      The expression to be evaluated.
  */
-#if PJ_DEBUG == 0
+#if PJ_DEBUG==0
 
-#ifndef pj_assert
-#include "pj/os.h"
-#include "pj/log.h"
-#define pj_assert(expr)                                            \
-    do                                                             \
-    {                                                              \
-        if (!(expr))                                               \
-        {                                                          \
-            if (pj_thread_is_registered())                         \
-                PJ_LOG(1, (__FILE__, "Assert failed: %s", #expr)); \
-        }                                                          \
-    } while (0)
-#endif
+#   ifndef pj_assert
+#       include "pj/os.h"
+#       include "pj/log.h"
+#       define pj_assert(expr) \
+            do { \
+                if (!(expr)) { \
+                    if (pj_thread_is_registered()) \
+                        PJ_LOG(1, (__FILE__, "Assert failed: %s", #expr)); \
+                } \
+            } while (0)
+#   endif
 
 #else /* PJ_DEBUG != 0 */
 
-#ifndef pj_assert
-#define pj_assert(expr) assert(expr)
-#endif
+#   ifndef pj_assert
+#       define pj_assert(expr)   assert(expr)
+#   endif
 
 #endif
 
@@ -82,15 +80,10 @@
  */
 #ifndef PJ_ASSERT_LOG
 #include "VBotPJSIP/pj/log.h"
-#define PJ_ASSERT_LOG(expr, ...)      \
-    do                                \
-    {                                 \
-        if (!(expr))                  \
-        {                             \
-            PJ_LOG(1, (__VA_ARGS__)); \
-            assert(expr);             \
-        }                             \
-    } while (0)
+#define PJ_ASSERT_LOG(expr,...)    \
+            do { \
+                if (!(expr)) { PJ_LOG(1,(__VA_ARGS__)); assert(expr); } \
+            } while (0)
 
 #endif
 
@@ -100,35 +93,30 @@
  * and the current function will return with the specified return value.
  */
 // #if defined(PJ_ENABLE_EXTRA_CHECK) && PJ_ENABLE_EXTRA_CHECK != 0
-#define PJ_ASSERT_RETURN(expr, retval) \
-    do                                 \
-    {                                  \
-        if (!(expr))                   \
-        {                              \
-            pj_assert(expr);           \
-            return retval;             \
-        }                              \
-    } while (0)
-// #else
-// #   define PJ_ASSERT_RETURN(expr,retval)    pj_assert(expr)
-// #endif
+#define PJ_ASSERT_RETURN(expr,retval)    \
+            do { \
+                if (!(expr)) { pj_assert(expr); return retval; } \
+            } while (0)
+//#else
+//#   define PJ_ASSERT_RETURN(expr,retval)    pj_assert(expr)
+//#endif
 
 /**
  * @hideinitializer
  * If the expression yields false, assertion will be triggered
  * and @a exec_on_fail will be executed.
  */
-// #if defined(PJ_ENABLE_EXTRA_CHECK) && PJ_ENABLE_EXTRA_CHECK != 0
-#define PJ_ASSERT_ON_FAIL(expr, exec_on_fail) \
-    {                                         \
-        pj_assert(expr);                      \
-        if (!(expr))                          \
-            exec_on_fail;                     \
-    }
-// #else
-// #   define PJ_ASSERT_ON_FAIL(expr,exec_on_fail)    pj_assert(expr)
-// #endif
+//#if defined(PJ_ENABLE_EXTRA_CHECK) && PJ_ENABLE_EXTRA_CHECK != 0
+#define PJ_ASSERT_ON_FAIL(expr,exec_on_fail)    \
+            { \
+                pj_assert(expr); \
+                if (!(expr)) exec_on_fail; \
+            }
+//#else
+//#   define PJ_ASSERT_ON_FAIL(expr,exec_on_fail)    pj_assert(expr)
+//#endif
 
 /** @} */
 
-#endif /* __PJ_ASSERT_H__ */
+#endif  /* __PJ_ASSERT_H__ */
+

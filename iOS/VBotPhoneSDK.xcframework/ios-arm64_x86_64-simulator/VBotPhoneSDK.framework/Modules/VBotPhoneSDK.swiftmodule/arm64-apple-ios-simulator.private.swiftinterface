@@ -94,7 +94,7 @@ extension Swift.Optional where Wrapped == UIKit.UIView.AnimationCurve {
   }
 }
 public struct VBotConfig {
-  public init(supportPopupCall: Swift.Bool = true, iconTemplateImageData: Foundation.Data? = nil)
+  public init(supportPopupCall: Swift.Bool = true, includesCallsInRecents: Swift.Bool = true, iconTemplateImageData: Foundation.Data? = nil)
 }
 public struct VBotHotline : Swift.Codable {
   public let name: Swift.String, phoneNumber: Swift.String

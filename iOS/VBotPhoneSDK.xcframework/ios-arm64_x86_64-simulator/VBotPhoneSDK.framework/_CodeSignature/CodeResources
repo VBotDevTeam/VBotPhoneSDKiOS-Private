@@ -122,15 +122,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		l6mSqE3KhjFJOo8C+ejHhG+JXM4=
+		XITp94LAX5YUH5Lk0fm200X4ScY=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		F1hF1TSe5lDrmjQvhIqWCvj1Qxg=
+		PNEcYUkCkGAQQV2B9SHvY8Fk3Jc=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		gwDvKs2frN9BeWfYj2AZl6ZIyNw=
+		A2HzhZYg3FIOC/Xia4At/KvrhmE=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -138,19 +138,19 @@
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		gwDvKs2frN9BeWfYj2AZl6ZIyNw=
+		A2HzhZYg3FIOC/Xia4At/KvrhmE=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		DuzGzo+PosTMvVrww+8mk/87yHQ=
+		3KdwygoG2aXIy7Wk7ndG4D0iPco=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		F1hF1TSe5lDrmjQvhIqWCvj1Qxg=
+		PNEcYUkCkGAQQV2B9SHvY8Fk3Jc=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/bO/J8fwqW9C1dz+JioQa6xkYaY=
+		zcJH2sBgV+U9G8ewG3jnS6M1UR8=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -158,11 +158,11 @@
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/bO/J8fwqW9C1dz+JioQa6xkYaY=
+		zcJH2sBgV+U9G8ewG3jnS6M1UR8=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7b3hZHubsFYfw5SSqKq/icwroew=
+		bh7wiDwT07qaYm0iWw6560U2e5k=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -207,6 +207,10 @@
 		<key>placeholder-avatar.png</key>
 		<data>
 		djzFiMo6hObV5zitIKGD4tGTrP4=
+		</data>
+		<key>ringtone.mp3</key>
+		<data>
+		kmMaQvE2DFAL4QhtTvNe64qrGbM=
 		</data>
 		<key>speaker-bluetooth.png</key>
 		<data>
@@ -438,14 +442,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XYQQ+xrjCYkJj5AivYVLNaLXK+j3s3JBHqK4i645zWs=
+			PwlPXK0mfMvOIGT4Mrl90erg8rTvrwb3yXijiMkM6KY=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XSMHfUAau5cVtS3S68UPSomFajpKnB2MDVv73XNzdVA=
+			nI4HdFeV753QalDG063gjEcICVhhuczi8HsawFMTQr8=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -459,28 +463,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XSMHfUAau5cVtS3S68UPSomFajpKnB2MDVv73XNzdVA=
+			nI4HdFeV753QalDG063gjEcICVhhuczi8HsawFMTQr8=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RPtbh3v/o6ccfGb65YponDjnfUjzWTzSP2S6rU0dUro=
+			ehkFCVvE+L4W/nnavStb7kuUmeZtgd6xQVw/rj0Ztbw=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XYQQ+xrjCYkJj5AivYVLNaLXK+j3s3JBHqK4i645zWs=
+			PwlPXK0mfMvOIGT4Mrl90erg8rTvrwb3yXijiMkM6KY=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			luYjJSu8c9Mxn+H7Ac/Agud4HJdbIlpa7Et+QYaCBqU=
+			d/LYk+OB0pNU9VPRDkcBYnDzK8z3RUm0C0YWHELLwyw=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -494,14 +498,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			luYjJSu8c9Mxn+H7Ac/Agud4HJdbIlpa7Et+QYaCBqU=
+			d/LYk+OB0pNU9VPRDkcBYnDzK8z3RUm0C0YWHELLwyw=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EyITpplw5xeNY3yUxOf27CDDiVc8+38DWKTIFTBJB0w=
+			bm+3coQoEBiSwq1/XHVKnfkuYYdi3Js/dipL+sMj2Hs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -579,6 +583,13 @@
 			<key>hash2</key>
 			<data>
 			tf1kN40Fx0IMrQ1F09yxmBBx26qUinRE175G3Xxmhcw=
+			</data>
+		</dict>
+		<key>ringtone.mp3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6IpZgQMSV7xfi44FVozfJRWjqdfVU24F9RZ7ztepuyE=
 			</data>
 		</dict>
 		<key>speaker-bluetooth.png</key>
