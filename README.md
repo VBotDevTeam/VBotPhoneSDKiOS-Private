@@ -82,8 +82,9 @@ File **AppDelegate.swift**
 
 ```swift
 let config = VBotConfig(
-            supportPopupCall: true,
-            iconTemplateImageData: UIImage(named: "callkit-icon")?.pngData())
+            supportPopupCall: true, // Bật pip call
+            includesCallsInRecents: true, // Bật lưu lịch sử cuộc gọi
+            iconTemplateImageData: UIImage(named: "callkit-icon")?.pngData()) // Icon app cho button trong màn hình CallKit
             
 VBotPhone.sharedInstance.setup(token: token, with: config)
 ```
@@ -98,7 +99,7 @@ Trong đó:
 
 ```swift
 VBotPhone.sharedInstance.startOutgoingCall(
-	callerId: <Mã người gọi>, 
+  callerId: <Mã người gọi>, 
   callerName: <Tên người gọi>, 
   callerAvatar: <Ảnh đại diện người gọi>, 
   calleeId: <Mã người nghe>, 
@@ -121,7 +122,69 @@ VBotPhone.sharedInstance.startOutgoingCall(
   }
 ```
 
+### Gọi lại từ lịch sử cuộc gọi của iPhone
+
+Trong cấu hình của VBotConfig, nếu bạn bật **includesCallsInRecents: true** thì lịch sử cuộc gọi sẽ được lưu vào ứng dụng Điện thoại của iPhone.
+
+Và người dùng có thể chọn vào lịch sử này để gọi lại.
+
+Để đón được sự kiện này và thực hiện gọi lại:
+
+Trong file **AppDelegate.swift**, thêm hàm sau:
+
+```swift
+// Đón sự kiện người dùng bấm vào lịch sử để gọi lại
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        switch userActivity.activityType {
+        case "INStartAudioCallIntent":
+            return handleStartCallIntent(
+                INStartAudioCallIntent.self,
+                userActivity: userActivity,
+                contacts: \.contacts,
+            )
+
+        case "INStartCallIntent":
+            if #available(iOS 13.0, *) {
+                return handleStartCallIntent(
+                    INStartCallIntent.self,
+                    userActivity: userActivity,
+                    contacts: \.contacts,
+                )
+            } else {
+                return false
+            }
+
+        default:
+            return false
+        }
+    }
+
+// Lấy ra calleeId để gọi lại
+private func handleStartCallIntent<T: INIntent>(
+	_ intentType: T.Type,
+        userActivity: NSUserActivity,
+        contacts: KeyPath<T, [INPerson]?>,
+    ) -> Bool {
+        let intent = userActivity.interaction?.intent
+        guard let intent = intent as? T else {
+            return false
+        }
+        
+        if let person =  intent[keyPath: contacts]?.first {
+            let calleeId = person.displayName
+
+	    // Dùng giá trị calleeId để tìm thông tin người gọi
+	    // Sau đó gọi hàm startOutgoingCall để gọi lại
+            // VBotPhone.sharedInstance.startOutgoingCall()
+        }
+       
+        return true
+}
+```
+
+
 ### Gọi đến
+
 Để nhận cuộc gọi đến
 Trong hàm **pushRegistry didReceiveIncomingPushWith** hãy sử dụng hàm **startIncomingCall**
 
@@ -132,17 +195,17 @@ func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload
   	// Xử lý payload
     	...
     
-    // Truyền dữ liệu sau khi xử lý vào hàm khởi tạo của của VBot SDK
-		VBotPhone.sharedInstance.startIncomingCall(
-			callerId: <Mã người gọi>, 
+    	// Truyền dữ liệu sau khi xử lý vào hàm khởi tạo của của VBot SDK
+	VBotPhone.sharedInstance.startIncomingCall(
+		callerId: <Mã người gọi>, 
   		callerName: <Tên người gọi>, 
   		callerAvatar: <Ảnh đại diện người gọi>, 
   		calleeId: <Mã người nghe>, 
   		calleeName: <Tên người nghe>, 
   		calleeAvatar: <Ảnh đại diện người nghe>, 
   		checkSum: <Mã xác thực cuộc gọi>,
-      metaData: <MetaData của cuộc gọi>
-      completion: completion) 
+      		metaData: <MetaData của cuộc gọi>
+      		completion: completion) 
   }
 ```
 
