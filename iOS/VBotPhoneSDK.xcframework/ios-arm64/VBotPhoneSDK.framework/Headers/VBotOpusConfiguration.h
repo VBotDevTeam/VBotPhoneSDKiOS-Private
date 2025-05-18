@@ -8,7 +8,7 @@
 typedef NS_ENUM(NSUInteger, VBotOpusConfigurationSampleRate) {
     VBotOpusConfigurationSampleRateFullBand = 48000,
     VBotOpusConfigurationSampleRateSuperWideBand = 24000,
-    VBotOpusConfigurationSampleRateWideBand = 16000,
+    VBotOpusConfigurationSampleRateWideBand = 8000,
     VBotOpusConfigurationSampleRateMediumBand = 12000,
     VBotOpusConfigurationSampleRateNarrowBand = 8000
 };

@@ -217,7 +217,6 @@ extension VBotPhoneSDK.VBotPhone {
   public func onOffSpeaker()
   public func isCallHold() -> Swift.Bool
   public func isCallMute() -> Swift.Bool
-  public func sendDTMF(digit: Swift.String, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
 }
 extension VBotPhoneSDK.VBotPhone {
   @objc dynamic public func callObserver(_ callObserver: CallKit.CXCallObserver, callChanged call: CallKit.CXCall)
