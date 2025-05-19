@@ -11159,20 +11159,20 @@
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
       "kind": "StringLiteral",
       "offset": 155,
-      "length": 7,
-      "value": "\"2.0.9\""
+      "length": 8,
+      "value": "\"2.0.12\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
       "kind": "StringLiteral",
-      "offset": 194,
+      "offset": 195,
       "length": 10,
       "value": "\"VBotUser\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
       "kind": "StringLiteral",
-      "offset": 236,
+      "offset": 237,
       "length": 15,
       "value": "\"VBotPushToken\""
     }
