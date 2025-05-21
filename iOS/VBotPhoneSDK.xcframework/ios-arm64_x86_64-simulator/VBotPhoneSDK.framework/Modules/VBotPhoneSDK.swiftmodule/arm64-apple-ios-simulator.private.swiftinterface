@@ -204,6 +204,7 @@ extension VBotPhoneSDK.VBotPhone {
   public func setConfig(config: VBotPhoneSDK.VBotConfig)
   public func getConfig() -> VBotPhoneSDK.VBotConfig
   public func getLocalizedStrings() -> VBotPhoneSDK.VBotLocalizedStrings
+  public func getCallDataFromUserActivity(_ string: Swift.String) -> (callId: Swift.String, callName: Swift.String)
   public func startOutgoingCall(callerId: Swift.String, callerName: Swift.String, callerAvatar: Swift.String? = nil, calleeId: Swift.String, calleeName: Swift.String, calleeAvatar: Swift.String? = nil, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   public func startIncomingCall(callerId: Swift.String, callerName: Swift.String, callerAvatar: Swift.String? = nil, calleeId: Swift.String, calleeName: Swift.String, calleeAvatar: Swift.String? = nil, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping () -> Swift.Void)
   public func returnToCallVCIfNeeded()

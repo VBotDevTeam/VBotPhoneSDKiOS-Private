@@ -2950,6 +2950,47 @@
           },
           {
             "kind": "Function",
+            "name": "getCallDataFromUserActivity",
+            "printedName": "getCallDataFromUserActivity(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(callId: Swift.String, callName: Swift.String)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VBotPhoneSDK0aB0C27getCallDataFromUserActivityySS6callId_SS0J4NametSSF",
+            "mangledName": "$s12VBotPhoneSDK0aB0C27getCallDataFromUserActivityySS6callId_SS0J4NametSSF",
+            "moduleName": "VBotPhoneSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "startOutgoingCall",
             "printedName": "startOutgoingCall(callerId:callerName:callerAvatar:calleeId:calleeName:calleeAvatar:checkSum:metaData:completion:)",
             "children": [
@@ -3082,6 +3123,9 @@
             "usr": "s:12VBotPhoneSDK0aB0C17startOutgoingCall8callerId0G4Name0G6Avatar06calleeH00kI00kJ08checkSum8metaData10completionySS_S2SSgS2SANSSSDySSypGSgys6ResultOyyts5Error_pGctF",
             "mangledName": "$s12VBotPhoneSDK0aB0C17startOutgoingCall8callerId0G4Name0G6Avatar06calleeH00kI00kJ08checkSum8metaData10completionySS_S2SSgS2SANSSSDySSypGSgys6ResultOyyts5Error_pGctF",
             "moduleName": "VBotPhoneSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -3205,6 +3249,9 @@
             "usr": "s:12VBotPhoneSDK0aB0C17startIncomingCall8callerId0G4Name0G6Avatar06calleeH00kI00kJ08checkSum8metaData10completionySS_S2SSgS2SANSSSDySSypGSgyyctF",
             "mangledName": "$s12VBotPhoneSDK0aB0C17startIncomingCall8callerId0G4Name0G6Avatar06calleeH00kI00kJ08checkSum8metaData10completionySS_S2SSgS2SANSSSDySSypGSgyyctF",
             "moduleName": "VBotPhoneSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -6881,6 +6928,23 @@
       },
       {
         "kind": "Import",
+        "name": "CryptoSwift",
+        "printedName": "CryptoSwift",
+        "declKind": "Import",
+        "moduleName": "VBotPhoneSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VBotPhoneSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CallKit",
         "printedName": "CallKit",
         "declKind": "Import",
@@ -10423,35 +10487,35 @@
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 25151,
+      "offset": 25429,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 25629,
+      "offset": 25907,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 26179,
+      "offset": 26457,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 41303,
+      "offset": 41581,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 42473,
+      "offset": 42751,
       "length": 2,
       "value": "30"
     },
@@ -11128,6 +11192,27 @@
       "value": "131"
     },
     {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotCrypto.swift",
+      "kind": "StringLiteral",
+      "offset": 198,
+      "length": 20,
+      "value": "\"vbotxanh18call04ta\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotCrypto.swift",
+      "kind": "StringLiteral",
+      "offset": 474,
+      "length": 15,
+      "value": "\"vbotNonce0418\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotCrypto.swift",
+      "kind": "IntegerLiteral",
+      "offset": 502,
+      "length": 2,
+      "value": "12"
+    },
+    {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotVoIPPushHandler.swift",
       "kind": "BooleanLiteral",
       "offset": 322,
@@ -11160,7 +11245,7 @@
       "kind": "StringLiteral",
       "offset": 155,
       "length": 8,
-      "value": "\"2.0.12\""
+      "value": "\"2.0.14\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
