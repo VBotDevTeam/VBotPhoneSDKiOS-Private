@@ -171,10 +171,9 @@ private func handleStartCallIntent<T: INIntent>(
         }
         
         if let person =  intent[keyPath: contacts]?.first {
-            let calleeId = person.displayName
-
-	    // Dùng giá trị calleeId để tìm thông tin người gọi
-	    // Sau đó gọi hàm startOutgoingCall để gọi lại
+            let displayName = person.displayName
+	    let (id, name) = VBotPhone.sharedInstance.getCallDataFromUserActivity(displayName)
+	    // Gọi hàm startOutgoingCall và truyền data để gọi lại
             // VBotPhone.sharedInstance.startOutgoingCall()
         }
        
