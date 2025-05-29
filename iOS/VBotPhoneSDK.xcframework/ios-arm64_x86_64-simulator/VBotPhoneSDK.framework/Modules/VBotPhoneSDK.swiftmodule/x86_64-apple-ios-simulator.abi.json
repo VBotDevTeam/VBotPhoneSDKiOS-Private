@@ -3725,6 +3725,92 @@
         "children": [
           {
             "kind": "Var",
+            "name": "call_name_title",
+            "printedName": "call_name_title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvp",
+            "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvp",
+            "moduleName": "VBotPhoneSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvg",
+                "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvg",
+                "moduleName": "VBotPhoneSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvs",
+                "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvs",
+                "moduleName": "VBotPhoneSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvM",
+                "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV15call_name_titleSSvM",
+                "moduleName": "VBotPhoneSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "call_btn_messsage",
             "printedName": "call_btn_messsage",
             "children": [
@@ -5704,7 +5790,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(call_btn_messsage:call_btn_mute:call_btn_speaker:call_calling:call_connecting:call_end:call_failed_api:call_failed_no_connection:call_lost_connection:call_permission_btn_allow:call_permission_btn_deny:call_permission_btn_setting:call_permission_btn_skip:call_permission_microphone_content:call_permission_microphone_demied_content:call_permission_microphone_demied_title:call_permission_microphone_title:call_refused:call_busy:call_temporarily_unavailable:call_ringing:call_title:call_weak_signal:)",
+            "printedName": "init(call_name_title:call_btn_messsage:call_btn_mute:call_btn_speaker:call_calling:call_connecting:call_end:call_failed_api:call_failed_no_connection:call_lost_connection:call_permission_btn_allow:call_permission_btn_deny:call_permission_btn_setting:call_permission_btn_skip:call_permission_microphone_content:call_permission_microphone_demied_content:call_permission_microphone_demied_title:call_permission_microphone_title:call_refused:call_busy:call_temporarily_unavailable:call_ringing:call_title:call_weak_signal:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5872,11 +5958,18 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV17call_btn_messsage0f1_G5_mute0f1_G8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_N14_no_connection0f6_lost_Q00f12_permission_G6_allow0f1_s1_G5_deny0f1_s1_G8_setting0f1_s1_G5_skip0f1_S19_microphone_content0f1_s1_x8_demied_Y00f1_s1_x1_Z6_title0f1_s1_X6_title0F8_refused0F5_busy0F24_temporarily_unavailable0F8_ringing0F6_title0F12_weak_signalACSS_S22Stcfc",
-            "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV17call_btn_messsage0f1_G5_mute0f1_G8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_N14_no_connection0f6_lost_Q00f12_permission_G6_allow0f1_s1_G5_deny0f1_s1_G8_setting0f1_s1_G5_skip0f1_S19_microphone_content0f1_s1_x8_demied_Y00f1_s1_x1_Z6_title0f1_s1_X6_title0F8_refused0F5_busy0F24_temporarily_unavailable0F8_ringing0F6_title0F12_weak_signalACSS_S22Stcfc",
+            "usr": "s:12VBotPhoneSDK0A16LocalizedStringsV15call_name_title0F13_btn_messsage0f1_I5_mute0f1_I8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_P14_no_connection0f6_lost_S00f12_permission_I6_allow0f1_u1_I5_deny0f1_u1_I8_setting0f1_u1_I5_skip0f1_U19_microphone_content0f1_u1_Z15_demied_content0f1_u1_z8_demied_H00f1_u1_z1_H00F8_refused0F5_busy0F24_temporarily_unavailable0F8_ringing0f1_H00F12_weak_signalACSS_S23Stcfc",
+            "mangledName": "$s12VBotPhoneSDK0A16LocalizedStringsV15call_name_title0F13_btn_messsage0f1_I5_mute0f1_I8_speaker0F8_calling0F11_connecting0F4_end0F11_failed_api0f1_P14_no_connection0f6_lost_S00f12_permission_I6_allow0f1_u1_I5_deny0f1_u1_I8_setting0f1_u1_I5_skip0f1_U19_microphone_content0f1_u1_Z15_demied_content0f1_u1_z8_demied_H00f1_u1_z1_H00F8_refused0F5_busy0F24_temporarily_unavailable0F8_ringing0f1_H00F12_weak_signalACSS_S23Stcfc",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
               "AccessControl"
@@ -9661,77 +9754,77 @@
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 15944,
+      "offset": 15964,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 15977,
+      "offset": 15997,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16012,
+      "offset": 16032,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16045,
+      "offset": 16065,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16075,
+      "offset": 16095,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16108,
+      "offset": 16128,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16139,
+      "offset": 16159,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16169,
+      "offset": 16189,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16199,
+      "offset": 16219,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16232,
+      "offset": 16252,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotAPI.swift",
       "kind": "StringLiteral",
-      "offset": 16263,
+      "offset": 16283,
       "length": 2,
       "value": "\"\""
     },
@@ -9759,7 +9852,7 @@
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26199,
+      "offset": 26431,
       "length": 1,
       "value": "0"
     },
@@ -10091,6 +10184,13 @@
       "offset": 7289,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotModel.swift",
+      "kind": "StringLiteral",
+      "offset": 620,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotReturnToCallViewController.swift",
@@ -10466,378 +10566,392 @@
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "Array",
-      "offset": 3093,
+      "offset": 3052,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 3228,
+      "offset": 3130,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 3274,
+      "offset": 3176,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 25429,
+      "offset": 25263,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 25907,
+      "offset": 25741,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 26457,
+      "offset": 26291,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 41581,
+      "offset": 42755,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 42751,
+      "offset": 43925,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 421,
+      "offset": 419,
+      "length": 9,
+      "value": "\"Xanh SM\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
+      "kind": "StringLiteral",
+      "offset": 472,
       "length": 12,
       "value": "\"Nhắn tin\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 473,
+      "offset": 524,
       "length": 11,
       "value": "\"Im lặng\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 527,
+      "offset": 578,
       "length": 12,
       "value": "\"Loa ngoài\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 578,
+      "offset": 629,
       "length": 16,
       "value": "\"Đang gọi...\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 687,
       "length": 19,
       "value": "\"Đang kết nối\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 694,
+      "offset": 745,
       "length": 24,
       "value": "\"Đang đổ chuông...\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 755,
+      "offset": 806,
       "length": 19,
       "value": "\"Gọi miễn phí\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 817,
+      "offset": 868,
       "length": 13,
       "value": "\"Sóng yếu\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 865,
+      "offset": 916,
       "length": 13,
       "value": "\"Kết thúc\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 917,
+      "offset": 968,
       "length": 42,
       "value": "\"Người nhận từ chối cuộc gọi\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 995,
+      "offset": 1046,
       "length": 12,
       "value": "\"Máy bận\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1062,
+      "offset": 1113,
       "length": 29,
       "value": "\"Không liên lạc được\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1133,
+      "offset": 1184,
       "length": 65,
       "value": "\"Không thể thực hiện cuộc gọi. Vui lòng thử lại.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1250,
+      "offset": 1301,
       "length": 43,
       "value": "\"Không có mạng. Vui lòng thử lại.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1340,
+      "offset": 1391,
       "length": 19,
       "value": "\"Mất kết nối\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1411,
+      "offset": 1462,
       "length": 11,
       "value": "\"Cho phép\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1473,
+      "offset": 1524,
       "length": 18,
       "value": "\"Không cho phép\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1545,
+      "offset": 1596,
       "length": 24,
       "value": "\"Đi đến Cài đặt\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1620,
+      "offset": 1671,
       "length": 10,
       "value": "\"Bỏ qua\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1691,
+      "offset": 1742,
       "length": 95,
       "value": "\"Việc này cho phép ứng dụng thực hiện cuộc gọi miễn phí trong ứng dụng.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 1854,
+      "offset": 1905,
       "length": 107,
       "value": "\"Vui lòng cho phép ứng dụng truy cập \"Microphone\" trong Cài đặt điện thoại của bạn.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2027,
+      "offset": 2078,
       "length": 85,
       "value": "\"Không thể thực hiện cuộc gọi do chưa có quyền truy cập “Micrô\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2171,
+      "offset": 2222,
       "length": 66,
       "value": "\"Xanh SM muốn truy cập micrô trên thiết bị của bạn.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2292,
+      "offset": 2341,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2381,
       "length": 12,
       "value": "\"Nhắn tin\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2338,
+      "offset": 2427,
       "length": 11,
       "value": "\"Im lặng\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2386,
+      "offset": 2475,
       "length": 12,
       "value": "\"Loa ngoài\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2431,
+      "offset": 2520,
       "length": 16,
       "value": "\"Đang gọi...\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2483,
+      "offset": 2572,
       "length": 19,
       "value": "\"Đang kết nối\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2531,
+      "offset": 2620,
       "length": 13,
       "value": "\"Kết thúc\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2580,
+      "offset": 2669,
       "length": 65,
       "value": "\"Không thể thực hiện cuộc gọi. Vui lòng thử lại.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2691,
+      "offset": 2780,
       "length": 43,
       "value": "\"Không có mạng. Vui lòng thử lại.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2775,
+      "offset": 2864,
       "length": 19,
       "value": "\"Mất kết nối\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2840,
+      "offset": 2929,
       "length": 11,
       "value": "\"Cho phép\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2896,
+      "offset": 2985,
       "length": 18,
       "value": "\"Không cho phép\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 2962,
+      "offset": 3051,
       "length": 24,
       "value": "\"Đi đến Cài đặt\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3031,
+      "offset": 3120,
       "length": 10,
       "value": "\"Bỏ qua\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3096,
+      "offset": 3185,
       "length": 95,
       "value": "\"Việc này cho phép ứng dụng thực hiện cuộc gọi miễn phí trong ứng dụng.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3253,
+      "offset": 3342,
       "length": 107,
       "value": "\"Vui lòng cho phép ứng dụng truy cập \"Microphone\" trong Cài đặt điện thoại của bạn.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3420,
+      "offset": 3509,
       "length": 85,
       "value": "\"Không thể thực hiện cuộc gọi do chưa có quyền truy cập “Micrô\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3558,
+      "offset": 3647,
       "length": 66,
       "value": "\"Xanh SM muốn truy cập micrô trên thiết bị của bạn.\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3657,
+      "offset": 3746,
       "length": 42,
       "value": "\"Người nhận từ chối cuộc gọi\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3725,
+      "offset": 3818,
       "length": 12,
       "value": "\"Máy bận\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3782,
+      "offset": 3879,
       "length": 29,
       "value": "\"Không liên lạc được\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3844,
+      "offset": 3941,
       "length": 24,
       "value": "\"Đang đổ chuông...\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3899,
+      "offset": 3996,
       "length": 19,
       "value": "\"Gọi miễn phí\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLocalizationManager.swift",
       "kind": "StringLiteral",
-      "offset": 3955,
+      "offset": 4052,
       "length": 13,
       "value": "\"Sóng yếu\""
     },
@@ -11245,7 +11359,7 @@
       "kind": "StringLiteral",
       "offset": 155,
       "length": 8,
-      "value": "\"2.0.14\""
+      "value": "\"2.0.15\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
