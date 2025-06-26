@@ -9831,28 +9831,28 @@
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1183,
+      "offset": 1175,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1229,
+      "offset": 1221,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1862,
+      "offset": 1854,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26431,
+      "offset": 26428,
       "length": 1,
       "value": "0"
     },
@@ -10181,7 +10181,7 @@
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotWindowManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 7289,
+      "offset": 7347,
       "length": 5,
       "value": "false"
     },
@@ -10544,78 +10544,92 @@
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
+      "kind": "Array",
+      "offset": 2608,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2775,
+      "offset": 2823,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 2817,
+      "offset": 2865,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 2853,
+      "offset": 2901,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "Array",
-      "offset": 3052,
+      "offset": 3100,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 3130,
+      "offset": 3178,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 3176,
+      "offset": 3224,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "StringLiteral",
-      "offset": 25263,
+      "offset": 3287,
+      "length": 23,
+      "value": "\"com.vbot.callLogQueue\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
+      "kind": "StringLiteral",
+      "offset": 25843,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 25741,
+      "offset": 26321,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "BooleanLiteral",
-      "offset": 26291,
+      "offset": 27204,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 42755,
+      "offset": 44618,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotPhone.swift",
       "kind": "IntegerLiteral",
-      "offset": 43925,
+      "offset": 45788,
       "length": 2,
       "value": "30"
     },
@@ -11359,19 +11373,19 @@
       "kind": "StringLiteral",
       "offset": 155,
       "length": 8,
-      "value": "\"2.0.15\""
+      "value": "\"2.0.16\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
       "kind": "StringLiteral",
-      "offset": 195,
+      "offset": 190,
       "length": 10,
       "value": "\"VBotUser\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
       "kind": "StringLiteral",
-      "offset": 237,
+      "offset": 232,
       "length": 15,
       "value": "\"VBotPushToken\""
     }
