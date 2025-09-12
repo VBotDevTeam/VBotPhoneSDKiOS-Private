@@ -197,6 +197,8 @@ extension UIKit.UIWindow.Level {
   public static let sharedInstance: VBotPhoneSDK.VBotPhone
   public var audioOutput: VBotPhoneSDK.VBotAudioControllerOutputs?
   public var microphonePermissionGranted: AVFAudio.AVAudioSession.RecordPermission
+  public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
+  public func removeDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
   @objc deinit
 }
 extension VBotPhoneSDK.VBotPhone {
@@ -221,10 +223,6 @@ extension VBotPhoneSDK.VBotPhone {
 }
 extension VBotPhoneSDK.VBotPhone {
   @objc dynamic public func callObserver(_ callObserver: CallKit.CXCallObserver, callChanged call: CallKit.CXCall)
-}
-extension VBotPhoneSDK.VBotPhone {
-  public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
-  public func removeDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)
 }
 public struct VBotLocalizedStrings {
   public var call_name_title: Swift.String
