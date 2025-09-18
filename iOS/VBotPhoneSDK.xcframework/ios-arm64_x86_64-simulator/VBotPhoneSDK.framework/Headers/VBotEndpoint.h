@@ -64,6 +64,12 @@ typedef NS_ENUM(NSInteger, VBotEndpointState) {
 
 @interface VBotEndpoint : NSObject
 
+@property (nonatomic, strong, readonly, nonnull) dispatch_queue_t sipQueue;
+
+- (void)performOnSipQueue:(nonnull dispatch_block_t)block;     // async
+- (void)performSyncOnSipQueue:(nonnull dispatch_block_t)block;
+
+
 /**
  *  Current state of the endpoint.
  */

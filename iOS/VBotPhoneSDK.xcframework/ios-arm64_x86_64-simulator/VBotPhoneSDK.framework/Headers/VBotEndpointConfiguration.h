@@ -133,4 +133,16 @@
  */
 @property (strong, nonatomic) NSString * _Nullable userAgent;
 
+/// Bật/tắt fast parallel STUN probe (song song 3 server, chọn thằng trả lời nhanh nhất).
+/// Mặc định: YES (bật). Có thể đổi default trong -init nếu bạn muốn.
+@property (nonatomic) BOOL stunFastProbeEnabled;
+
+/// RTO (ms) cho STUN transaction khi fast-probe. Gợi ý 250–300ms.
+/// Mặc định: 300.
+@property (nonatomic) NSUInteger stunFastProbeRtoMsec;
+
+/// Tổng “hard timeout” (ms) cho cả cuộc đua (song song).
+/// Mặc định: 2500 (2.5s).
+@property (nonatomic) NSUInteger stunFastProbeHardTimeoutMsec;
+
 @end
