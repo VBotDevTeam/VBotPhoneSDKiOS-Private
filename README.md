@@ -382,29 +382,35 @@ protocol VBotPhoneDelegate {
 
 
 ```
+    @objc public enum VBotEndCallReason: Int {
     // Timeout
     case timeOut = -1001
     
     // Khởi tạo không thành công
     case initiationFailed = 1001
     
+    // Không sẵn sàng để gọi đi / Khởi tạo không thành công
     case initiationFailed_1 = 1002
     
     // Chưa cấp truyền mic
     case microphonePermissionDenied = 1003
     
+    // Số điện thoại không hợp lệ
     case invalidPhoneNumber = 1004
     
     // Không có dữ liệu từ máy chủ
     case noDataFromServer = 1005
     
-    case initiationFailed_2 = 1006
+    // Cuộc gọi kết thúc khi chưa kết nối
+    case endCallBeforeServerStartCall = 1006
     
+    // Lỗi khi khởi tạo cuộc gọi
     case initiationFailed_3 = 1007
     
     // Dữ liệu không hợp lệ
     case dataInvalid = 1008
     
+    // Tài khoản VBot không tồn tại
     case initiationFailed_4 = 1009
     
     // Xác thực thất bại
@@ -428,8 +434,55 @@ protocol VBotPhoneDelegate {
     // reportNewIncomingCall lỗi
     case reportNewIncomingCallFailed = 1016
     
+    // không có alert_data
+    case alertDataNotFound = 1017
+    
     // Lỗi chưa xác định
     case unknownError = 1999
+    
+    public var description: String {
+        switch self {
+        case .timeOut:
+            return "Time-out"
+        case .initiationFailed:
+            return "initiationFailed"
+        case .initiationFailed_1:
+            return "initiationFailed 1"
+        case .microphonePermissionDenied:
+            return "Microphone permission denied"
+        case .invalidPhoneNumber:
+            return "Invalid phone number"
+        case .noDataFromServer:
+            return "No data from server"
+        case .endCallBeforeServerStartCall:
+            return "End call before server start call"
+        case .initiationFailed_3:
+            return "initiationFailed 3"
+        case .dataInvalid:
+            return "Data invalid"
+        case .initiationFailed_4:
+            return "InitiationFailed 4"
+        case .authenticatedFailed:
+            return "Authenticated failed"
+        case .anotherCallInProgress:
+            return "Another call in progress"
+        case .normal:
+            return "Call ended Normally"
+        case .decline:
+            return "Decline"
+        case .temporarilyUnavailable:
+            return "Temporarily unavailable"
+        case .busy:
+            return "Busy"
+        case .reportNewIncomingCallFailed:
+            return "Report new incoming call failed"
+        case .alertDataNotFound:
+            return "Alert data not found in noti payload"
+        case .unknownError:
+            return "unknownError"
+        }
+    }
+}
 ```
 
 
