@@ -327,6 +327,7 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonBusy = 1015,
   VBotEndCallReasonReportNewIncomingCallFailed = 1016,
   VBotEndCallReasonAlertDataNotFound = 1017,
+  VBotEndCallReasonCallNotFoundOnServer = 1018,
   VBotEndCallReasonUnknownError = 1999,
 };
 
@@ -702,6 +703,7 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonBusy = 1015,
   VBotEndCallReasonReportNewIncomingCallFailed = 1016,
   VBotEndCallReasonAlertDataNotFound = 1017,
+  VBotEndCallReasonCallNotFoundOnServer = 1018,
   VBotEndCallReasonUnknownError = 1999,
 };
 

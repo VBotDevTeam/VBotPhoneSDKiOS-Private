@@ -48,6 +48,8 @@ extern NSString * _Nonnull const VBotCallConnectedNotification DEPRECATED_MSG_AT
  */
 extern NSString * _Nonnull const VBotCallDisconnectedNotification DEPRECATED_MSG_ATTRIBUTE("Deprecated, listen for VBotCallStateChangedNotification instead");
 
+
+
 /**
  *  The posible errors VBotCall can return.
  */
@@ -339,6 +341,8 @@ typedef NS_ENUM(NSInteger, VBotCallTerminateReason) {
  * The codec that has been used during the call.
  */
 @property (readonly, nonatomic) NSString * _Nonnull activeCodec;
+
+@property (atomic, assign) BOOL finalized;
 
 #pragma mark - Methods
 

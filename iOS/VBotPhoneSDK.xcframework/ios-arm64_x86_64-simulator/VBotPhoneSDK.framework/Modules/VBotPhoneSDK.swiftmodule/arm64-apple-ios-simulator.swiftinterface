@@ -270,6 +270,7 @@ public struct VBotLocalizedStrings {
   case busy = 1015
   case reportNewIncomingCallFailed = 1016
   case alertDataNotFound = 1017
+  case callNotFoundOnServer = 1018
   case unknownError = 1999
   public var description: Swift.String {
     get
