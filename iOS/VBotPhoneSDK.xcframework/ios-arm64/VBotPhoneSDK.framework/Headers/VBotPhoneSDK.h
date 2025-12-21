@@ -2,7 +2,7 @@
 //  VBotPhoneSDK.h
 //  VBotPhoneSDK
 //
-//  Created by DAT NGUYEN QUOC on 10/01/2025.
+//  Copyright © 2020 VPMedia. All rights reserved.
 //
 
 #import "VBotSIP.h"

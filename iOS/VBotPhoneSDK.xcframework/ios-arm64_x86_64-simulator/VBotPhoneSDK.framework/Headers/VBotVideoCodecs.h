@@ -2,7 +2,7 @@
 //  VBotVideoCodecs.h
 //  VBotSIP
 //
-//  Created by Redmer Loen on 4/5/18.
+//  Copyright © 2020 VPMedia. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,7 +2,7 @@
 //  VBotIceConfiguration.h
 //  VBotSIP
 //
-//  Created by Maciek Gierszewski on 25/10/2017.
+//  Copyright © 2020 VPMedia. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
