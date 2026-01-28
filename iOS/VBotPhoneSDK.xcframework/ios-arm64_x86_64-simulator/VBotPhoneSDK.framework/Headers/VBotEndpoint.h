@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "VBCocoaLumberjack.h"
 #import <VBotPJSIP/pjsua.h>
 #import "VBotEndpointConfiguration.h"
 
@@ -95,7 +95,7 @@ typedef NS_ENUM(NSInteger, VBotEndpointState) {
 /**
  The logCallBackBlock will be called when there is a log message to be shown.
  */
-@property (copy, nonatomic) void( ^ _Nonnull logCallBackBlock)(DDLogMessage * _Nonnull logMessage);
+@property (copy, nonatomic) void( ^ _Nonnull logCallBackBlock)(VBLogMessage * _Nonnull logMessage);
 
 /**
  *  References to the account that have been added to the endpoint.

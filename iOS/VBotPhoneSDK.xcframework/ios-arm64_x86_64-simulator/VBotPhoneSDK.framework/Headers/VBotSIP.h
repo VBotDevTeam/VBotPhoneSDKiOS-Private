@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "VBCocoaLumberjack.h"
 #import "VBotAccountConfiguration.h"
 #import "VBotCallManager.h"
 #import "VBotCall.h"
@@ -277,7 +277,7 @@ typedef NS_ENUM(NSUInteger, VBotSIPErrors) {
 
  @param logCallBackBlock block that will be invoked when a log message is shown.
  */
-- (void)setLogCallBackBlock:(void(^ _Nonnull)(DDLogMessage * _Nonnull logMessage))logCallBackBlock;
+- (void)setLogCallBackBlock:(void(^ _Nonnull)(VBLogMessage * _Nonnull logMessage))logCallBackBlock;
 
 /**
  *  Get a VBotCall with the callId.

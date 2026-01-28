@@ -30,10 +30,5 @@ Pod::Spec.new do |s|
   ]
 
   s.resources =   ['iOS/resources/*.png']
-
-  s.dependency 'Starscream', '~> 4.0.8'
-  s.dependency 'CocoaLumberjack', '~> 3.8.5'
-  s.dependency 'Reachability', '~> 3.7.6'
-  s.dependency 'CryptoSwift', '~> 1.8.4'
    
 end

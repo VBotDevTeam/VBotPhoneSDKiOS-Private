@@ -5,4 +5,4 @@
 
 #import <Foundation/Foundation.h>
 
-extern int const ddLogLevel;
+extern int const vbLogLevel;

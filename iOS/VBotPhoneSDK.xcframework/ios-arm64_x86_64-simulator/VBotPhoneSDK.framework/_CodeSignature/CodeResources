@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Constants.h</key>
 		<data>
-		M42Hv95HXB9xhqpEuI3uE+/4dFI=
+		U6fBDouo1CmoKPdiqQX0l2Sna+A=
 		</data>
 		<key>Headers/NSError+VBotError.h</key>
 		<data>
@@ -19,6 +19,90 @@
 		<key>Headers/SipInvite.h</key>
 		<data>
 		vVYAL8dw2953VP8dXXN1Z30Q3kk=
+		</data>
+		<key>Headers/VBASLLogCapture.h</key>
+		<data>
+		2lfKkrKhjupwBKYIhEJbSzpgz1o=
+		</data>
+		<key>Headers/VBASLLogger.h</key>
+		<data>
+		aa6pepJj0AGqSfCdaEVXbLS04+o=
+		</data>
+		<key>Headers/VBAbstractDatabaseLogger.h</key>
+		<data>
+		Xh0CB/cFVixKl9UZGUKeUCB5stQ=
+		</data>
+		<key>Headers/VBAssertMacros.h</key>
+		<data>
+		claU3IU22jtHlDY6vp7vBuOg/Io=
+		</data>
+		<key>Headers/VBCLIColor.h</key>
+		<data>
+		L/QlDHheNKMCU9M/83KuJTrvCbo=
+		</data>
+		<key>Headers/VBCocoaLumberjack.h</key>
+		<data>
+		BYC3w+SDjkVrRh3suz6oOeiIeSs=
+		</data>
+		<key>Headers/VBContextFilterLogFormatter+Deprecated.h</key>
+		<data>
+		6GG7gzK4ZyQqERcfbeE+BjKIxyA=
+		</data>
+		<key>Headers/VBContextFilterLogFormatter.h</key>
+		<data>
+		yBHPvUNXuLE6bT1F3R83+p8U8Bo=
+		</data>
+		<key>Headers/VBDispatchQueueLogFormatter.h</key>
+		<data>
+		Hletzcvjl03uhOkv65GtwlZweX8=
+		</data>
+		<key>Headers/VBFileLogger+Buffering.h</key>
+		<data>
+		BsR7338hkEPfOKS2P5lZfNhkiEE=
+		</data>
+		<key>Headers/VBFileLogger+Internal.h</key>
+		<data>
+		rSO2GHoJXu9fqY5LEUde7TzAS2g=
+		</data>
+		<key>Headers/VBFileLogger.h</key>
+		<data>
+		xVimGYDk/xBfU3r+vNbQGMhr/Fk=
+		</data>
+		<key>Headers/VBLegacyMacros.h</key>
+		<data>
+		hRo2gsRWma6GWRj/6E/3Yxv/y5o=
+		</data>
+		<key>Headers/VBLog+LOGV.h</key>
+		<data>
+		uxAn45Ed6IVcB9s+o4SRUFiFbqA=
+		</data>
+		<key>Headers/VBLog.h</key>
+		<data>
+		DiQmqwr6BJI+rIyFR0QR6e+buWI=
+		</data>
+		<key>Headers/VBLogMacros.h</key>
+		<data>
+		vPwNpc6FT5CP2LkevNz6R+7b3zI=
+		</data>
+		<key>Headers/VBLoggerNames.h</key>
+		<data>
+		f10BcKh0X02FolkN0vq9B+EtJzM=
+		</data>
+		<key>Headers/VBMultiFormatter.h</key>
+		<data>
+		cWYi5vIKxI27AKSBCP/Z6gqGPz4=
+		</data>
+		<key>Headers/VBOSLogger.h</key>
+		<data>
+		UMzp31EWcFB/hpsdlrAZD8LyMZ8=
+		</data>
+		<key>Headers/VBReachability.h</key>
+		<data>
+		p75cXoVNTLOx4WACJ1+PPCpeBDE=
+		</data>
+		<key>Headers/VBTTYLogger.h</key>
+		<data>
+		GHdmzqizWe2UJ8RseOcT0h6d2jc=
 		</data>
 		<key>Headers/VBotAccount.h</key>
 		<data>
@@ -54,7 +138,7 @@
 		</data>
 		<key>Headers/VBotEndpoint.h</key>
 		<data>
-		Tsa32j+zx4VnkS5Pnl/xSavvqmA=
+		12Sctu6HytDtgfkZaxHMHUIy9nE=
 		</data>
 		<key>Headers/VBotEndpointConfiguration.h</key>
 		<data>
@@ -70,7 +154,7 @@
 		</data>
 		<key>Headers/VBotLogging.h</key>
 		<data>
-		NrNRzbn/9mkQwg1imeBbZ6ah6sg=
+		FC0mU1b+gK1WA2h9C7vMOgIwU0g=
 		</data>
 		<key>Headers/VBotNetworkMonitor.h</key>
 		<data>
@@ -98,7 +182,7 @@
 		</data>
 		<key>Headers/VBotSIP.h</key>
 		<data>
-		EIvxrwnAUI2rlwtqX7Z79ospH2w=
+		LPLMN3cV4gGw0Uw26gRLrCOOEyM=
 		</data>
 		<key>Headers/VBotStunConfiguration.h</key>
 		<data>
@@ -126,47 +210,51 @@
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		LcCtDDW/6Fy58H01AICWEMflaA0=
+		cusb52uo6SZ7JvFUkFI1MJNNlt4=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		rxdUVZfdt2ptlGphZTq3tU3jc6s=
+		CaCqqyDjQDBFFyGCtLDvNmz95eY=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		22UwYnjjT56sS8wDjZTf9glTx3M=
+		MLgCpFcnZr5GzXvZZlAC59K08jk=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		rxdUVZfdt2ptlGphZTq3tU3jc6s=
+		CaCqqyDjQDBFFyGCtLDvNmz95eY=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FuMtBtDjCvmQABv9CT1wfRMSCto=
+		exndCvDaLyC5ZrAZl/VQl9Wgx7s=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		LcCtDDW/6Fy58H01AICWEMflaA0=
+		cusb52uo6SZ7JvFUkFI1MJNNlt4=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		43StZ1I4FQvkZOVguVnwpEA5NaM=
+		EqqDC9RVVLqZwX1d5RTJZHr6X8A=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lxIdOL980V1LnO8a6Tqn+3jaLr8=
+		25QqiuBcHfyDZrjhJotwbuE1wK8=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		43StZ1I4FQvkZOVguVnwpEA5NaM=
+		EqqDC9RVVLqZwX1d5RTJZHr6X8A=
 		</data>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		y06+6S8wUzf3GTiiklbg9q+tUIA=
+		NkDfXUSJLAst+zOGlRB14aiq6SU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		MlJh2+ZVnDYIy6tcCKEeq5w5+HM=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		4MLe/JNfAmWnKv0SN0uFkANew0w=
 		</data>
 		<key>back-call.png</key>
 		<data>
@@ -239,7 +327,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ojNGdWb+1qEwOJLtbVG14Shuy5i0JMiB78+JJAq3oEs=
+			ZZeJexN4vULm6H+8LOmPBWmJF6gs86HDQZLLtbhEaDw=
 			</data>
 		</dict>
 		<key>Headers/NSError+VBotError.h</key>
@@ -261,6 +349,153 @@
 			<key>hash2</key>
 			<data>
 			sdrP/N7sA6EHH9R1UT/ZuSRIttje7/MUueZb0qSPjAc=
+			</data>
+		</dict>
+		<key>Headers/VBASLLogCapture.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MC6ilVIuvd+bW6oSadnKEAzUyhfmzzIvxaDp2x7NIIg=
+			</data>
+		</dict>
+		<key>Headers/VBASLLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Wsl45NSXn75RpInteWP9kWaYYBgc4TaLZ45VEaMD/Gc=
+			</data>
+		</dict>
+		<key>Headers/VBAbstractDatabaseLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zrpnog/7I4FVdq7TkFCHTy1THAWOCUh5C66S+B2DN5A=
+			</data>
+		</dict>
+		<key>Headers/VBAssertMacros.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Lw05hyhG20GFJrbYTcNixNXBzWmP0o2RwdXZKUAksPs=
+			</data>
+		</dict>
+		<key>Headers/VBCLIColor.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BshPJKtgm6phFmLL9Ctl0OQfz5VPLETpaKV9BtRObbQ=
+			</data>
+		</dict>
+		<key>Headers/VBCocoaLumberjack.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8Ej1s/yTk8S6CexLp62bN3Wsk+IEoFKB7l8nVI0DMMo=
+			</data>
+		</dict>
+		<key>Headers/VBContextFilterLogFormatter+Deprecated.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			htIdkqzrmoa202euX2Yj094A1Zy/vHDXc4FTDPq+6x8=
+			</data>
+		</dict>
+		<key>Headers/VBContextFilterLogFormatter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3Kklv16bMimPicuMaUQqaYN9XTSW6pQbX3jJCKfjjCE=
+			</data>
+		</dict>
+		<key>Headers/VBDispatchQueueLogFormatter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rq4nQg0BTTHf/5Qi7w2WG+n6/Fy+1a0nlufImXxYx5w=
+			</data>
+		</dict>
+		<key>Headers/VBFileLogger+Buffering.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rvI+JQrvWj8Tb55xBS4XeUnxWW1imxMVmqfXk1TblpY=
+			</data>
+		</dict>
+		<key>Headers/VBFileLogger+Internal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nDqq1qer19YZUrPmGADU9O78MVwUQ7ZUngXITTNE/jE=
+			</data>
+		</dict>
+		<key>Headers/VBFileLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uRV3B+Gf0pOJDiERMvIg07NMsfo+SFqVqdOTPFiPY3g=
+			</data>
+		</dict>
+		<key>Headers/VBLegacyMacros.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LWEGOtUXOpOiozULzujeB747KDt0KvcxhRhXtOj5IGY=
+			</data>
+		</dict>
+		<key>Headers/VBLog+LOGV.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JYLv6/AkbzUczLPKElp1PLkUya/xmSzvIdX8zou0g/E=
+			</data>
+		</dict>
+		<key>Headers/VBLog.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z1ZMQ6pspOaT5RaxgT8t75L2DALLAEUKcBXTSoux4wQ=
+			</data>
+		</dict>
+		<key>Headers/VBLogMacros.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1teIdipyVXADKLXnqHtzgWotQXpZArGYjkkj6a6L2Ns=
+			</data>
+		</dict>
+		<key>Headers/VBLoggerNames.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			glx5I2FkHAqNvq7k3Xlm0xqC6ZS3msPrQey66pPY/OQ=
+			</data>
+		</dict>
+		<key>Headers/VBMultiFormatter.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wGDUKosfk7mDibs2iNPlSihtSYFkBRpx9xsECGL3uhs=
+			</data>
+		</dict>
+		<key>Headers/VBOSLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RMgJeXQLQe8CUb9ypd/uwD+vUbQFm45MNH7vnsE0NbA=
+			</data>
+		</dict>
+		<key>Headers/VBReachability.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			T72v5oVLONzvbW2y2q8FZt7n6HipeqqfABnPpgnIYAA=
+			</data>
+		</dict>
+		<key>Headers/VBTTYLogger.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZaDPa0zklWoHAfzzgO5wDYhNDs9uG3i1wsBQyfmp7LU=
 			</data>
 		</dict>
 		<key>Headers/VBotAccount.h</key>
@@ -323,7 +558,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6880NnjNoslgQ7cx2Y6gAtjAVF/GZn0N9wVfgTN2oKw=
+			3ml1qcGzyrD8wOj5/+YA8uvkoAPLoWH7hdfByV4GAAU=
 			</data>
 		</dict>
 		<key>Headers/VBotEndpointConfiguration.h</key>
@@ -351,7 +586,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uXyyoOjh+ZStxt9UmEvDloRV9NXnyCoV/TGD7RFo2ys=
+			9RIfTgyiavpY6qkFglqW9K673XLRLdnclTy3+3tugvM=
 			</data>
 		</dict>
 		<key>Headers/VBotNetworkMonitor.h</key>
@@ -400,7 +635,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CkcumcVwUSOgvQ38WIK1QaFF2c0K3bgW1s6Ku++wMpc=
+			h7+Pru+Cr1TmXmmVr0wcciC/6Yorb9i0PqfxuHIjA8Q=
 			</data>
 		</dict>
 		<key>Headers/VBotStunConfiguration.h</key>
@@ -442,70 +677,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hNe0upI7P0y+FD71jygC4r8grOqgtZi7XH6UEJOxBnM=
+			sflodjXBsKd9Q29MlfOEz9qx5wncLClET/mlQUfHwfc=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+3gfdlBDjHbAaw9NT/zLZkQI2XfDSNb2dN1cJT8SO1A=
+			OjBFyl3PlSGHcj0jrIDnzR79lSpnQKs9DCUQawQfA3E=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f1VvuVGD7Gf/5vmoruejmdvbdlf5pmnSRF0dvBH4lJQ=
+			lOe0CVH8uKIh2RDA5M8sb8Tw3M4l0XrFNq14X164qkA=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+3gfdlBDjHbAaw9NT/zLZkQI2XfDSNb2dN1cJT8SO1A=
+			OjBFyl3PlSGHcj0jrIDnzR79lSpnQKs9DCUQawQfA3E=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IzSwnhGXWCkhv+Fj2zO+9SdPSyRgcVfMrUugVZM6gXA=
+			xtllHjbEKyohONrwBaAkuCbpfuNIa2TNDmNIacdSKBU=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hNe0upI7P0y+FD71jygC4r8grOqgtZi7XH6UEJOxBnM=
+			sflodjXBsKd9Q29MlfOEz9qx5wncLClET/mlQUfHwfc=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O0ks1I6efHocr2N3CupNAYMHa1DFt77/m1A5lOBK9G0=
+			R/mEJxW7l4lwJc0hxfXxILMJolS+dBRQAR196JxccGw=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R7u5mxsznC8YDM4k3aW/l5FwgoTfBkat54I7KoREIgM=
+			nhvz9tkodxgyPM8sn9ie4ejpwTi530PNCm9oPb1UXVA=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O0ks1I6efHocr2N3CupNAYMHa1DFt77/m1A5lOBK9G0=
+			R/mEJxW7l4lwJc0hxfXxILMJolS+dBRQAR196JxccGw=
 			</data>
 		</dict>
 		<key>Modules/VBotPhoneSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CErUgdk6AiSX/kknw2pVOtcvANG4DeKxkx6YS53hvxA=
+			FotrUn7m1IOJ6UPcyjKGDXMsH8t8pp0L0XEsmVXmSEQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -513,6 +748,13 @@
 			<key>hash2</key>
 			<data>
 			hsKUBQwyJmD2lJQ4D/EXbZisemDDKNjkVfcDJOvecaI=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EyzsACYN4YTYVoWqydU6QpR6qYctp0ZHxFdxTmtf57Y=
 			</data>
 		</dict>
 		<key>back-call.png</key>
