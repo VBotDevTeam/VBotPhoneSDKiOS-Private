@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "VBotPhoneSDK",
-    "printedName": "VBotPhoneSDK",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
     "children": [
       {
         "kind": "Import",
@@ -93,22 +93,6 @@
         "moduleName": "VBotPhoneSDK",
         "declAttributes": [
           "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -302,20 +286,6 @@
           "RawDocComment"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "Decodable",
@@ -765,22 +735,6 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -1024,9 +978,6 @@
             "moduleName": "VBotPhoneSDK",
             "static": true,
             "implicit": true,
-            "declAttributes": [
-              "Nonisolated"
-            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -1068,20 +1019,6 @@
         ],
         "enumRawTypeName": "String",
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1561,20 +1498,6 @@
                 "conformances": [
                   {
                     "kind": "Conformance",
-                    "name": "Copyable",
-                    "printedName": "Copyable",
-                    "usr": "s:s8CopyableP",
-                    "mangledName": "$ss8CopyableP"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Escapable",
-                    "printedName": "Escapable",
-                    "usr": "s:s9EscapableP",
-                    "mangledName": "$ss9EscapableP"
-                  },
-                  {
-                    "kind": "Conformance",
                     "name": "Equatable",
                     "printedName": "Equatable",
                     "usr": "s:SQ",
@@ -1632,20 +1555,6 @@
               "RawDocComment"
             ],
             "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
               {
                 "kind": "Conformance",
                 "name": "Equatable",
@@ -2153,23 +2062,7 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
+        "hasMissingDesignatedInitializers": true
       },
       {
         "kind": "Import",
@@ -2578,22 +2471,6 @@
           "AccessControl",
           "ObjC",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
         ]
       },
       {
@@ -3656,20 +3533,6 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5996,22 +5859,6 @@
         "moduleName": "VBotPhoneSDK",
         "declAttributes": [
           "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -7004,20 +6851,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -7164,7 +6997,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE4left12CoreGraphics7CGFloatVvp",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7207,7 +7039,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE5right12CoreGraphics7CGFloatVvp",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7250,7 +7081,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE3top12CoreGraphics7CGFloatVvp",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7293,7 +7123,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE6bottom12CoreGraphics7CGFloatVvp",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7336,7 +7165,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE5width12CoreGraphics7CGFloatVvp",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7379,7 +7207,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE6height12CoreGraphics7CGFloatVvp",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7473,7 +7300,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE33animateDecelerationToVerticalEdge12withDuration8velocity0L9Threshold12boundingRect10completionySd_So7CGPointV12CoreGraphics7CGFloatVSo6CGRectVySbcSgtF",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7534,7 +7360,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE11setIsHidden_8animated10completionySb_SbySbcSgtF",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7595,7 +7420,6 @@
             "mangledName": "$sSo6UIViewC12VBotPhoneSDKE11setIsHidden_21withAnimationDuration10completionySb_SdySbcSgtF",
             "moduleName": "VBotPhoneSDK",
             "declAttributes": [
-              "Preconcurrency",
               "Custom"
             ],
             "isFromExtension": true,
@@ -7609,7 +7433,6 @@
         "intro_iOS": "2.0",
         "objc_name": "UIView",
         "declAttributes": [
-          "Preconcurrency",
           "Available",
           "ObjC",
           "NonSendable",
@@ -7624,20 +7447,6 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -8106,20 +7915,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_ObjectiveCBridgeable",
             "printedName": "_ObjectiveCBridgeable",
             "children": [
@@ -8167,13 +7962,6 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -8335,20 +8123,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_ObjectiveCBridgeable",
             "printedName": "_ObjectiveCBridgeable",
             "children": [
@@ -8396,13 +8170,6 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -8499,31 +8266,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -8633,20 +8379,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "RawRepresentable",
             "printedName": "RawRepresentable",
             "children": [
@@ -8687,13 +8419,6 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -8748,14 +8473,21 @@
         "usr": "s:Sq",
         "mangledName": "$sSq",
         "moduleName": "Swift",
-        "genericSig": "<τ_0_0 where τ_0_0 : ~Copyable, τ_0_0 : ~Escapable>",
-        "sugared_genericSig": "<Wrapped where Wrapped : ~Copyable, Wrapped : ~Escapable>",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Wrapped>",
         "declAttributes": [
           "Frozen"
         ],
         "isExternal": true,
         "isEnumExhaustive": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByNilLiteral",
+            "printedName": "ExpressibleByNilLiteral",
+            "usr": "s:s23ExpressibleByNilLiteralP",
+            "mangledName": "$ss23ExpressibleByNilLiteralP"
+          },
           {
             "kind": "Conformance",
             "name": "Encodable",
@@ -8769,48 +8501,6 @@
             "printedName": "Decodable",
             "usr": "s:Se",
             "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "BitwiseCopyable",
-            "printedName": "BitwiseCopyable",
-            "usr": "s:s15BitwiseCopyableP",
-            "mangledName": "$ss15BitwiseCopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExpressibleByNilLiteral",
-            "printedName": "ExpressibleByNilLiteral",
-            "usr": "s:s23ExpressibleByNilLiteralP",
-            "mangledName": "$ss23ExpressibleByNilLiteralP"
           },
           {
             "kind": "Conformance",
@@ -8863,6 +8553,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "EncodableWithConfiguration",
             "printedName": "EncodableWithConfiguration",
             "children": [
@@ -8905,44 +8602,49 @@
           },
           {
             "kind": "Conformance",
-            "name": "AttributedTextFormattingDefinition",
-            "printedName": "AttributedTextFormattingDefinition",
+            "name": "TableColumnContent",
+            "printedName": "TableColumnContent",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Body",
-                "printedName": "Body",
+                "name": "TableRowValue",
+                "printedName": "TableRowValue",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some SwiftUICore.AttributedTextFormattingDefinition<Wrapped.Scope>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AttributedTextFormattingDefinition",
-                        "printedName": "SwiftUICore.AttributedTextFormattingDefinition",
-                        "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP"
-                      }
-                    ]
+                    "name": "DependentMember",
+                    "printedName": "τ_0_0.TableRowValue"
                   }
                 ]
               },
               {
                 "kind": "TypeWitness",
-                "name": "Scope",
-                "printedName": "Scope",
+                "name": "TableColumnSortComparator",
+                "printedName": "TableColumnSortComparator",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "DependentMember",
-                    "printedName": "τ_0_0.Scope"
+                    "printedName": "τ_0_0.TableColumnSortComparator"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "TableColumnBody",
+                "printedName": "TableColumnBody",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
                   }
                 ]
               }
             ],
-            "usr": "s:7SwiftUI34AttributedTextFormattingDefinitionP",
-            "mangledName": "$s7SwiftUI34AttributedTextFormattingDefinitionP"
+            "usr": "s:7SwiftUI18TableColumnContentP",
+            "mangledName": "$s7SwiftUI18TableColumnContentP"
           },
           {
             "kind": "Conformance",
@@ -9002,134 +8704,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "AtomicRepresentable",
-            "printedName": "AtomicRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "AtomicRepresentation",
-                "printedName": "AtomicRepresentation",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.AtomicOptionalRepresentation"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:15Synchronization19AtomicRepresentableP",
-            "mangledName": "$s15Synchronization19AtomicRepresentableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "TableColumnContent",
-            "printedName": "TableColumnContent",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "TableRowValue",
-                "printedName": "TableRowValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.TableRowValue"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "TableColumnSortComparator",
-                "printedName": "TableColumnSortComparator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.TableColumnSortComparator"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "TableColumnBody",
-                "printedName": "TableColumnBody",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Never",
-                    "printedName": "Swift.Never",
-                    "usr": "s:s5NeverO"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI18TableColumnContentP",
-            "mangledName": "$s7SwiftUI18TableColumnContentP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "TabContent",
-            "printedName": "TabContent",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "TabValue",
-                "printedName": "TabValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.TabValue"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "_IdentifiedView",
-                "printedName": "_IdentifiedView",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "τ_0_0._IdentifiedView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "DependentMember",
-                        "printedName": "τ_0_0._IdentifiedView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Body",
-                "printedName": "Body",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "τ_0_0?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GenericTypeParam",
-                        "printedName": "τ_0_0"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI10TabContentP",
-            "mangledName": "$s7SwiftUI10TabContentP"
-          },
-          {
-            "kind": "Conformance",
             "name": "TableRowContent",
             "printedName": "TableRowContent",
             "children": [
@@ -9161,55 +8735,6 @@
             ],
             "usr": "s:7SwiftUI15TableRowContentP",
             "mangledName": "$s7SwiftUI15TableRowContentP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SliderTickContent",
-            "printedName": "SliderTickContent",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Value",
-                "printedName": "Value",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DependentMember",
-                    "printedName": "τ_0_0.Value"
-                  }
-                ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Body",
-                "printedName": "Body",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[SwiftUI.SliderTick<τ_0_0.Value>]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SliderTick",
-                        "printedName": "SwiftUI.SliderTick<τ_0_0.Value>",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "DependentMember",
-                            "printedName": "τ_0_0.Value"
-                          }
-                        ],
-                        "usr": "s:7SwiftUI10SliderTickV"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI17SliderTickContentP",
-            "mangledName": "$s7SwiftUI17SliderTickContentP"
           },
           {
             "kind": "Conformance",
@@ -9345,20 +8870,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "OptionSet",
             "printedName": "OptionSet",
             "children": [
@@ -9429,13 +8940,6 @@
             ],
             "usr": "s:s10SetAlgebraP",
             "mangledName": "$ss10SetAlgebraP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -9536,20 +9040,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "RawRepresentable",
             "printedName": "RawRepresentable",
             "children": [
@@ -9590,13 +9080,6 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -9662,20 +9145,6 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "RawRepresentable",
             "printedName": "RawRepresentable",
             "children": [
@@ -9716,13 +9185,6 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -9797,20 +9259,6 @@
         "isFromExtension": true,
         "isExternal": true,
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "_ObjectiveCBridgeable",
@@ -9892,13 +9340,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "SendableMetatype",
-            "printedName": "SendableMetatype",
-            "usr": "s:s16SendableMetatypeP",
-            "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
             "name": "_UIKitNumericRawRepresentable",
             "printedName": "_UIKitNumericRawRepresentable",
             "usr": "s:5UIKit01_A23NumericRawRepresentableP",
@@ -9951,6 +9392,13 @@
       "offset": 316,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Models\/VBotUser.swift",
+      "kind": "StringLiteral",
+      "offset": 474,
+      "length": 14,
+      "value": "\"websocketUrl\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Models\/VBotUser.swift",
@@ -10072,6 +9520,13 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/UI\/VBotCallViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 153,
+      "length": 22,
+      "value": "\"VBotPhoneSDK.VBotCallViewController\""
+    },
+    {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLogger.swift",
       "kind": "StringLiteral",
       "offset": 165,
@@ -10156,6 +9611,13 @@
       "value": "\"yyyy\/MM\/dd HH:mm:ss.SSS\""
     },
     {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 5147,
+      "length": 12,
+      "value": "\"VBotPhoneSDK.LogFormatter\""
+    },
+    {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Models\/AppInfo.swift",
       "kind": "StringLiteral",
       "offset": 279,
@@ -10182,6 +9644,27 @@
       "offset": 497,
       "length": 19,
       "value": "\"Commit_Short_Hash\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
+      "kind": "StringLiteral",
+      "offset": 192,
+      "length": 17,
+      "value": "\"vbot.call.ready\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 19,
+      "value": "\"vbot.call.unready\""
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
+      "length": 18,
+      "value": "\"vbot.call.hangup\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotUltils.swift",
@@ -11353,6 +10836,580 @@
       "value": "1999"
     },
     {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 181,
+      "length": 1,
+      "value": "-1001"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 260,
+      "length": 4,
+      "value": "1001"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
+      "length": 4,
+      "value": "1002"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 457,
+      "length": 4,
+      "value": "1003"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 543,
+      "length": 4,
+      "value": "1004"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 627,
+      "length": 4,
+      "value": "1005"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 731,
+      "length": 4,
+      "value": "1006"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 814,
+      "length": 4,
+      "value": "1007"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 884,
+      "length": 4,
+      "value": "1008"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 968,
+      "length": 4,
+      "value": "1009"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1041,
+      "length": 4,
+      "value": "1010"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1120,
+      "length": 4,
+      "value": "1011"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1180,
+      "length": 4,
+      "value": "1012"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1241,
+      "length": 4,
+      "value": "1013"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1320,
+      "length": 4,
+      "value": "1014"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1364,
+      "length": 4,
+      "value": "1015"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1448,
+      "length": 4,
+      "value": "1016"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1516,
+      "length": 4,
+      "value": "1017"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1610,
+      "length": 4,
+      "value": "1018"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotEndCallReason.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1676,
+      "length": 4,
+      "value": "1999"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 156,
+      "length": 3,
+      "value": "101"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 191,
+      "length": 3,
+      "value": "102"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 223,
+      "length": 3,
+      "value": "103"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 262,
+      "length": 3,
+      "value": "104"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 295,
+      "length": 3,
+      "value": "105"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 3,
+      "value": "106"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 357,
+      "length": 3,
+      "value": "107"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 393,
+      "length": 3,
+      "value": "108"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 429,
+      "length": 3,
+      "value": "109"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 464,
+      "length": 3,
+      "value": "110"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 502,
+      "length": 3,
+      "value": "111"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 542,
+      "length": 3,
+      "value": "112"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 588,
+      "length": 3,
+      "value": "113"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 622,
+      "length": 3,
+      "value": "114"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 658,
+      "length": 3,
+      "value": "115"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 694,
+      "length": 3,
+      "value": "116"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 726,
+      "length": 3,
+      "value": "117"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 756,
+      "length": 3,
+      "value": "118"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 790,
+      "length": 3,
+      "value": "119"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 824,
+      "length": 3,
+      "value": "120"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 855,
+      "length": 3,
+      "value": "121"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 889,
+      "length": 3,
+      "value": "122"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 924,
+      "length": 3,
+      "value": "123"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 956,
+      "length": 3,
+      "value": "124"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 993,
+      "length": 3,
+      "value": "125"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1029,
+      "length": 3,
+      "value": "126"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1068,
+      "length": 3,
+      "value": "127"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1100,
+      "length": 3,
+      "value": "128"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1136,
+      "length": 3,
+      "value": "129"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1178,
+      "length": 3,
+      "value": "130"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1210,
+      "length": 3,
+      "value": "131"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 156,
+      "length": 3,
+      "value": "101"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 191,
+      "length": 3,
+      "value": "102"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 223,
+      "length": 3,
+      "value": "103"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 262,
+      "length": 3,
+      "value": "104"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 295,
+      "length": 3,
+      "value": "105"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 329,
+      "length": 3,
+      "value": "106"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 357,
+      "length": 3,
+      "value": "107"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 393,
+      "length": 3,
+      "value": "108"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 429,
+      "length": 3,
+      "value": "109"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 464,
+      "length": 3,
+      "value": "110"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 502,
+      "length": 3,
+      "value": "111"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 542,
+      "length": 3,
+      "value": "112"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 588,
+      "length": 3,
+      "value": "113"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 622,
+      "length": 3,
+      "value": "114"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 658,
+      "length": 3,
+      "value": "115"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 694,
+      "length": 3,
+      "value": "116"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 726,
+      "length": 3,
+      "value": "117"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 756,
+      "length": 3,
+      "value": "118"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 790,
+      "length": 3,
+      "value": "119"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 824,
+      "length": 3,
+      "value": "120"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 855,
+      "length": 3,
+      "value": "121"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 889,
+      "length": 3,
+      "value": "122"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 924,
+      "length": 3,
+      "value": "123"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 956,
+      "length": 3,
+      "value": "124"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 993,
+      "length": 3,
+      "value": "125"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1029,
+      "length": 3,
+      "value": "126"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1068,
+      "length": 3,
+      "value": "127"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1100,
+      "length": 3,
+      "value": "128"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1136,
+      "length": 3,
+      "value": "129"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1178,
+      "length": 3,
+      "value": "130"
+    },
+    {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1210,
+      "length": 3,
+      "value": "131"
+    },
+    {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotCallLog.swift",
       "kind": "IntegerLiteral",
       "offset": 156,
@@ -11591,6 +11648,13 @@
       "value": "12"
     },
     {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotSipUser.swift",
+      "kind": "StringLiteral",
+      "offset": 113,
+      "length": 11,
+      "value": "\"VBotPhoneSDK.VBotSipUser\""
+    },
+    {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/VBotVoIPPushHandler.swift",
       "kind": "BooleanLiteral",
       "offset": 313,
@@ -11626,11 +11690,18 @@
       "value": "\"websocketUrl\""
     },
     {
+      "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Models\/UserInitCall.swift",
+      "kind": "StringLiteral",
+      "offset": 605,
+      "length": 14,
+      "value": "\"websocketUrl\""
+    },
+    {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",
       "kind": "StringLiteral",
       "offset": 147,
       "length": 8,
-      "value": "\"2.0.21\""
+      "value": "\"2.0.22\""
     },
     {
       "filePath": "\/Users\/datnguyenquoc\/Documents\/GitHub\/VBot-Phone-iOS-private\/VBotPhoneSDK\/Helpers\/VBotKeys.swift",

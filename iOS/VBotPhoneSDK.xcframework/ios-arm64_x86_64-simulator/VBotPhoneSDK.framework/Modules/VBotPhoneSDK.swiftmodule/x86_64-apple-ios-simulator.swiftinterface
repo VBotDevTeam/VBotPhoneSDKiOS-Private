@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VBotPhoneSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VBotPhoneSDK
 import AVFAudio
 import AVFoundation
 import AVKit
@@ -48,35 +47,29 @@ extension CoreFoundation.CGRect {
   public func pinnedToVerticalEdge(of boundingRect: CoreFoundation.CGRect) -> CoreFoundation.CGRect
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var left: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var left: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor @preconcurrency public var right: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var right: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor @preconcurrency public var top: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var top: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor @preconcurrency public var bottom: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var bottom: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor @preconcurrency public var width: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var width: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor @preconcurrency public var height: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var height: CoreFoundation.CGFloat {
     get
   }
 }
 extension UIKit.UIView {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func animateDecelerationToVerticalEdge(withDuration duration: Foundation.TimeInterval, velocity: CoreFoundation.CGPoint, velocityThreshold: CoreFoundation.CGFloat = 500, boundingRect: CoreFoundation.CGRect, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func setIsHidden(_ isHidden: Swift.Bool, animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func setIsHidden(_ isHidden: Swift.Bool, withAnimationDuration duration: Foundation.TimeInterval, completion: ((Swift.Bool) -> Swift.Void)? = nil)
-  #endif
+  @_Concurrency.MainActor(unsafe) public func animateDecelerationToVerticalEdge(withDuration duration: Foundation.TimeInterval, velocity: CoreFoundation.CGPoint, velocityThreshold: CoreFoundation.CGFloat = 500, boundingRect: CoreFoundation.CGRect, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func setIsHidden(_ isHidden: Swift.Bool, animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func setIsHidden(_ isHidden: Swift.Bool, withAnimationDuration duration: Foundation.TimeInterval, completion: ((Swift.Bool) -> Swift.Void)? = nil)
 }
 extension CoreFoundation.CGPoint {
   public var length: CoreFoundation.CGFloat {
@@ -94,17 +87,13 @@ extension UIKit.UIView.AnimationCurve {
     get
   }
 }
-#if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional where Wrapped == UIKit.UIView.AnimationCurve {
   public var asAnimationOptions: UIKit.UIView.AnimationOptions {
     get
   }
 }
-#endif
 public struct VBotConfig {
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(supportPopupCall: Swift.Bool = true, includesCallsInRecents: Swift.Bool = true, iconTemplateImageData: Foundation.Data? = nil)
-  #endif
 }
 public struct VBotHotline : Swift.Codable {
   public let name: Swift.String, phoneNumber: Swift.String
@@ -112,21 +101,11 @@ public struct VBotHotline : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct VBotLogger {
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func verbose(file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line, filter: Swift.String? = nil, _ message: Swift.String)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func debug(file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line, filter: Swift.String? = nil, _ message: Swift.String)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func info(file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line, filter: Swift.String? = nil, _ message: Swift.String)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func warning(file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line, filter: Swift.String? = nil, _ message: Swift.String)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public static func error(file: Swift.String = #file, function: Swift.String = #function, line: Swift.UInt = #line, filter: Swift.String? = nil, _ message: Swift.String)
-  #endif
 }
 extension CocoaLumberjack.DDLogFlag : Swift.Hashable {
   public func hash(into hasher: inout Swift.Hasher)
@@ -136,12 +115,10 @@ public enum SocketMethod : Swift.String, Swift.CaseIterable {
   case READY_CALL
   case UN_READY_CALL
   case HANGUP_CALL
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [VBotPhoneSDK.SocketMethod]
   public typealias RawValue = Swift.String
-  nonisolated public static var allCases: [VBotPhoneSDK.SocketMethod] {
+  public static var allCases: [VBotPhoneSDK.SocketMethod] {
     get
   }
   public var rawValue: Swift.String {
@@ -185,20 +162,14 @@ extension AVFAudio.AVAudioSession.RecordPermission {
     get
   }
   final public let reachabilityQueue: Dispatch.DispatchQueue
-  #if compiler(>=5.3) && $NonescapableTypes
   open var flags: SystemConfiguration.SCNetworkReachabilityFlags? {
     get
   }
-  #endif
   open var status: VBotPhoneSDK.NetworkReachabilityManager.NetworkReachabilityStatus {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init?(host: Swift.String)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init?()
-  #endif
   @objc deinit
   @discardableResult
   open func startListening(onQueue queue: Dispatch.DispatchQueue = .main, onUpdatePerforming listener: @escaping VBotPhoneSDK.NetworkReachabilityManager.Listener) -> Swift.Bool
@@ -235,22 +206,14 @@ extension VBotPhoneSDK.VBotPhone {
   public func getConfig() -> VBotPhoneSDK.VBotConfig
   public func getLocalizedStrings() -> VBotPhoneSDK.VBotLocalizedStrings
   public func getCallDataFromUserActivity(_ string: Swift.String) -> (callId: Swift.String, callName: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func startOutgoingCall(callerId: Swift.String, callerName: Swift.String, callerAvatar: Swift.String? = nil, calleeId: Swift.String, calleeName: Swift.String, calleeAvatar: Swift.String? = nil, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func startIncomingCall(callerId: Swift.String, callerName: Swift.String, callerAvatar: Swift.String? = nil, calleeId: Swift.String, calleeName: Swift.String, calleeAvatar: Swift.String? = nil, checkSum: Swift.String, metaData: [Swift.String : Any]? = nil, completion: @escaping () -> Swift.Void)
-  #endif
   public func returnToCallVCIfNeeded()
   public func hideCallVCIfNeeded()
   public func hasActiveCall() -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public func endCall(completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  #endif
   public func muteCall()
-  #if compiler(>=5.3) && $NonescapableTypes
   public func holdCall(completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  #endif
   public func hasAudioBluetooth() -> Swift.Bool
   public func isSpeakerOn() -> Swift.Bool
   public func onOffSpeaker()
@@ -311,9 +274,7 @@ public struct VBotLocalizedStrings {
   public var description: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
