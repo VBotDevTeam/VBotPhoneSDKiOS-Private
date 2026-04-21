@@ -87,6 +87,7 @@ let success = VBotPhone.sharedInstance.setup(token: "your_encrypted_token", with
 ```
 
 Trong đó:
+
 - **token** là App Token, đại diện cho ứng dụng của bạn, dùng để xác thực với máy chủ VBot
 - **config** là cấu hình tùy chọn cho SDK
 
