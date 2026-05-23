@@ -194,6 +194,22 @@ typedef NS_ENUM(NSInteger, VBotCallTerminateReason) {
     VBotCallTerminateReasonOriginatorCancel,
 };
 #define VBotCallTerminateReasonString(VBotCallTerminateReason) [@[@"VBotCallTerminateReasonUnknown", @"VBotCallTerminateReasonCallCompletedElsewhere", @"VBotCallTerminateReasonOriginatorCancel"] objectAtIndex:VBotCallTerminateReason]
+@interface VBotCallInfo : NSObject
+
+@property (nonatomic, assign) VBotCallState state;
+@property (nonatomic, assign) VBotMediaState media_status;
+@property (nonatomic, assign) NSInteger last_status;
+@property (nonatomic, copy, nullable) NSString *state_text;
+@property (nonatomic, copy, nullable) NSString *last_status_text;
+@property (nonatomic, copy, nullable) NSString *call_id;
+@property (nonatomic, copy, nullable) NSString *local_info;
+@property (nonatomic, copy, nullable) NSString *remote_info;
+@property (nonatomic, assign) NSInteger conf_slot;
+@property (nonatomic, assign) NSInteger media_0_index;
+
+- (instancetype _Nonnull)initWithPjsuaCallInfo:(pjsua_call_info)callInfo;
+
+@end
 
 
 @interface VBotCall : NSObject
@@ -416,16 +432,16 @@ typedef NS_ENUM(NSInteger, VBotCallTerminateReason) {
 /**
  *  This will change the callState of the call.
  *
- *  @param callInfo pjsip callInfo
+ *  @param callInfo VBotCallInfo object
  */
-- (void)callStateChanged:(pjsua_call_info)callInfo;
+- (void)callStateChanged:(VBotCallInfo * _Nonnull)callInfo;
 
 /**
  *  This will change the mediaState of the call.
  *
- *  @param callInfo pjsip callInfo
+ *  @param callInfo VBotCallInfo object
  */
-- (void)mediaStateChanged:(pjsua_call_info)callInfo;
+- (void)mediaStateChanged:(VBotCallInfo * _Nonnull)callInfo;
 
 /**
  *  Start the call. The number that will be called is the number provided when the call was created using

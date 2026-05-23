@@ -8,7 +8,7 @@
  @param packet The full SIP INVITE packet.
  @return An instance of SipInvite
  */
-- (instancetype _Nullable)initWithInvitePacket:(char*_Nonnull)packet;
+- (instancetype _Nullable)initWithInvitePacket:(NSString *_Nonnull)packet;
 
 /**
  Check if this INVITE contained a REMOTE-PARTY-ID SIP header.
