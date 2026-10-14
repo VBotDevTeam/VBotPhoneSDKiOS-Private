@@ -14,9 +14,9 @@ SDK tích hợp cuộc gọi VoIP cho ứng dụng iOS, hỗ trợ CallKit, Push
 
 ## Cài đặt SDK
 
-### CocoaPods qua Git repository
+### CocoaPods
 
-Do **VBotPhoneSDKiOS-Private** là repository riêng tư (private repository), cần chỉ định nguồn Git và tag phiên bản trong `Podfile`:
+Thêm **VBotPhoneSDKiOS-Private** vào `Podfile`:
 
 ```ruby
 platform :ios, '13.0'
@@ -24,11 +24,7 @@ platform :ios, '13.0'
 target 'YourApp' do
   use_frameworks! :linkage => :static
 
-  # Cài đặt qua Git repository (khuyên dùng)
-  pod 'VBotPhoneSDKiOS-Private', :git => 'https://github.com/VBotDevTeam/VBotPhoneSDKiOS-Private.git', :tag => '2.0.27'
-
-  # Hoặc nếu copy repo vào thư mục nội bộ dự án:
-  # pod 'VBotPhoneSDKiOS-Private', :path => './Lib/VBotPhoneSDKiOS-Private'
+  pod 'VBotPhoneSDKiOS-Private', '2.0.27'
 
 end
 
@@ -48,10 +44,9 @@ Sau đó chạy:
 pod install
 ```
 
-> **Lưu ý quan trọng:**
-> 1. Máy tính hoặc CI/CD chạy `pod install` cần có quyền truy cập vào GitHub repo `VBotDevTeam/VBotPhoneSDKiOS-Private` (qua SSH key hoặc Personal Access Token).
-> 2. `BUILD_LIBRARY_FOR_DISTRIBUTION = YES` trong `post_install` là **bắt buộc**.
-> 3. Tên module để import trong code Swift là **`VBotPhoneSDK`**:
+> **Lưu ý:**
+> 1. `BUILD_LIBRARY_FOR_DISTRIBUTION = YES` trong `post_install` là **bắt buộc**.
+> 2. Tên module để import trong code Swift là **`VBotPhoneSDK`**:
 >    ```swift
 >    import VBotPhoneSDK
 >    ```
