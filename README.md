@@ -14,9 +14,9 @@ SDK tích hợp cuộc gọi VoIP cho ứng dụng iOS, hỗ trợ CallKit, Push
 
 ## Cài đặt SDK
 
-### CocoaPods
+### CocoaPods qua Git repository
 
-Thêm **VBotPhoneSDKiOS-Private** vào `Podfile`:
+Do **VBotPhoneSDKiOS-Private** là repository riêng tư (private repository), cần chỉ định nguồn Git và tag phiên bản trong `Podfile`:
 
 ```ruby
 platform :ios, '13.0'
@@ -24,7 +24,11 @@ platform :ios, '13.0'
 target 'YourApp' do
   use_frameworks! :linkage => :static
 
-  pod 'VBotPhoneSDKiOS-Private'
+  # Cài đặt qua Git repository (khuyên dùng)
+  pod 'VBotPhoneSDKiOS-Private', :git => 'https://github.com/VBotDevTeam/VBotPhoneSDKiOS-Private.git', :tag => '2.0.27'
+
+  # Hoặc nếu copy repo vào thư mục nội bộ dự án:
+  # pod 'VBotPhoneSDKiOS-Private', :path => './Lib/VBotPhoneSDKiOS-Private'
 
 end
 
@@ -44,7 +48,13 @@ Sau đó chạy:
 pod install
 ```
 
-> **Lưu ý:** `BUILD_LIBRARY_FOR_DISTRIBUTION = YES` là **bắt buộc**.
+> **Lưu ý quan trọng:**
+> 1. Máy tính hoặc CI/CD chạy `pod install` cần có quyền truy cập vào GitHub repo `VBotDevTeam/VBotPhoneSDKiOS-Private` (qua SSH key hoặc Personal Access Token).
+> 2. `BUILD_LIBRARY_FOR_DISTRIBUTION = YES` trong `post_install` là **bắt buộc**.
+> 3. Tên module để import trong code Swift là **`VBotPhoneSDK`**:
+>    ```swift
+>    import VBotPhoneSDK
+>    ```
 
 ## Cấu hình dự án
 
@@ -52,7 +62,10 @@ pod install
 
 Trong Xcode → target app → **Signing & Capabilities**, thêm:
 
-- **Background Modes**: bật `Voice over IP` và `Remote notifications`
+- **Background Modes**:
+  - `Audio, AirPlay, and Picture in Picture` *(bắt buộc để tiếp tục thu/phát âm thanh cuộc gọi khi app xuống nền hoặc màn hình khóa)*
+  - `Voice over IP` *(bắt buộc cho luồng cuộc gọi VoIP)*
+  - `Remote notifications` *(nhận thông báo cuộc gọi)*
 - **Push Notifications**
 
 ### 2. Info.plist
