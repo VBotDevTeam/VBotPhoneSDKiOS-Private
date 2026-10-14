@@ -331,8 +331,14 @@ typedef SWIFT_ENUM(NSInteger, VBotEndCallReason, open) {
   VBotEndCallReasonUnknownError = 1999,
 };
 
+@class NSString;
 SWIFT_CLASS("_TtC12VBotPhoneSDK9VBotPhone")
 @interface VBotPhone : NSObject <CXCallObserverDelegate>
+/// Phiên bản hiện tại của VBotPhoneSDK
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
++ (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+/// Phiên bản hiện tại của VBotPhoneSDK
+@property (nonatomic, readonly, copy) NSString * _Nonnull sdkVersion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

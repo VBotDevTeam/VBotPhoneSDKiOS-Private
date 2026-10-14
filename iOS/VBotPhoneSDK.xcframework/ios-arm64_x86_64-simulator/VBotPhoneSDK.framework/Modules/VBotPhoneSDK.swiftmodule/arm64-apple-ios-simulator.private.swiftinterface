@@ -222,6 +222,12 @@ extension UIKit.UIWindow.Level {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VBotPhone : ObjectiveC.NSObject, CallKit.CXCallObserverDelegate {
   public static let sharedInstance: VBotPhoneSDK.VBotPhone
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc public var sdkVersion: Swift.String {
+    @objc get
+  }
   public var audioOutput: VBotPhoneSDK.VBotAudioControllerOutputs?
   public var microphonePermissionGranted: AVFAudio.AVAudioSession.RecordPermission
   public func addDelegate(_ delegate: any VBotPhoneSDK.VBotPhoneDelegate)

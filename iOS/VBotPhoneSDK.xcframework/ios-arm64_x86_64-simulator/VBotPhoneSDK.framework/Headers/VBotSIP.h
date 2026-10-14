@@ -246,6 +246,8 @@ typedef NS_ENUM(NSUInteger, VBotSIPErrors) {
  */
 - (void)registerAccountWithUser:(__autoreleasing id<SIPEnabledUser> _Nonnull)sipUser forceRegistration:(BOOL)force withCompletion:(void (^_Nullable)(BOOL success, VBotAccount * _Nullable account))completion;
 
+- (void)registerAccountWithUser:(__autoreleasing id<SIPEnabledUser> _Nonnull)sipUser forceRegistration:(BOOL)force withErrorCompletion:(void (^_Nullable)(BOOL success, VBotAccount * _Nullable account, NSError * _Nullable error))completion;
+
 /*
  *  This will return the first account that is available.
  *
